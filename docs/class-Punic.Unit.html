@@ -6,16 +6,49 @@
 
 	<title>Class Punic\Unit | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?457732901"></script>
+	<script type="text/javascript" src="resources/combined.js?675583309"></script>
 	<script type="text/javascript" src="elementlist.js?3730892315"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
 
 </head>
 
 <body>
-<div id="left">
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Punic APIs</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Punic.html" title="Summary of Punic"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+						<li>
+							<a href="todo.html" title="Todo list"><span>Todo</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
 	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
 
 
 		<div id="groups">
@@ -28,8 +61,6 @@
 							</ul></li>
 			</ul>
 		</div>
-
-		<hr>
 
 
 		<div id="elements">
@@ -57,37 +88,7 @@
 <div id="splitter"></div>
 
 <div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="">
-		<input type="hidden" name="ie" value="UTF-8">
-		<input type="text" name="q" class="text">
-		<input type="submit" value="Search">
-	</form>
-
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-Punic.html" title="Summary of Punic"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
-			<li>
-				<a href="todo.html" title="Todo list"><span>Todo</span></a>
-			</li>
-		</ul>
-		<ul>
-		</ul>
-	</div>
-
+	<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class Unit</h1>
 
@@ -106,7 +107,7 @@
 
 
 
-	<div class="info">
+	<div class="alert alert-info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
@@ -117,65 +118,59 @@
 
 
 
-	<table class="summary" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="format" id="_format">
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="format" id="_format">
 
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
 
-		<td class="name"><div>
-		<a class="anchor" href="#_format">#</a>
-		<code><a href="source-class-Punic.Unit.html#10-77" title="Go to source code">format</a>( <span>integer|float|string <var>$number</var></span>, <span>string <var>$unit</var></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<td class="name"><div>
+			<a class="anchor" href="#_format">#</a>
+			<code><a href="source-class-Punic.Unit.html#10-77" title="Go to source code">format</a>( <span>integer|float|string <var>$number</var></span>, <span>string <var>$unit</var></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
-		<div class="description short">
-			
+			<div class="description short">
+				
 <p>Format a unit string</p>
 
-		</div>
+			</div>
 
-		<div class="description detailed hidden">
-			
+			<div class="description detailed hidden">
+				
 <p>Format a unit string</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$number</var></dt>
-					<dd><code>integer|float|string</code><br>$number The unit amount</dd>
-					<dt><var>$unit</var></dt>
-					<dd><code>string</code><br>$unit The unit identifier (eg 'duration/millisecond' or 'millisecond')</dd>
-					<dt><var>$width</var></dt>
-					<dd><code>string</code><br>$width = 'short' The format name; it can be 'long' (eg '3 milliseconds'),
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$number</var></dt>
+						<dd><code>integer|float|string</code><br>$number The unit amount</dd>
+						<dt><var>$unit</var></dt>
+						<dd><code>string</code><br>$unit The unit identifier (eg 'duration/millisecond' or 'millisecond')</dd>
+						<dt><var>$width</var></dt>
+						<dd><code>string</code><br>$width = 'short' The format name; it can be 'long' (eg '3 milliseconds'),
 'short' (eg '3 ms') or 'narrow' (eg '3ms')</dd>
-					<dt><var>$locale</var></dt>
-					<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
 \Punic\Data</dd>
-				</dl></div>
+					</dl></div>
 
 
 
 
 
-		</div>
-		</div></td>
-	</tr>
-	</table>
+			</div>
+			</div></td>
+		</tr>
+		</table>
 
 
 
-
-
-
-
-
-
-
+		<h3>Magic methods summary</h3>
 
 
 
@@ -185,11 +180,11 @@
 
 
 </div>
+	</div>
 
 	<div id="footer">
 		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
-</div>
 </div>
 </body>
 </html>
