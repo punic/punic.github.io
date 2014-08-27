@@ -115,7 +115,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-29" title="Go to source code">Territory.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-214" title="Go to source code">Territory.php</a><br>
 	</div>
 
 
@@ -162,6 +162,299 @@
 					</div>
 
 
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContinents" id="_getContinents">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContinents">#</a>
+			<code><a href="source-class-Punic.Territory.html#30-38" title="Go to source code">getContinents</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the list of continents in the form of an array with key=ID,
+value=name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the list of continents in the form of an array with key=ID,
+value=name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCountries" id="_getCountries">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCountries">#</a>
+			<code><a href="source-class-Punic.Territory.html#40-48" title="Go to source code">getCountries</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the list of countries in the form of an array with key=ID,
+value=name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the list of countries in the form of an array with key=ID,
+value=name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getContinentsAndCountries" id="_getContinentsAndCountries">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getContinentsAndCountries">#</a>
+			<code><a href="source-class-Punic.Territory.html#50-80" title="Go to source code">getContinentsAndCountries</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Return a list of continents and relative countries. The resulting array is in
+the following form (JSON representation):</p>
+
+<pre>
+{
+    <span class="php-quote">&quot;002&quot;</span>: {
+        <span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Africa&quot;</span>,
+        <span
+class="php-quote">&quot;children&quot;</span>: {
+            <span
+class="php-quote">&quot;DZ&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Algeria&quot;</span>},
+            <span
+class="php-quote">&quot;AO&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Angola&quot;</span>},
+            ...
+        }
+    },
+    <span
+class="php-quote">&quot;150&quot;</span>: {
+        <span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Europe&quot;</span>,
+        <span
+class="php-quote">&quot;children&quot;</span>: {
+            <span
+class="php-quote">&quot;AL&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Albania&quot;</span>},
+            <span
+class="php-quote">&quot;AD&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Andorra&quot;</span>},
+            ...
+        }
+    }
+    ...
+}
+</pre>
+
+<p>The arrays are sorted by territory name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return a list of continents and relative countries. The resulting array is in
+the following form (JSON representation):</p>
+
+<pre>
+{
+    <span class="php-quote">&quot;002&quot;</span>: {
+        <span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Africa&quot;</span>,
+        <span
+class="php-quote">&quot;children&quot;</span>: {
+            <span
+class="php-quote">&quot;DZ&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Algeria&quot;</span>},
+            <span
+class="php-quote">&quot;AO&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Angola&quot;</span>},
+            ...
+        }
+    },
+    <span
+class="php-quote">&quot;150&quot;</span>: {
+        <span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Europe&quot;</span>,
+        <span
+class="php-quote">&quot;children&quot;</span>: {
+            <span
+class="php-quote">&quot;AL&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Albania&quot;</span>},
+            <span
+class="php-quote">&quot;AD&quot;</span>: {<span
+class="php-quote">&quot;name&quot;</span>: <span
+class="php-quote">&quot;Andorra&quot;</span>},
+            ...
+        }
+    }
+    ...
+}
+</pre>
+
+<p>The arrays are sorted by territory name</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getList" id="_getList">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getList">#</a>
+			<code><a href="source-class-Punic.Territory.html#82-129" title="Go to source code">getList</a>( <span>string <var>$levels</var> = <span class="php-quote">'W'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				Return a list of some specified territory, structured or not. $levels control
+which data you want to retrieve. It can be one or more of the following values:
+<ul>
+	<li>'W': world</li>
+
+	<li>'C': continents</li>
+
+	<li>'S': sub-continents</li>
+
+	<li>'c': countries</li>
+</ul>
+ If only one level is specified you'll get a flat list (like the one returned by
+<code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>). If one or more levels are specified, you'll get a
+structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).
+			</div>
+
+			<div class="description detailed hidden">
+				Return a list of some specified territory, structured or not. $levels control
+which data you want to retrieve. It can be one or more of the following values:
+<ul>
+	<li>'W': world</li>
+
+	<li>'C': continents</li>
+
+	<li>'S': sub-continents</li>
+
+	<li>'c': countries</li>
+</ul>
+ If only one level is specified you'll get a flat list (like the one returned by
+<code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>). If one or more levels are specified, you'll get a
+structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$levels</var></dt>
+						<dd><code>string</code><br>$levels A string with one or more of the characters: 'W' (for world), 'C' (for
+continents), 'S' (for sub-continents), 'c' (for countries)</dd>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://www.unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html">http://www.unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html</a><br>
+					</div>
 
 
 			</div>
