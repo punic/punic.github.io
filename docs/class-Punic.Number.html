@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Punic\Misc | Punic APIs</title>
+	<title>Class Punic\Number | Punic APIs</title>
 
 	<script type="text/javascript" src="resources/combined.js?675583309"></script>
 	<script type="text/javascript" src="elementlist.js?1451730403"></script>
@@ -69,8 +69,8 @@
 				<li><a href="class-Punic.Calendar.html">Calendar</a></li>
 				<li><a href="class-Punic.Data.html">Data</a></li>
 				<li><a href="class-Punic.Language.html">Language</a></li>
-				<li class="active"><a href="class-Punic.Misc.html">Misc</a></li>
-				<li><a href="class-Punic.Number.html">Number</a></li>
+				<li><a href="class-Punic.Misc.html">Misc</a></li>
+				<li class="active"><a href="class-Punic.Number.html">Number</a></li>
 				<li><a href="class-Punic.Plural.html">Plural</a></li>
 				<li><a href="class-Punic.Territory.html">Territory</a></li>
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
@@ -93,12 +93,12 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Misc</h1>
+	<h1>Class Number</h1>
 
 
 	<div class="description">
 	
-<p>Various helper stuff</p>
+<p>Numbers helpers</p>
 
 	</div>
 
@@ -116,46 +116,42 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-90" title="Go to source code">Misc.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Number.html#4-40" title="Go to source code">Number.php</a><br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
 		<table class="summary table table-bordered table-striped" id="methods">
-		<tr data-order="join" id="_join">
+		<tr data-order="isNumeric" id="_isNumeric">
 
 			<td class="attributes"><code>
 				 public static
-				string
+				boolean
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_join">#</a>
-			<code><a href="source-class-Punic.Misc.html#9-18" title="Go to source code">join</a>( <span>array <var>$list</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<a class="anchor" href="#_isNumeric">#</a>
+			<code><a href="source-class-Punic.Number.html#9-39" title="Go to source code">isNumeric</a>( <span>string <var>$value</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				
-<p>Concatenates a list of items returning a localized string (for instance:
-array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for
-Italian)</p>
+<p>Check if a variable contains a valid number for the specified locale</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Concatenates a list of items returning a localized string (for instance:
-array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for
-Italian)</p>
+<p>Check if a variable contains a valid number for the specified locale</p>
 
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$list</var></dt>
-						<dd><code>array</code><br>$list The list to concatenate</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>string</code><br>$value The string value to check</dd>
 						<dt><var>$locale</var></dt>
 						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
 \Punic\Data</dd>
@@ -163,58 +159,7 @@ Italian)</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $list is not an array of it it's empty, the joined
-items otherwise.<br>
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="joinUnits" id="_joinUnits">
-
-			<td class="attributes"><code>
-				 public static
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_joinUnits">#</a>
-			<code><a href="source-class-Punic.Misc.html#20-45" title="Go to source code">joinUnits</a>( <span>array <var>$list</var></span>, <span>string <var>$width</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
-
-			<div class="description short">
-				
-<p>Concatenates a list of unit items returning a localized string (for instance:
-array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
-
-			</div>
-
-			<div class="description detailed hidden">
-				
-<p>Concatenates a list of unit items returning a localized string (for instance:
-array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
-
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$list</var></dt>
-						<dd><code>array</code><br>$list The list to concatenate</dd>
-						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = '' The preferred width ('' for default, or 'short' or 'narrow')</dd>
-						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code>string</code><br>Returns an empty string if $list is not an array of it it's empty, the joined
-items otherwise.<br>
+						<code>boolean</code><br>
 					</div>
 
 
