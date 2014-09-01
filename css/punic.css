@@ -3,10 +3,19 @@ div.punic-section {
 	padding-bottom: 20px;
 }
 
-div.punic-section div.class-header h1 a:before {
+div.punic-section h1 {
+	font-size: 40px;
+}
+div.punic-section h2 {
+	font-size: 30px;
+}
+div.punic-section h3 {
+	font-size: 20px;
+}
+div.punic-section h1 a:before {
 	content: "View full documentation";
 }
-div.punic-section div.class-header h1 a {
+div.punic-section h1 a {
 	font-size: 14px;
 	float: right;
 }
