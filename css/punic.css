@@ -12,10 +12,10 @@ div.punic-section h2 {
 div.punic-section h3 {
 	font-size: 20px;
 }
-div.punic-section h1 a:before {
+div.punic-section h2 a:before {
 	content: "View full documentation";
 }
-div.punic-section h1 a {
+div.punic-section h2 a {
 	font-size: 14px;
 	float: right;
 }
