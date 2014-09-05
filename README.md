@@ -1,4 +1,4 @@
 Punic - PHP Unicode CLDR Toolkit Documentation
 ==============================================
 
-[Punic Documentation](https://punic.github.io/)
+[Punic Documentation](http://punic.github.io/)
