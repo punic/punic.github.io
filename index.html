@@ -29,6 +29,7 @@
 		</div>
 		<div class="navbar-collapse collapse" id="navbar-main">
 			<ul class="nav navbar-nav">
+				<li><a href="#Getting-started">Getting started</a></li>
 				<li><a href="#Calendar-class">Calendar</a></li>
 				<li><a href="#Language-class">Language</a></li>
 				<li><a href="#Territory-class">Territory</a></li>
@@ -56,33 +57,36 @@
 <div class="clearfix punic-section" id="Getting-started">
 	<h2>Getting started</h2>
 	<div class="row">
-		<div class="col-lg-5">
-			<h3>Installation using composer</h3>
-			<p>
-			Punic is a PHP library using the CLDR data to help you localize various variables like numbers and dates.
-			</p>
-			<p>
-			As it's written using PSR-4, it's highly recommended to use composer to use it. Begin by editing your project's <code>composer.json</code> to require <code>punic/punic</code>.
-			</p>
-			<pre>"require": {
-"punic/punic": "1.*"
-}</pre>
-			<p>
-			Next, go to your favourite terminal and run <code>composer update</code>.
-			</p>
-			<p>
-			That's all it takes, you're ready to go! Have a look at the example on the right to see how a basic call to punic can look like.
-			</p>
-			<!--
+		<div class="col-lg-12">
 			<h3>Manual installation</h3>
-			<p>
-			In case you can't use composer, there's of course a way to manually add punic to your project. Simply download the latest version by clicking on this link:
-			<a href=""></a>. Extract the ZIP somewhere accessible by your project and make sure you include the <code>autoload.php</code> found in the ZIP.
-			</p>
-			-->		
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-5">
+			<p>In case you can't use composer, there's of course a way to manually add punic to your project. Simply download the latest version from the <a href="https://github.com/punic/punic/releases">Punic releases page</a>.<br />
+			Extract the zip archive somewhere accessible by your project and make sure you include the <code>punic.php</code> found in the zip.</p>
 		</div>
 		<div class="col-lg-7">
-			<script src="http://githubist.ortic.com/punic/punic/examples/example.php"></script>
+			<script src="http://githubist.ortic.com/punic/examples/setup/manual.php"></script>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h3>Installation using composer</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-5">
+			<p>Punic is a PHP library using the CLDR data to help you localize various variables like numbers and dates.</p>
+			<p>As it's written using PSR-4, it's highly recommended to use composer to use it. Begin by editing your project's <code>composer.json</code> to require <code>punic/punic</code>.</p>
+			<pre>"require": {
+    "punic/punic": "1.*"
+}</pre>
+			<p>Next, go to your favourite terminal and run <code>composer update</code>.</p>
+			<p>That's all it takes, you're ready to go! Have a look at the example on the right to see how a basic call to punic can look like.</p>
+		</div>
+		<div class="col-lg-7">
+			<script src="http://githubist.ortic.com/punic/examples/setup/composer.php"></script>
 		</div>
 	</div>
 </div>
@@ -91,7 +95,6 @@
 
 <div class="clearfix punic-section" id="Calendar-class">
 	<h2>Calendar <a href="docs/class-Punic.Calendar.html"></a></h2>
-	
 	<div class="row">
 		<div class="col-lg-5">
 			The calendar class contains a number of methods to localize date object related outputs. <code>formatDate</code> to format a date, <code>getEraName</code> to return the name of an era, <code>getMonthName</code> to do the same for months.
@@ -101,7 +104,6 @@
 			<script src="http://githubist.ortic.com/punic/punic/examples/example_calendar.php"></script>
 		</div>
 	</div>
-	
 </div>
 
 <hr>
@@ -142,7 +144,7 @@
 <div class="clearfix punic-section" id="Unit-class">
 	<h2>Unit <a href="docs/class-Punic.Unit.html"></a></h2>
 	<div class="row">
-		<div class="col-lg-12">			
+		<div class="col-lg-12">
 			TBD
 		</div>
 	</div>
