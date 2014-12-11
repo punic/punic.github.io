@@ -116,7 +116,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-142" title="Go to source code">Misc.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-227" title="Go to source code">Misc.php</a><br>
 	</div>
 
 
@@ -258,8 +258,9 @@ items otherwise.<br>
 	<li><code>&lt;span class="php-quote"&gt;'titlecase-words'&lt;/span&gt;</code>
 	all words in the phrase should be title case</li>
 
-	<li><code>&lt;span class="php-quote"&gt;'titlecase-firstword'&lt;/span&gt;</code>
-	the first word should be title case</li>
+	<li><code>&lt;span
+	class="php-quote"&gt;'titlecase-firstword'&lt;/span&gt;</code> the first word
+	should be title case</li>
 
 	<li><code>&lt;span class="php-quote"&gt;'lowercase-words'&lt;/span&gt;</code>
 	all words in the phrase should be lower case</li>
@@ -277,6 +278,89 @@ items otherwise.<br>
 					<div class="list">
 							<a href="http://cldr.unicode.org/development/development-process/design-proposals/consistent-casing">http://cldr.unicode.org/development/development-process/design-proposals/consistent-casing</a><br>
 					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getBrowserLocales" id="_getBrowserLocales">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getBrowserLocales">#</a>
+			<code><a href="source-class-Punic.Misc.html#143-161" title="Go to source code">getBrowserLocales</a>( )</code>
+
+			<div class="description short">
+				
+<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found
+locales</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found
+locales</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseHttpAcceptLanguage" id="_parseHttpAcceptLanguage">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseHttpAcceptLanguage">#</a>
+			<code><a href="source-class-Punic.Misc.html#163-226" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
+locales</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
+locales</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$httpAcceptLanguages</var></dt>
+						<dd><code>string</code><br>$httpAcceptLanguages</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>
+					</div>
+
+
 
 
 			</div>
