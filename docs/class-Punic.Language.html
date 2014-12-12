@@ -116,13 +116,65 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Language.html#4-51" title="Go to source code">Language.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Language.html#4-86" title="Go to source code">Language.php</a><br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
 		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="getAll" id="_getAll">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAll">#</a>
+			<code><a href="source-class-Punic.Language.html#9-43" title="Go to source code">getAll</a>( <span>boolean <var>$excludeCountrySpecific</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$excludeScriptSpecific</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Return all the languages</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return all the languages</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$excludeCountrySpecific</var></dt>
+						<dd><code>boolean</code><br>$excludeCountrySpecific = false Set to false (default) to include also
+Country-specific languages (eg 'U.S. English' in addition to 'English'), set to
+true to exclude them</dd>
+						<dt><var>$excludeScriptSpecific</var></dt>
+						<dd><code>boolean</code><br>$excludeScriptSpecific = false Set to false (default) to include also
+script-specific languages (eg 'Simplified Chinese' in addition to 'Chinese'),
+set to true to exclude them</dd>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Return an array, sorted by values, whose keys are the language IDs and the
+values are the localized language names<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="getName" id="_getName">
 
 			<td class="attributes"><code>
@@ -134,7 +186,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Punic.Language.html#10-50" title="Go to source code">getName</a>( <span>string <var>$languageCode</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Language.html#45-85" title="Go to source code">getName</a>( <span>string <var>$languageCode</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				
