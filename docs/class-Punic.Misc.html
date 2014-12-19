@@ -116,7 +116,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-227" title="Go to source code">Misc.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-252" title="Go to source code">Misc.php</a><br>
 	</div>
 
 
@@ -294,7 +294,7 @@ items otherwise.<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBrowserLocales">#</a>
-			<code><a href="source-class-Punic.Misc.html#143-161" title="Go to source code">getBrowserLocales</a>( )</code>
+			<code><a href="source-class-Punic.Misc.html#143-162" title="Go to source code">getBrowserLocales</a>( <span>boolean <var>$ignoreCache</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				
@@ -310,6 +310,11 @@ locales</p>
 
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ignoreCache</var></dt>
+						<dd><code>boolean</code><br>$ignoreCache set to true if you want to ignore the cache</dd>
+					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
@@ -333,7 +338,7 @@ locales</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseHttpAcceptLanguage">#</a>
-			<code><a href="source-class-Punic.Misc.html#163-226" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
+			<code><a href="source-class-Punic.Misc.html#164-227" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
 
 			<div class="description short">
 				
@@ -358,6 +363,92 @@ locales</p>
 					<h4>Returns</h4>
 					<div class="list">
 						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCharacterOrder" id="_getCharacterOrder">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCharacterOrder">#</a>
+			<code><a href="source-class-Punic.Misc.html#229-239" title="Go to source code">getCharacterOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the character order (right-to-left or left-to-right)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the character order (right-to-left or left-to-right)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Return 'left-to-right' or 'right-to-left'<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getLineOrder" id="_getLineOrder">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getLineOrder">#</a>
+			<code><a href="source-class-Punic.Misc.html#241-251" title="Go to source code">getLineOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$locale</var></dt>
+						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
+\Punic\Data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Return 'top-to-bottom' or 'bottom-to-top'<br>
 					</div>
 
 
