@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="generator" content="ApiGen 2.8.0">
 
-	<title>Class Punic\Language | Punic APIs</title>
+	<title>Class Punic\Phone | Punic APIs</title>
 
 	<script type="text/javascript" src="resources/combined.js?4169603613"></script>
 	<script type="text/javascript" src="elementlist.js?1663966723"></script>
@@ -68,10 +68,10 @@
 			<ul>
 				<li><a href="class-Punic.Calendar.html">Calendar</a></li>
 				<li><a href="class-Punic.Data.html">Data</a></li>
-				<li class="active"><a href="class-Punic.Language.html">Language</a></li>
+				<li><a href="class-Punic.Language.html">Language</a></li>
 				<li><a href="class-Punic.Misc.html">Misc</a></li>
 				<li><a href="class-Punic.Number.html">Number</a></li>
-				<li><a href="class-Punic.Phone.html">Phone</a></li>
+				<li class="active"><a href="class-Punic.Phone.html">Phone</a></li>
 				<li><a href="class-Punic.Plural.html">Plural</a></li>
 				<li><a href="class-Punic.Territory.html">Territory</a></li>
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
@@ -94,12 +94,12 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Language</h1>
+	<h1>Class Phone</h1>
 
 
 	<div class="description">
 	
-<p>Language-related stuff</p>
+<p>Numbers helpers</p>
 
 	</div>
 
@@ -117,14 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Language.html#4-86" title="Go to source code">Language.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Phone.html#4-71" title="Go to source code">Phone.php</a><br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
 		<table class="summary table table-bordered table-striped" id="methods">
-		<tr data-order="getAll" id="_getAll">
+		<tr data-order="getPrefixesForTerritory" id="_getPrefixesForTerritory">
 
 			<td class="attributes"><code>
 				 public static
@@ -134,40 +134,32 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Punic.Language.html#9-43" title="Go to source code">getAll</a>( <span>boolean <var>$excludeCountrySpecific</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$excludeScriptSpecific</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<a class="anchor" href="#_getPrefixesForTerritory">#</a>
+			<code><a href="source-class-Punic.Phone.html#9-26" title="Go to source code">getPrefixesForTerritory</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
 				
-<p>Return all the languages</p>
+<p>Retrieve the list of the country calling codes for a specific country</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Return all the languages</p>
+<p>Retrieve the list of the country calling codes for a specific country</p>
 
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$excludeCountrySpecific</var></dt>
-						<dd><code>boolean</code><br>$excludeCountrySpecific = false Set to false (default) to include also
-Country-specific languages (eg 'U.S. English' in addition to 'English'), set to
-true to exclude them</dd>
-						<dt><var>$excludeScriptSpecific</var></dt>
-						<dd><code>boolean</code><br>$excludeScriptSpecific = false Set to false (default) to include also
-script-specific languages (eg 'Simplified Chinese' in addition to 'Chinese'),
-set to true to exclude them</dd>
-						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dt><var>$territoryCode</var></dt>
+						<dd><code>string</code><br>$territoryCode The country identifier ('001' for global systems, for instance
+satellite communications like Iridium)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Return an array, sorted by values, whose keys are the language IDs and the
-values are the localized language names<br>
+						<code>array</code><br>Returns the list of country calling codes found for the specified country (eg:
+for 'US' you'll get array('1'))<br>
 					</div>
 
 
@@ -176,45 +168,78 @@ values are the localized language names<br>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getName" id="_getName">
+		<tr data-order="getTerritoriesForPrefix" id="_getTerritoriesForPrefix">
 
 			<td class="attributes"><code>
 				 public static
-				string
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Punic.Language.html#45-85" title="Go to source code">getName</a>( <span>string <var>$languageCode</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<a class="anchor" href="#_getTerritoriesForPrefix">#</a>
+			<code><a href="source-class-Punic.Phone.html#28-46" title="Go to source code">getTerritoriesForPrefix</a>( <span>string <var>$prefix</var></span> )</code>
 
 			<div class="description short">
 				
-<p>Retrieve the name of a language</p>
+<p>Retrieve the list of territory codes for a specific prefix</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Retrieve the name of a language</p>
+<p>Retrieve the list of territory codes for a specific prefix</p>
 
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$languageCode</var></dt>
-						<dd><code>string</code><br>$languageCode The language code. If it contails also a terrotory code (eg:
-'en-US'), the result will contain also the territory code (eg 'English (United
-States)')</dd>
-						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dt><var>$prefix</var></dt>
+						<dd><code>string</code><br>$prefix The country calling code (for instance: '1')</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the localized language name (returns $languageCode if not found)<br>
+						<code>array</code><br>Returns the list of territories for which the specified prefix is applicable
+(eg: for '1' you'll get array('US', 'AG', 'AI', 'CA', ...))<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getMaxPrefixLength" id="_getMaxPrefixLength">
+
+			<td class="attributes"><code>
+				 public static
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getMaxPrefixLength">#</a>
+			<code><a href="source-class-Punic.Phone.html#48-70" title="Go to source code">getMaxPrefixLength</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the max length of the country calling codes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the max length of the country calling codes</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>
 					</div>
 
 
