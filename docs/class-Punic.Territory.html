@@ -117,7 +117,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-362" title="Go to source code">Territory.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-383" title="Go to source code">Territory.php</a><br>
 	</div>
 
 
@@ -741,6 +741,49 @@ the total number of people speaking that language.</p>
 					<h4>Returns</h4>
 					<div class="list">
 						<code>array</code><br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getParentTerritoryCode" id="_getParentTerritoryCode">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getParentTerritoryCode">#</a>
+			<code><a href="source-class-Punic.Territory.html#267-286" title="Go to source code">getParentTerritoryCode</a>( <span>string <var>$childTerritoryCode</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Return the code of the territory that contains a territory</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the code of the territory that contains a territory</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$childTerritoryCode</var></dt>
+						<dd><code>string</code><br>$childTerritoryCode</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Return the parent territory code, or an empty string if $childTerritoryCode is
+the World (001) or if it's invalid.<br>
 					</div>
 
 
