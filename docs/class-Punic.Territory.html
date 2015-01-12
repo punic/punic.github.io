@@ -6,7 +6,7 @@
 
 	<title>Class Punic\Territory | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?4169603613"></script>
+	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
 	<script type="text/javascript" src="elementlist.js?1663966723"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
@@ -117,7 +117,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-383" title="Go to source code">Territory.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-417" title="Go to source code">Territory.php</a><br>
 	</div>
 
 
@@ -760,7 +760,7 @@ the total number of people speaking that language.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParentTerritoryCode">#</a>
-			<code><a href="source-class-Punic.Territory.html#267-286" title="Go to source code">getParentTerritoryCode</a>( <span>string <var>$childTerritoryCode</var></span> )</code>
+			<code><a href="source-class-Punic.Territory.html#267-288" title="Go to source code">getParentTerritoryCode</a>( <span>string <var>$childTerritoryCode</var></span> )</code>
 
 			<div class="description short">
 				
@@ -784,6 +784,52 @@ the total number of people speaking that language.</p>
 					<div class="list">
 						<code>string</code><br>Return the parent territory code, or an empty string if $childTerritoryCode is
 the World (001) or if it's invalid.<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getChildTerritoryCodes" id="_getChildTerritoryCodes">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getChildTerritoryCodes">#</a>
+			<code><a href="source-class-Punic.Territory.html#290-320" title="Go to source code">getChildTerritoryCodes</a>( <span>string <var>$parentTerritoryCode</var></span>, <span>boolean <var>$expandSubGroups</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the child territories of a parent territory</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the child territories of a parent territory</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$parentTerritoryCode</var></dt>
+						<dd><code>string</code><br>$parentTerritoryCode</dd>
+						<dt><var>$expandSubGroups</var></dt>
+						<dd><code>boolean</code><br>$expandSubGroups = false Set to true to expand the sub-groups, false to retrieve
+them.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Return the list of territory codes that are children of $parentTerritoryCode (if
+$parentTerritoryCode is invalid you'll get an empty list)<br>
 					</div>
 
 
