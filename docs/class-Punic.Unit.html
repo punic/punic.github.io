@@ -117,7 +117,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Unit.html#4-164" title="Go to source code">Unit.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Unit.html#4-228" title="Go to source code">Unit.php</a><br>
 	</div>
 
 
@@ -294,6 +294,92 @@ If $territoryCode is not valid we'll return an empty string.<br>
 					<div class="list">
 						<code>array</code><br>The list of country IDs that use the specified measurement system (if
 $measurementSystem is invalid you'll get an empty array)<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPaperSizeFor" id="_getPaperSizeFor">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPaperSizeFor">#</a>
+			<code><a href="source-class-Punic.Unit.html#165-186" title="Go to source code">getPaperSizeFor</a>( <span>string <var>$territoryCode</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the standard paper size for a specific territory</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the standard paper size for a specific territory</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$territoryCode</var></dt>
+						<dd><code>string</code><br>$territoryCode The territory code (eg. 'US' for 'United States of America').</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Return the standard paper size (eg: 'A4' or 'US-Letter') for the specified
+territory. If $territoryCode is not valid we'll return an empty string.<br>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCountriesWithPaperSize" id="_getCountriesWithPaperSize">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCountriesWithPaperSize">#</a>
+			<code><a href="source-class-Punic.Unit.html#188-227" title="Go to source code">getCountriesWithPaperSize</a>( <span>string <var>$paperSize</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Returns the list of countries that use a specific paper size by default</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the list of countries that use a specific paper size by default</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$paperSize</var></dt>
+						<dd><code>string</code><br>$paperSize The paper size identifier ('A4' or 'US-Letter')</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>The list of country IDs that use the specified paper size (if $paperSize is
+invalid you'll get an empty array)<br>
 					</div>
 
 
