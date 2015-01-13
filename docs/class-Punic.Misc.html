@@ -117,7 +117,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-252" title="Go to source code">Misc.php</a><br>
+		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-253" title="Go to source code">Misc.php</a><br>
 	</div>
 
 
@@ -298,15 +298,15 @@ items otherwise.<br>
 
 			<div class="description short">
 				
-<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found
-locales</p>
+<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales,
+sorted in descending order by the quality values</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found
-locales</p>
+<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales,
+sorted in descending order by the quality values</p>
 
 
 
@@ -318,7 +318,8 @@ locales</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						<code>array</code><br>Array keys are the found locales, array values are the relative quality value
+(from 0 to 1)<br>
 					</div>
 
 
@@ -338,19 +339,19 @@ locales</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseHttpAcceptLanguage">#</a>
-			<code><a href="source-class-Punic.Misc.html#164-227" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
+			<code><a href="source-class-Punic.Misc.html#164-228" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
 
 			<div class="description short">
 				
 <p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
-locales</p>
+locales, sorted in descending order by the quality values</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
 <p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
-locales</p>
+locales, sorted in descending order by the quality values</p>
 
 
 
@@ -362,7 +363,8 @@ locales</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						<code>array</code><br>Array keys are the found locales, array values are the relative quality value
+(from 0 to 1)<br>
 					</div>
 
 
@@ -382,7 +384,7 @@ locales</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCharacterOrder">#</a>
-			<code><a href="source-class-Punic.Misc.html#229-239" title="Go to source code">getCharacterOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Misc.html#230-240" title="Go to source code">getCharacterOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				
@@ -425,7 +427,7 @@ locales</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLineOrder">#</a>
-			<code><a href="source-class-Punic.Misc.html#241-251" title="Go to source code">getLineOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Misc.html#242-252" title="Go to source code">getLineOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				
