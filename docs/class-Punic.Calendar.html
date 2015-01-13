@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta charset="utf-8">
 
 	<title>Class Punic\Calendar | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
-	<script type="text/javascript" src="elementlist.js?1663966723"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
 
 </head>
 
@@ -52,13 +49,18 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Punic.html">Punic<span></span></a>
-						<ul>
-				<li><a href="namespace-Punic.Exception.html">Exception</a>
-						</li>
-							</ul></li>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
 			</ul>
 		</div>
 
@@ -77,12 +79,12 @@
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
 			</ul>
 
-
-
-			<h3>Exceptions</h3>
+			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Punic.Exception.html">Exception</a></li>
 			</ul>
+
+
 
 
 		</div>
@@ -98,9 +100,7 @@
 
 
 	<div class="description">
-	
-<p>Date and time related functions</p>
-
+	<p>Date and time related functions</p>
 	</div>
 
 
@@ -117,13 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Calendar.html#12-1721" title="Go to source code">Calendar.php</a><br>
+			<b>Located at</b> <a href="source-class-Punic.Calendar.html#12-1725" title="Go to source code">Calendar.php</a>
+		<br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
+		<table class="summary table table-bordered table-striped methods" id="methods">
 		<tr data-order="toDateTime" id="_toDateTime">
 
 			<td class="attributes"><code>
@@ -135,68 +136,54 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_toDateTime">#</a>
-			<code><a href="source-class-Punic.Calendar.html#17-108" title="Go to source code">toDateTime</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string|DateTimeZone <var>$fromTimezone</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#17-112" title="Go to source code">toDateTime</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string|DateTimeZone <var>$fromTimezone</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Convert a date/time representation to a <a href="http://php.net/manual/class.datetime.php">\DateTime</a> instance.</p>
-
+				<p>Convert a date/time representation to a <a href="http://php.net/manual/class.datetime.php">\DateTime</a> instance.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Convert a date/time representation to a <a href="http://php.net/manual/class.datetime.php">\DateTime</a> instance.</p>
-
+				<p>Convert a date/time representation to a <a href="http://php.net/manual/class.datetime.php">\DateTime</a> instance.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime|string</code><br>$value An Unix timestamp, a <code>\DateTime</code> instance or a string accepted
-by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
+						<dd>An Unix timestamp, a <code>\DateTime</code> instance \DateTime or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$toTimezone The timezone to set; leave empty to use the value of $fromTimezone
-(if it's empty we'll use the default timezone or the timezone associated to
-$value if it's already a <code>\DateTime</code>).</dd>
+						<dd>$toTimezone='' The timezone to set; leave empty to use the value of $fromTimezone (if it's empty we'll use the default timezone or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
 						<dt><var>$fromTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$fromTimezone The original timezone of $value; leave empty to use the default
-timezone (or the timezone associated to $value if it's already a
-<code>\DateTime</code>).</dd>
+						<dd>$fromTimezone='' The original timezone of $value; leave empty to use the default timezone (or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>DateTime|null</code><br>Returns null if $value is empty, a <code>\DateTime</code> instance otherwise.<br>
+						DateTime|null<br>Returns null if $value is empty, a <code>\DateTime</code> instance otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws an exception if $value is not empty and can't be converted to a
-<code>\DateTime</code> instance or if $toTimezone is not empty and is not valid.<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws an exception if $value is not empty and can't be converted to a <code>\DateTime</code> instance or if $toTimezone is not empty and is not valid.
 					</div>
 
 					<h4>Example</h4>
 					<div class="list">
-							Convert a Unix timestamp to a \DateTime instance with the current time zone:<br
-/>
-\Punic\Calendar::toDateTime(1409648286);<br />
-<br />
-Convert a Unix timestamp to a \DateTime instance with a specific time zone:<br
-/>
-\Punic\Calendar::toDateTime(1409648286, 'Europe/Rome');<br />
-\Punic\Calendar::toDateTime(1409648286, new \DateTimeZone('Europe/Rome'));<br />
-<br />
-Convert a string to a \DateTime instance with the current time zone:<br />
-\Punic\Calendar::toDateTime('2014-03-07 13:30');<br />
-<br />
-Convert a string to a \DateTime instance with a specific time zone:<br />
-\Punic\Calendar::toDateTime('2014-03-07 13:30', 'Europe/Rome');<br />
-Please remark that in this case '2014-03-07 13:30' is converted to a \DateTime
-instance with the current timezone, and &lt;u&gt;after&lt;/u&gt; we change the
-timezone.<br />
-So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the
-resulting date/time will be '2014-03-07 22:30 GMT+1' since it'll be converted to
-'Europe/Rome' (GMT +1)<br>
+							<p>Convert a Unix timestamp to a \DateTime instance with the current time zone:</p>
+
+<pre>\Punic\Calendar::toDateTime(<span class="php-num">1409648286</span>);</pre><br>
+							<p>Convert a Unix timestamp to a \DateTime instance with a specific time zone:</p>
+
+<pre>\Punic\Calendar::toDateTime(<span class="php-num">1409648286</span>, <span class="php-quote">'Europe/Rome'</span>);
+\Punic\Calendar::toDateTime(<span class="php-num">1409648286</span>, <span class="php-keyword1">new</span> \DateTimeZone(<span class="php-quote">'Europe/Rome'</span>));</pre><br>
+							<p>Convert a string to a \DateTime instance with the current time zone:</p>
+
+<pre>\Punic\Calendar::toDateTime(<span class="php-quote">'2014-03-07 13:30'</span>);</pre><br>
+							<p>Convert a string to a \DateTime instance with a specific time zone:</p>
+
+<pre>\Punic\Calendar::toDateTime(<span class="php-quote">'2014-03-07 13:30'</span>, <span class="php-quote">'Europe/Rome'</span>);</pre>
+
+<p>Please remark that in this case '2014-03-07 13:30' is converted to a \DateTime instance with the current timezone, and <u>after</u> we change the timezone.
+So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resulting date/time will be '2014-03-07 22:30 GMT+1' since it'll be converted to 'Europe/Rome' (GMT +1)</p><br>
 					</div>
 
 
@@ -214,30 +201,25 @@ resulting date/time will be '2014-03-07 22:30 GMT+1' since it'll be converted to
 
 			<td class="name"><div>
 			<a class="anchor" href="#_convertPhpToIsoFormat">#</a>
-			<code><a href="source-class-Punic.Calendar.html#110-172" title="Go to source code">convertPhpToIsoFormat</a>( <span>string <var>$format</var></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#114-176" title="Go to source code">convertPhpToIsoFormat</a>( <span>string <var>$format</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Converts a format string from <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP&#039;s date format</a> to <a href="http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">ISO format</a>.</p>
-
+				<p>Converts a format string from <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP&#039;s date format</a> to <a href="http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">ISO format</a>.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Converts a format string from <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP&#039;s date format</a> to <a href="http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">ISO format</a>.</p>
-
+				<p>Converts a format string from <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP&#039;s date format</a> to <a href="http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">ISO format</a>.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$format</var></dt>
-						<dd><code>string</code><br>$format The PHP date/time format string to convert.</dd>
+						<dd>The PHP date/time format string to convert.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the ISO date/time format corresponding to the specified PHP date/time
-format.<br>
+						string<br>Returns the ISO date/time format corresponding to the specified PHP date/time format.
 					</div>
 
 
@@ -257,44 +239,36 @@ format.<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getEraName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#174-212" title="Go to source code">getEraName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'abbreviated'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#178-216" title="Go to source code">getEraName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'abbreviated'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the name of an era.</p>
-
+				<p>Get the name of an era.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the name of an era.</p>
-
+				<p>Get the name of an era.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime</code><br>$value The year number or the \DateTime instance for which you want the name of
-the era.</dd>
+						<dd>The year number or the \DateTime instance for which you want the name of the era.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'abbreviated' The format name; it can be 'wide' (eg 'Before Christ'),
-'abbreviated' (eg 'BC') or 'narrow' (eg 'B').</dd>
+						<dd>$width='abbreviated' The format name; it can be 'wide' (eg 'Before Christ'), 'abbreviated' (eg 'BC') or 'narrow' (eg 'B').</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the name of the era otherwise.<br>
+						string<br>Returns an empty string if $value is empty, the name of the era otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
-						<code><code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of other problems (for instance if you
-specify an invalid locale).<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of other problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -313,47 +287,38 @@ specify an invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMonthName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#214-253" title="Go to source code">getMonthName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#218-257" title="Go to source code">getMonthName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the name of a month.</p>
-
+				<p>Get the name of a month.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the name of a month.</p>
-
+				<p>Get the name of a month.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime</code><br>$value The month number (1-12) or a \DateTime instance for which you want the
-name of the month.</dd>
+						<dd>The month number (1-12) or a \DateTime instance for which you want the name of the month.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'wide' The format name; it can be 'wide' (eg 'January'), 'abbreviated'
-(eg 'Jan') or 'narrow' (eg 'J').</dd>
+						<dd>$width='wide' The format name; it can be 'wide' (eg 'January'), 'abbreviated' (eg 'Jan') or 'narrow' (eg 'J').</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd><code>boolean</code><br>$standAlone = false Set to true to return the form used independently (such as
-in calendar header), set to false if the month name will be part of a date.</dd>
+						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the month name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the name of the month otherwise.<br>
+						string<br>Returns an empty string if $value is empty, the name of the month otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
-						<code><code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of other problems (for instance if you
-specify an invalid locale).<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of other problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -372,48 +337,38 @@ specify an invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWeekdayName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#255-296" title="Go to source code">getWeekdayName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#259-300" title="Go to source code">getWeekdayName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the name of a week day.</p>
-
+				<p>Get the name of a week day.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the name of a week day.</p>
-
+				<p>Get the name of a week day.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime</code><br>$value A week day number (from 0-Sunday to 6-Saturnday) or a \DateTime instance
-for which you want the name of the day of the week.</dd>
+						<dd>A week day number (from 0-Sunday to 6-Saturnday) or a \DateTime instance for which you want the name of the day of the week.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'wide' The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated'
-(eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').</dd>
+						<dd>$width='wide' The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated' (eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd><code>boolean</code><br>$standAlone = false Set to true to return the form used independently (such as
-in calendar header), set to false if the week day name will be part of a date.</dd>
+						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the week day name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the name of the week day name
-otherwise.<br>
+						string<br>Returns an empty string if $value is empty, the name of the week day name otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
-						<code><code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of other problems (for instance if you
-specify an invalid locale).<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of other problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -432,48 +387,38 @@ specify an invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getQuarterName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#298-337" title="Go to source code">getQuarterName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#302-341" title="Go to source code">getQuarterName</a>( <span>number|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the name of a quarter.</p>
-
+				<p>Get the name of a quarter.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the name of a quarter.</p>
-
+				<p>Get the name of a quarter.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime</code><br>$value A quarter number (from 1 to 4) or a \DateTime instance for which you want
-the name of the day of the quarter.</dd>
+						<dd>A quarter number (from 1 to 4) or a \DateTime instance for which you want the name of the day of the quarter.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'wide' The format name; it can be 'wide' (eg '1st quarter'),
-'abbreviated' (eg 'Q1') or 'narrow' (eg '1').</dd>
+						<dd>$width='wide' The format name; it can be 'wide' (eg '1st quarter'), 'abbreviated' (eg 'Q1') or 'narrow' (eg '1').</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd><code>boolean</code><br>$standAlone = false Set to true to return the form used independently (such as
-in calendar header), set to false if the quarter name will be part of a date.</dd>
+						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the quarter name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the name of the quarter name
-otherwise.<br>
+						string<br>Returns an empty string if $value is empty, the name of the quarter name otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
-						<code><code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of other problems (for instance if you
-specify an invalid locale).<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of other problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -492,48 +437,38 @@ specify an invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDayperiodName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#339-388" title="Go to source code">getDayperiodName</a>( <span>number|string|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#343-392" title="Go to source code">getDayperiodName</a>( <span>number|string|DateTime <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'wide'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$standAlone</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the name of a day period (AM/PM).</p>
-
+				<p>Get the name of a day period (AM/PM).</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the name of a day period (AM/PM).</p>
-
+				<p>Get the name of a day period (AM/PM).</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|string|DateTime</code><br>$value An hour (from 0 to 23), a standard period name ('am' or 'pm', lower or
-upper case) a \DateTime instance for which you want the name of the day period.</dd>
+						<dd>An hour (from 0 to 23), a standard period name ('am' or 'pm', lower or upper case) a \DateTime instance for which you want the name of the day period.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'wide' The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg
-'AM') or 'narrow' (eg 'a').</dd>
+						<dd>$width='wide' The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg 'AM') or 'narrow' (eg 'a').</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd><code>boolean</code><br>$standAlone = false Set to true to return the form used independently (such as
-in calendar header), set to false if the day period name will be part of a date.</dd>
+						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the day period name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the name of the day period name
-otherwise.<br>
+						string<br>Returns an empty string if $value is empty, the name of the day period name otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
-						<code><code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of other problems (for instance if you
-specify an invalid locale).<br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code><br>Throws a BadArgumentType exception if $value is not valid.<br>
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code><br>Throws a ValueNotInList exception if $width is not valid.<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of other problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -552,48 +487,36 @@ specify an invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTimezoneNameNoLocationSpecific">#</a>
-			<code><a href="source-class-Punic.Calendar.html#390-502" title="Go to source code">getTimezoneNameNoLocationSpecific</a>( <span>string|DateTime|DateTimeZone <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'long'</span></span>, <span>string <var>$kind</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#394-506" title="Go to source code">getTimezoneNameNoLocationSpecific</a>( <span>string|DateTime|DateTimeZone <var>$value</var></span>, <span>string <var>$width</var> = <span class="php-quote">'long'</span></span>, <span>string <var>$kind</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the localized name of a timezone, no location-specific.</p>
-
+				<p>Returns the localized name of a timezone, no location-specific.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the localized name of a timezone, no location-specific.</p>
-
+				<p>Returns the localized name of a timezone, no location-specific.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>string|DateTime|DateTimeZone</code><br>$value The php name of a timezone, or a \DateTime instance or a \DateTimeZone
-instance for which you want the localized timezone name.</dd>
+						<dd>The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance for which you want the localized timezone name.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'long' The format name; it can be 'long' (eg 'Greenwich Mean Time') or
-'short' (eg 'GMT').</dd>
+						<dd>$width='long' The format name; it can be 'long' (eg 'Greenwich Mean Time') or 'short' (eg 'GMT').</dd>
 						<dt><var>$kind</var></dt>
-						<dd><code>string</code><br>$kind = '' Set to 'daylight' to retrieve the daylight saving time name, set to
-'standard' to retrieve the standard time, set to 'generic' to retrieve the
-generic name, set to '' to determine automatically the dst (if $value is
-\DateTime) or the generic (otherwise).</dd>
+						<dd>$kind='' Set to 'daylight' to retrieve the daylight saving time name, set to 'standard' to retrieve the standard time, set to 'generic' to retrieve the generic name, set to '' to determine automatically the dst (if $value is \DateTime) or the generic (otherwise).</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set with
-<code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if the timezone has not been found (maybe we don't have
-the data in the specified $width), the timezone name otherwise.<br>
+						string<br>Returns an empty string if the timezone has not been found (maybe we don't have the data in the specified $width), the timezone name otherwise.
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws a generic exception in case of problems (for instance if you specify an
-invalid locale).<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws a generic exception in case of problems (for instance if you specify an invalid locale).
 					</div>
 
 
@@ -612,7 +535,7 @@ invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTimezoneNameLocationSpecific">#</a>
-			<code><a href="source-class-Punic.Calendar.html#504-508" title="Go to source code">getTimezoneNameLocationSpecific</a>( <span>mixed <var>$value</var></span>, <span>mixed <var>$width</var> = <span class="php-quote">'long'</span></span>, <span>mixed <var>$kind</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#508-512" title="Go to source code">getTimezoneNameLocationSpecific</a>( <span> <var>$value</var></span>, <span> <var>$width</var> = <span class="php-quote">'long'</span></span>, <span> <var>$kind</var> = <span class="php-quote">''</span></span>, <span> <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				
@@ -645,37 +568,29 @@ invalid locale).<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTimezoneExemplarCity">#</a>
-			<code><a href="source-class-Punic.Calendar.html#510-562" title="Go to source code">getTimezoneExemplarCity</a>( <span>string|DateTime|DateTimeZone <var>$value</var></span>, <span>boolean <var>$returnUnknownIfNotFound</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#514-566" title="Go to source code">getTimezoneExemplarCity</a>( <span>string|DateTime|DateTimeZone <var>$value</var></span>, <span>boolean <var>$returnUnknownIfNotFound</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the localized name of an exemplar city for a specific timezone</p>
-
+				<p>Returns the localized name of an exemplar city for a specific timezone</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the localized name of an exemplar city for a specific timezone</p>
-
+				<p>Returns the localized name of an exemplar city for a specific timezone</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>string|DateTime|DateTimeZone</code><br>$value The php name of a timezone, or a \DateTime instance or a \DateTimeZone
-instance</dd>
+						<dd>The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance</dd>
 						<dt><var>$returnUnknownIfNotFound</var></dt>
-						<dd><code>boolean</code><br>$returnUnknownIfNotFound true If the exemplar city is not found, shall we return
-the translation of 'Unknown City'?</dd>
+						<dd>$returnUnknownIfNotFound=true true If the exemplar city is not found, shall we return the translation of 'Unknown City'?</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if the exemplar city hasn't been found and
-$returnUnknownIfNotFound is false<br>
+						string<br>Returns an empty string if the exemplar city hasn't been found and $returnUnknownIfNotFound is false
 					</div>
 
 
@@ -695,35 +610,30 @@ $returnUnknownIfNotFound is false<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has12HoursClock">#</a>
-			<code><a href="source-class-Punic.Calendar.html#564-581" title="Go to source code">has12HoursClock</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#568-585" title="Go to source code">has12HoursClock</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns true if a locale has a 12-hour clock, false if 24-hour clock</p>
-
+				<p>Returns true if a locale has a 12-hour clock, false if 24-hour clock</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns true if a locale has a 12-hour clock, false if 24-hour clock</p>
-
+				<p>Returns true if a locale has a 12-hour clock, false if 24-hour clock</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>boolean</code><br>
+						boolean
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 
@@ -742,32 +652,25 @@ $returnUnknownIfNotFound is false<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFirstWeekday">#</a>
-			<code><a href="source-class-Punic.Calendar.html#583-603" title="Go to source code">getFirstWeekday</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#587-607" title="Go to source code">getFirstWeekday</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the first weekday for a specific locale (from 0-Sunday to
-6-Saturnday)</p>
-
+				<p>Retrieve the first weekday for a specific locale (from 0-Sunday to 6-Saturnday)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the first weekday for a specific locale (from 0-Sunday to
-6-Saturnday)</p>
-
+				<p>Retrieve the first weekday for a specific locale (from 0-Sunday to 6-Saturnday)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>integer</code><br>Returns a number from 0 (Sunday) to 7 (Saturnday)<br>
+						integer<br>Returns a number from 0 (Sunday) to 7 (Saturnday)
 					</div>
 
 
@@ -787,35 +690,28 @@ $returnUnknownIfNotFound is false<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSortedWeekdays">#</a>
-			<code><a href="source-class-Punic.Calendar.html#605-633" title="Go to source code">getSortedWeekdays</a>( <span>string|false <var>$namesWidth</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#609-637" title="Go to source code">getSortedWeekdays</a>( <span>string|false <var>$namesWidth</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the sorted list of weekdays, starting from <code><a href="class-Punic.Calendar.html#_getFirstWeekday">Punic\Calendar::getFirstWeekday()</a></code></p>
-
+				<p>Returns the sorted list of weekdays, starting from <code><a href="class-Punic.Calendar.html#_getFirstWeekday">Punic\Calendar::getFirstWeekday()</a></code></p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the sorted list of weekdays, starting from <code><a href="class-Punic.Calendar.html#_getFirstWeekday">Punic\Calendar::getFirstWeekday()</a></code></p>
-
+				<p>Returns the sorted list of weekdays, starting from <code><a href="class-Punic.Calendar.html#_getFirstWeekday">Punic\Calendar::getFirstWeekday()</a></code></p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$namesWidth</var></dt>
-						<dd><code>string|false</code><br>$namesWidth If false you'll get only the list of weekday identifiers (for
-instance: [0, 1, 2, 3, 4, 5, 6]), If it's a string it must be one accepted by
-<code><a href="class-Punic.Calendar.html#_getWeekdayName">Punic\Calendar::getWeekdayName()</a></code>, and you'll get an array like this: [{id: 0, name:
-'Monday', ..., {id: 6, name: 'Sunday'}]</dd>
+						<dd><p>$namesWidth=false If false you'll get only the list of weekday identifiers (for instance: [0, 1, 2, 3, 4, 5, 6]),
+If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.html#_getWeekdayName">Punic\Calendar::getWeekdayName()</a></code>, and you'll get an array like this: [{id: 0, name: 'Monday', ..., {id: 6, name: 'Sunday'}]</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -835,39 +731,32 @@ instance: [0, 1, 2, 3, 4, 5, 6]), If it's a string it must be one accepted by
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDateFormat">#</a>
-			<code><a href="source-class-Punic.Calendar.html#635-654" title="Go to source code">getDateFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#639-658" title="Go to source code">getDateFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the ISO format for a date</p>
-
+				<p>Get the ISO format for a date</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the ISO format for a date</p>
-
+				<p>Get the ISO format for a date</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday,
-August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg
-'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')</dd>
+						<dd>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the requested ISO format<br>
+						string<br>Returns the requested ISO format
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -892,39 +781,32 @@ August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTimeFormat">#</a>
-			<code><a href="source-class-Punic.Calendar.html#656-675" title="Go to source code">getTimeFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#660-679" title="Go to source code">getTimeFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the ISO format for a time</p>
-
+				<p>Get the ISO format for a time</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the ISO format for a time</p>
-
+				<p>Get the ISO format for a time</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM
-GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg
-'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
+						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the requested ISO format<br>
+						string<br>Returns the requested ISO format
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -949,39 +831,32 @@ GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDatetimeFormat">#</a>
-			<code><a href="source-class-Punic.Calendar.html#677-690" title="Go to source code">getDatetimeFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#681-694" title="Go to source code">getDatetimeFormat</a>( <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Get the ISO format for a date/time</p>
-
+				<p>Get the ISO format for a date/time</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Get the ISO format for a date/time</p>
-
+				<p>Get the ISO format for a date/time</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full', 'long', 'medium', 'short' or a
-combination for date+time like 'full|short' or a combination for
-format+date+time like 'full|full|short'</dd>
+						<dd>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the requested ISO format<br>
+						string<br>Returns the requested ISO format
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1006,39 +881,32 @@ format+date+time like 'full|full|short'</dd>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDeltaDays">#</a>
-			<code><a href="source-class-Punic.Calendar.html#743-770" title="Go to source code">getDeltaDays</a>( <span>DateTime <var>$dateEnd</var></span>, <span>DateTime|null <var>$dateStart</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#747-774" title="Go to source code">getDeltaDays</a>( <span>DateTime <var>$dateEnd</var></span>, <span>DateTime|null <var>$dateStart</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the difference in days between two dates (or between a date and
-today)</p>
-
+				<p>Returns the difference in days between two dates (or between a date and today)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the difference in days between two dates (or between a date and
-today)</p>
-
+				<p>Returns the difference in days between two dates (or between a date and today)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$dateEnd</var></dt>
-						<dd><code>DateTime</code><br>$dateEnd The first date</dd>
+						<dd>The first date</dd>
 						<dt><var>$dateStart</var></dt>
-						<dd><code>DateTime|null</code><br>$dateStart The final date (if it has a timezone different than $dateEnd, we'll
-use the one of $dateEnd)</dd>
+						<dd>$dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>integer</code><br>Returns the diffence $dateEnd - $dateStart in days<br>
+						integer<br>Returns the diffence $dateEnd - $dateStart in days
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code>
 					</div>
 
 
@@ -1057,46 +925,38 @@ use the one of $dateEnd)</dd>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_describeInterval">#</a>
-			<code><a href="source-class-Punic.Calendar.html#772-857" title="Go to source code">describeInterval</a>( <span>DateTime <var>$dateEnd</var></span>, <span>DateTime|null <var>$dateStart</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maxParts</var> = <span class="php-num">2</span></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#776-861" title="Go to source code">describeInterval</a>( <span>DateTime <var>$dateEnd</var></span>, <span>DateTime|null <var>$dateStart</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$maxParts</var> = <span class="php-num">2</span></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Describe an interval between two dates (eg '2 days and 4 hours').</p>
-
+				<p>Describe an interval between two dates (eg '2 days and 4 hours').</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Describe an interval between two dates (eg '2 days and 4 hours').</p>
-
+				<p>Describe an interval between two dates (eg '2 days and 4 hours').</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$dateEnd</var></dt>
-						<dd><code>DateTime</code><br>$dateEnd The first date</dd>
+						<dd>The first date</dd>
 						<dt><var>$dateStart</var></dt>
-						<dd><code>DateTime|null</code><br>$dateStart The final date (if it has a timezone different than $dateEnd, we'll
-use the one of $dateEnd)</dd>
+						<dd>$dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
 						<dt><var>$maxParts</var></dt>
-						<dd><code>integer</code><br>$maxParts = 2 The maximim parts (eg with 2 you may have '2 days and 4 hours',
-with 3 '2 days, 4 hours and 24 minutes')</dd>
+						<dd>$maxParts=2 The maximim parts (eg with 2 you may have '2 days and 4 hours', with 3 '2 days, 4 hours and 24 minutes')</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'short' The format name; it can be 'long' (eg '3 seconds'), 'short' (eg
-'3 s') or 'narrow' (eg '3s')</dd>
+						<dd>$width='short' The format name; it can be 'long' (eg '3 seconds'), 'short' (eg '3 s') or 'narrow' (eg '3s')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>
+						string
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code></code><br>
+						<code><a href="class-Punic.Exception.BadArgumentType.html">Punic\Exception\BadArgumentType</a></code>
 					</div>
 
 
@@ -1115,46 +975,35 @@ with 3 '2 days, 4 hours and 24 minutes')</dd>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatDate">#</a>
-			<code><a href="source-class-Punic.Calendar.html#859-887" title="Go to source code">formatDate</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#863-891" title="Go to source code">formatDate</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date</p>
-
+				<p>Format a date</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date</p>
-
+				<p>Format a date</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>DateTime</code><br>$value The \DateTime instance for which you want the localized textual
-representation</dd>
+						<dd>The \DateTime instance for which you want the localized textual representation</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday,
-August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg
-'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14'). You can
-also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day
-names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today',
-'yesterday', 'tomorrow' width '</em>') instead of the date.</dd>
+						<dd><p>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14').
+                     You can also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '</em>') instead of the date.</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1179,56 +1028,42 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatDateEx">#</a>
-			<code><a href="source-class-Punic.Calendar.html#889-910" title="Go to source code">formatDateEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#893-914" title="Go to source code">formatDateEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a date (extended version: various date/time representations - see toDateTime())</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a date (extended version: various date/time representations - see toDateTime())</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime|string</code><br>$value An Unix timestamp, a <code>\DateTime</code> instance or a string accepted
-by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
+						<dd>An Unix timestamp, a <code>\DateTime</code> instance or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday,
-August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg
-'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14') You can
-also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day
-names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today',
-'yesterday', 'tomorrow' width '</em>') instead of the date.</dd>
+						<dd><p>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')
+                     You can also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '</em>') instead of the date.</p></dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$toTimezone The timezone to set; leave empty to use the default timezone (or the
-timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code></code><br>
+							<code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code><br>
 					</div>
 					<h4>Link</h4>
 					<div class="list">
@@ -1252,43 +1087,34 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatTime">#</a>
-			<code><a href="source-class-Punic.Calendar.html#912-930" title="Go to source code">formatTime</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#916-934" title="Go to source code">formatTime</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a time</p>
-
+				<p>Format a time</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a time</p>
-
+				<p>Format a time</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>DateTime</code><br>$value The \DateTime instance for which you want the localized textual
-representation</dd>
+						<dd>The \DateTime instance for which you want the localized textual representation</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM
-GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg
-'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
+						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1313,53 +1139,41 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatTimeEx">#</a>
-			<code><a href="source-class-Punic.Calendar.html#932-952" title="Go to source code">formatTimeEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#936-956" title="Go to source code">formatTimeEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a time (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a time (extended version: various date/time representations - see toDateTime())</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a time (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a time (extended version: various date/time representations - see toDateTime())</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime|string</code><br>$value An Unix timestamp, a <code>\DateTime</code> instance or a string accepted
-by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
+						<dd>An Unix timestamp, a <code>\DateTime</code> instance or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM
-GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg
-'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
+						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$toTimezone The timezone to set; leave empty to use the default timezone (or the
-timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code></code><br>
+							<code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code><br>
 					</div>
 					<h4>Link</h4>
 					<div class="list">
@@ -1383,45 +1197,35 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatDatetime">#</a>
-			<code><a href="source-class-Punic.Calendar.html#954-996" title="Go to source code">formatDatetime</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#958-1000" title="Go to source code">formatDatetime</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date/time</p>
-
+				<p>Format a date/time</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date/time</p>
-
+				<p>Format a date/time</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>DateTime</code><br>$value The \DateTime instance for which you want the localized textual
-representation</dd>
+						<dd>The \DateTime instance for which you want the localized textual representation</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full', 'long', 'medium', 'short' or a
-combination for date+time like 'full|short' or a combination for
-format+date+time like 'full|full|short' You can also append an asterisk ('*') to
-the date parh of $width. If so, special day names may be used (like 'Today',
-'Yesterday', 'Tomorrow') instead of the date part.</dd>
+						<dd><p>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
+                     You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1446,55 +1250,42 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatDatetimeEx">#</a>
-			<code><a href="source-class-Punic.Calendar.html#998-1019" title="Go to source code">formatDatetimeEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#1002-1023" title="Go to source code">formatDatetimeEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$width</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date/time (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a date/time (extended version: various date/time representations - see toDateTime())</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date/time (extended version: various date/time representations - see
-toDateTime())</p>
-
+				<p>Format a date/time (extended version: various date/time representations - see toDateTime())</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime|string</code><br>$value An Unix timestamp, a <code>\DateTime</code> instance or a string accepted
-by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
+						<dd>An Unix timestamp, a <code>\DateTime</code> instance or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width The format name; it can be 'full', 'long', 'medium', 'short' or a
-combination for date+time like 'full|short' or a combination for
-format+date+time like 'full|full|short' You can also append an asterisk ('*') to
-the date parh of $width. If so, special day names may be used (like 'Today',
-'Yesterday', 'Tomorrow') instead of the date part.</dd>
+						<dd><p>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
+                     You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.</p></dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$toTimezone The timezone to set; leave empty to use the default timezone (or the
-timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code></code><br>
+							<code><a href="class-Punic.Calendar.html#_toDateTime">Punic\Calendar::toDateTime()</a></code><br>
 					</div>
 					<h4>Link</h4>
 					<div class="list">
@@ -1518,41 +1309,34 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_format">#</a>
-			<code><a href="source-class-Punic.Calendar.html#1021-1131" title="Go to source code">format</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$format</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#1025-1135" title="Go to source code">format</a>( <span>DateTime <var>$value</var></span>, <span>string <var>$format</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date and/or time</p>
-
+				<p>Format a date and/or time</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date and/or time</p>
-
+				<p>Format a date and/or time</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>DateTime</code><br>$value The \DateTime instance for which you want the localized textual
-representation</dd>
+						<dd>The \DateTime instance for which you want the localized textual representation</dd>
 						<dt><var>$format</var></dt>
-						<dd><code>string</code><br>$format The ISO format that specify how to render the date/time</dd>
+						<dd>The ISO format that specify how to render the date/time</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1577,46 +1361,36 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatEx">#</a>
-			<code><a href="source-class-Punic.Calendar.html#1132-1151" title="Go to source code">formatEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$format</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#1136-1155" title="Go to source code">formatEx</a>( <span>number|DateTime|string <var>$value</var></span>, <span>string <var>$format</var></span>, <span>string|DateTimeZone <var>$toTimezone</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a date and/or time (extended version: various date/time
-representations - see toDateTime())</p>
-
+				<p>Format a date and/or time (extended version: various date/time representations - see toDateTime())</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a date and/or time (extended version: various date/time
-representations - see toDateTime())</p>
-
+				<p>Format a date and/or time (extended version: various date/time representations - see toDateTime())</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$value</var></dt>
-						<dd><code>number|DateTime|string</code><br>$value An Unix timestamp, a <code>\DateTime</code> instance or a string accepted
-by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
+						<dd>An Unix timestamp, a <code>\DateTime</code> instance or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$format</var></dt>
-						<dd><code>string</code><br>$format The ISO format that specify how to render the date/time</dd>
+						<dd>The ISO format that specify how to render the date/time</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd><code>string|DateTimeZone</code><br>$toTimezone The timezone to set; leave empty to use the default timezone (or the
-timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $value is empty, the localized textual representation
-otherwise<br>
+						string<br>Returns an empty string if $value is empty, the localized textual representation otherwise
 					</div>
 
 					<h4>Throws</h4>
 					<div class="list">
-						<code><code><a href="class-Punic.Exception.html">Punic\Exception</a></code></code><br>Throws an exception in case of problems<br>
+						<code><a href="class-Punic.Exception.html">Punic\Exception</a></code><br>Throws an exception in case of problems
 					</div>
 
 					<h4>Link</h4>
@@ -1641,34 +1415,29 @@ otherwise<br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDateRelativeName">#</a>
-			<code><a href="source-class-Punic.Calendar.html#1153-1177" title="Go to source code">getDateRelativeName</a>( <span>DateTime <var>$datetime</var></span>, <span>boolean <var>$ucFirst</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Calendar.html#1157-1181" title="Go to source code">getDateRelativeName</a>( <span>DateTime <var>$datetime</var></span>, <span>boolean <var>$ucFirst</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the relative day name (eg 'yesterday', 'tomorrow'), if available</p>
-
+				<p>Retrieve the relative day name (eg 'yesterday', 'tomorrow'), if available</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the relative day name (eg 'yesterday', 'tomorrow'), if available</p>
-
+				<p>Retrieve the relative day name (eg 'yesterday', 'tomorrow'), if available</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$datetime</var></dt>
-						<dd><code>DateTime</code><br>$datetime The date for which you want the relative day name</dd>
+						<dd>The date for which you want the relative day name</dd>
 						<dt><var>$ucFirst</var></dt>
-						<dd><code>boolean</code><br>$ucFirst = false Force first letter to be upper case?</dd>
+						<dd>$ucFirst=false Force first letter to be upper case?</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>Returns</code><br>the relative name if available, otherwise returns an empty string<br>
+						Returns<br>the relative name if available, otherwise returns an empty string
 					</div>
 
 
@@ -1694,8 +1463,10 @@ otherwise<br>
 	</div>
 
 	<div id="footer">
-		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

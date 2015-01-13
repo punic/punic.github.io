@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta charset="utf-8">
 
 	<title>Class Punic\Misc | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
-	<script type="text/javascript" src="elementlist.js?1663966723"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
 
 </head>
 
@@ -52,13 +49,18 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Punic.html">Punic<span></span></a>
-						<ul>
-				<li><a href="namespace-Punic.Exception.html">Exception</a>
-						</li>
-							</ul></li>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
 			</ul>
 		</div>
 
@@ -77,12 +79,12 @@
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
 			</ul>
 
-
-
-			<h3>Exceptions</h3>
+			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Punic.Exception.html">Exception</a></li>
 			</ul>
+
+
 
 
 		</div>
@@ -98,9 +100,7 @@
 
 
 	<div class="description">
-	
-<p>Various helper stuff</p>
-
+	<p>Various helper stuff</p>
 	</div>
 
 
@@ -117,13 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Misc.html#4-253" title="Go to source code">Misc.php</a><br>
+			<b>Located at</b> <a href="source-class-Punic.Misc.html#4-253" title="Go to source code">Misc.php</a>
+		<br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
+		<table class="summary table table-bordered table-striped methods" id="methods">
 		<tr data-order="join" id="_join">
 
 			<td class="attributes"><code>
@@ -138,34 +139,24 @@
 			<code><a href="source-class-Punic.Misc.html#9-18" title="Go to source code">join</a>( <span>array <var>$list</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Concatenates a list of items returning a localized string (for instance:
-array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for
-Italian)</p>
-
+				<p>Concatenates a list of items returning a localized string (for instance: array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for Italian)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Concatenates a list of items returning a localized string (for instance:
-array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for
-Italian)</p>
-
+				<p>Concatenates a list of items returning a localized string (for instance: array(1, 2, 3) will result in '1, 2, and 3' for English or '1, 2 e 3' for Italian)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$list</var></dt>
-						<dd><code>array</code><br>$list The list to concatenate</dd>
+						<dd>The list to concatenate</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $list is not an array of it it's empty, the joined
-items otherwise.<br>
+						string<br>Returns an empty string if $list is not an array of it it's empty, the joined items otherwise.
 					</div>
 
 
@@ -188,34 +179,26 @@ items otherwise.<br>
 			<code><a href="source-class-Punic.Misc.html#20-45" title="Go to source code">joinUnits</a>( <span>array <var>$list</var></span>, <span>string <var>$width</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Concatenates a list of unit items returning a localized string (for instance:
-array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
-
+				<p>Concatenates a list of unit items returning a localized string (for instance: array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Concatenates a list of unit items returning a localized string (for instance:
-array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
-
+				<p>Concatenates a list of unit items returning a localized string (for instance: array('3 ft', '2 in') will result in '3 ft, 2 in'</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$list</var></dt>
-						<dd><code>array</code><br>$list The list to concatenate</dd>
+						<dd>The list to concatenate</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = '' The preferred width ('' for default, or 'short' or 'narrow')</dd>
+						<dd>$width='' The preferred width ('' for default, or 'short' or 'narrow')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns an empty string if $list is not an array of it it's empty, the joined
-items otherwise.<br>
+						string<br>Returns an empty string if $list is not an array of it it's empty, the joined items otherwise.
 					</div>
 
 
@@ -238,39 +221,28 @@ items otherwise.<br>
 			<code><a href="source-class-Punic.Misc.html#91-141" title="Go to source code">fixCase</a>( <span>string <var>$string</var></span>, <span>string <var>$case</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Fix the case of a string.</p>
-
+				<p>Fix the case of a string.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Fix the case of a string.</p>
-
+				<p>Fix the case of a string.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$string</var></dt>
-						<dd><code>string</code><br>$string The string whose case needs to be fixed</dd>
+						<dd>The string whose case needs to be fixed</dd>
 						<dt><var>$case</var></dt>
-						<dd><code>string</code><br>$case How to fix case. Allowed values:
-<ul>
-	<li><code>&lt;span class="php-quote"&gt;'titlecase-words'&lt;/span&gt;</code>
-	all words in the phrase should be title case</li>
-
-	<li><code>&lt;span class="php-quote"&gt;'titlecase-firstword'&lt;/span&gt;</code>
-	the first word should be title case</li>
-
-	<li><code>&lt;span class="php-quote"&gt;'lowercase-words'&lt;/span&gt;</code>
-	all words in the phrase should be lower case</li>
-</ul>
-</dd>
+						<dd><p>How to fix case. Allowed values:
+  <li><code>'titlecase-words'</code> all words in the phrase should be title case</li>
+  <li><code>'titlecase-firstword'</code> the first word should be title case</li>
+  <li><code>'lowercase-words'</code> all words in the phrase should be lower case</li>
+</ul></p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>
+						string
 					</div>
 
 
@@ -297,29 +269,22 @@ items otherwise.<br>
 			<code><a href="source-class-Punic.Misc.html#143-162" title="Go to source code">getBrowserLocales</a>( <span>boolean <var>$ignoreCache</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales,
-sorted in descending order by the quality values</p>
-
+				<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales, sorted in descending order by the quality values</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales,
-sorted in descending order by the quality values</p>
-
+				<p>Parse the browser HTTP_ACCEPT_LANGUAGE header and return the found locales, sorted in descending order by the quality values</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$ignoreCache</var></dt>
-						<dd><code>boolean</code><br>$ignoreCache set to true if you want to ignore the cache</dd>
+						<dd>$ignoreCache=false Set to true if you want to ignore the cache</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Array keys are the found locales, array values are the relative quality value
-(from 0 to 1)<br>
+						array<br>Array keys are the found locales, array values are the relative quality value (from 0 to 1)
 					</div>
 
 
@@ -342,29 +307,22 @@ sorted in descending order by the quality values</p>
 			<code><a href="source-class-Punic.Misc.html#164-228" title="Go to source code">parseHttpAcceptLanguage</a>( <span>string <var>$httpAcceptLanguages</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
-locales, sorted in descending order by the quality values</p>
-
+				<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found locales, sorted in descending order by the quality values</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found
-locales, sorted in descending order by the quality values</p>
-
+				<p>Parse the value of an HTTP_ACCEPT_LANGUAGE header and return the found locales, sorted in descending order by the quality values</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$httpAcceptLanguages</var></dt>
-						<dd><code>string</code><br>$httpAcceptLanguages</dd>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Array keys are the found locales, array values are the relative quality value
-(from 0 to 1)<br>
+						array<br>Array keys are the found locales, array values are the relative quality value (from 0 to 1)
 					</div>
 
 
@@ -387,27 +345,22 @@ locales, sorted in descending order by the quality values</p>
 			<code><a href="source-class-Punic.Misc.html#230-240" title="Go to source code">getCharacterOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the character order (right-to-left or left-to-right)</p>
-
+				<p>Retrieve the character order (right-to-left or left-to-right)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the character order (right-to-left or left-to-right)</p>
-
+				<p>Retrieve the character order (right-to-left or left-to-right)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Return 'left-to-right' or 'right-to-left'<br>
+						string<br>Return 'left-to-right' or 'right-to-left'
 					</div>
 
 
@@ -430,27 +383,22 @@ locales, sorted in descending order by the quality values</p>
 			<code><a href="source-class-Punic.Misc.html#242-252" title="Go to source code">getLineOrder</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
-
+				<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
-
+				<p>Retrieve the line order (top-to-bottom or bottom-to-top)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Return 'top-to-bottom' or 'bottom-to-top'<br>
+						string<br>Return 'top-to-bottom' or 'bottom-to-top'
 					</div>
 
 
@@ -476,8 +424,10 @@ locales, sorted in descending order by the quality values</p>
 	</div>
 
 	<div id="footer">
-		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

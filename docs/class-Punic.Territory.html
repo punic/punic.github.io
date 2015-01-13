@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta charset="utf-8">
 
 	<title>Class Punic\Territory | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
-	<script type="text/javascript" src="elementlist.js?1663966723"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
 
 </head>
 
@@ -52,13 +49,18 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Punic.html">Punic<span></span></a>
-						<ul>
-				<li><a href="namespace-Punic.Exception.html">Exception</a>
-						</li>
-							</ul></li>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
 			</ul>
 		</div>
 
@@ -77,12 +79,12 @@
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
 			</ul>
 
-
-
-			<h3>Exceptions</h3>
+			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Punic.Exception.html">Exception</a></li>
 			</ul>
+
+
 
 
 		</div>
@@ -98,9 +100,7 @@
 
 
 	<div class="description">
-	
-<p>Territory-related stuff</p>
-
+	<p>Territory-related stuff</p>
 	</div>
 
 
@@ -117,13 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Territory.html#4-417" title="Go to source code">Territory.php</a><br>
+			<b>Located at</b> <a href="source-class-Punic.Territory.html#4-417" title="Go to source code">Territory.php</a>
+		<br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
+		<table class="summary table table-bordered table-striped methods" id="methods">
 		<tr data-order="getName" id="_getName">
 
 			<td class="attributes"><code>
@@ -138,29 +139,24 @@
 			<code><a href="source-class-Punic.Territory.html#9-27" title="Go to source code">getName</a>( <span>string <var>$territoryCode</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the name of a territory (country, continent, ...)</p>
-
+				<p>Retrieve the name of a territory (country, continent, ...)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the name of a territory (country, continent, ...)</p>
-
+				<p>Retrieve the name of a territory (country, continent, ...)</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code</dd>
+						<dd>The territory code</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Returns the localized territory name (returns $territoryCode if not found)<br>
+						string<br>Returns the localized territory name (returns $territoryCode if not found)
 					</div>
 
 
@@ -183,29 +179,22 @@
 			<code><a href="source-class-Punic.Territory.html#29-37" title="Go to source code">getContinents</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the list of continents in the form of an array with key=ID,
-value=name</p>
-
+				<p>Return the list of continents in the form of an array with key=ID, value=name</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the list of continents in the form of an array with key=ID,
-value=name</p>
-
+				<p>Return the list of continents in the form of an array with key=ID, value=name</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -228,29 +217,22 @@ value=name</p>
 			<code><a href="source-class-Punic.Territory.html#39-47" title="Go to source code">getCountries</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the list of countries in the form of an array with key=ID,
-value=name</p>
-
+				<p>Return the list of countries in the form of an array with key=ID, value=name</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the list of countries in the form of an array with key=ID,
-value=name</p>
-
+				<p>Return the list of countries in the form of an array with key=ID, value=name</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -273,115 +255,51 @@ value=name</p>
 			<code><a href="source-class-Punic.Territory.html#49-79" title="Go to source code">getContinentsAndCountries</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Return a list of continents and relative countries. The resulting array is in
-the following form (JSON representation):</p>
+				<p>Return a list of continents and relative countries. The resulting array is in the following form (JSON representation):</p>
 
-<pre>
-{
-    <span class="php-quote">&quot;002&quot;</span>: {
-        <span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Africa&quot;</span>,
-        <span
-class="php-quote">&quot;children&quot;</span>: {
-            <span
-class="php-quote">&quot;DZ&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Algeria&quot;</span>},
-            <span
-class="php-quote">&quot;AO&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Angola&quot;</span>},
+<pre><code class="json">{
+    "002": {
+        "name": "Africa",
+        "children": {
+            "DZ": {"name": "Algeria"},
+            "AO": {"name": "Angola"},
             ...
         }
     },
-    <span
-class="php-quote">&quot;150&quot;</span>: {
-        <span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Europe&quot;</span>,
-        <span
-class="php-quote">&quot;children&quot;</span>: {
-            <span
-class="php-quote">&quot;AL&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Albania&quot;</span>},
-            <span
-class="php-quote">&quot;AD&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Andorra&quot;</span>},
+    "150": {
+        "name": "Europe",
+        "children": {
+            "AL": {"name": "Albania"},
+            "AD": {"name": "Andorra"},
             ...
         }
     }
     ...
 }
-</pre>
+</code></pre>
 
 <p>The arrays are sorted by territory name</p>
-
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return a list of continents and relative countries. The resulting array is in
-the following form (JSON representation):</p>
+				<p>Return a list of continents and relative countries. The resulting array is in the following form (JSON representation):</p>
 
-<pre>
-{
-    <span class="php-quote">&quot;002&quot;</span>: {
-        <span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Africa&quot;</span>,
-        <span
-class="php-quote">&quot;children&quot;</span>: {
-            <span
-class="php-quote">&quot;DZ&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Algeria&quot;</span>},
-            <span
-class="php-quote">&quot;AO&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Angola&quot;</span>},
-            ...
-        }
-    },
-    <span
-class="php-quote">&quot;150&quot;</span>: {
-        <span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Europe&quot;</span>,
-        <span
-class="php-quote">&quot;children&quot;</span>: {
-            <span
-class="php-quote">&quot;AL&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Albania&quot;</span>},
-            <span
-class="php-quote">&quot;AD&quot;</span>: {<span
-class="php-quote">&quot;name&quot;</span>: <span
-class="php-quote">&quot;Andorra&quot;</span>},
-            ...
-        }
-    }
-    ...
+<pre><code class="json">{ "002": { "name": "Africa", "children": { "DZ": {"name": "Algeria"}, "AO": {"name": "Angola"}, ... } }, "150": { "name": "Europe", "children": { "AL": {"name": "Albania"}, "AD": {"name": "Andorra"}, ... } } ...
 }
-</pre>
+</code></pre>
 
 <p>The arrays are sorted by territory name</p>
-
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -404,52 +322,42 @@ class="php-quote">&quot;Andorra&quot;</span>},
 			<code><a href="source-class-Punic.Territory.html#81-128" title="Go to source code">getList</a>( <span>string <var>$levels</var> = <span class="php-quote">'W'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				Return a list of some specified territory, structured or not. $levels control
-which data you want to retrieve. It can be one or more of the following values:
+				<p>Return a list of some specified territory, structured or not.
+$levels control which data you want to retrieve. It can be one or more of the following values:</p>
+
 <ul>
-	<li>'W': world</li>
-
-	<li>'C': continents</li>
-
-	<li>'S': sub-continents</li>
-
-	<li>'c': countries</li>
+    <li>'W': world</li>
+    <li>'C': continents</li>
+    <li>'S': sub-continents</li>
+    <li>'c': countries</li>
 </ul>
- If only one level is specified you'll get a flat list (like the one returned by
-<code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>). If one or more levels are specified, you'll get a
-structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).
+
+<p>If only one level is specified you'll get a flat list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>).
+If one or more levels are specified, you'll get a structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).</p>
 			</div>
 
 			<div class="description detailed hidden">
-				Return a list of some specified territory, structured or not. $levels control
-which data you want to retrieve. It can be one or more of the following values:
-<ul>
-	<li>'W': world</li>
+				<p>Return a list of some specified territory, structured or not.
+$levels control which data you want to retrieve. It can be one or more of the following values:</p>
 
-	<li>'C': continents</li>
-
-	<li>'S': sub-continents</li>
-
-	<li>'c': countries</li>
+<ul> <li>'W': world</li> <li>'C': continents</li> <li>'S': sub-continents</li> <li>'c': countries</li>
 </ul>
- If only one level is specified you'll get a flat list (like the one returned by
-<code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>). If one or more levels are specified, you'll get a
-structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).
+
+<p>If only one level is specified you'll get a flat list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinents">Punic\Territory::getContinents()</a></code>).
+If one or more levels are specified, you'll get a structured list (like the one returned by <code><a href="class-Punic.Territory.html#_getContinentsAndCountries">Punic\Territory::getContinentsAndCountries()</a></code>).</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$levels</var></dt>
-						<dd><code>string</code><br>$levels A string with one or more of the characters: 'W' (for world), 'C' (for
-continents), 'S' (for sub-continents), 'c' (for countries)</dd>
+						<dd>A string with one or more of the characters: 'W' (for world), 'C' (for continents), 'S' (for sub-continents), 'c' (for countries)</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -476,23 +384,17 @@ continents), 'S' (for sub-continents), 'c' (for countries)</dd>
 			<code><a href="source-class-Punic.Territory.html#130-137" title="Go to source code">getTerritoriesWithInfo</a>( )</code>
 
 			<div class="description short">
-				
-<p>Return a list of territory identifiers for which we have some info
-(languages, population, literacy level, Gross Domestic Product)</p>
-
+				<p>Return a list of territory identifiers for which we have some info (languages, population, literacy level, Gross Domestic Product)</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return a list of territory identifiers for which we have some info
-(languages, population, literacy level, Gross Domestic Product)</p>
-
+				<p>Return a list of territory identifiers for which we have some info (languages, population, literacy level, Gross Domestic Product)</p>
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>The list of territory IDs for which we have some info<br>
+						array<br>The list of territory IDs for which we have some info
 					</div>
 
 
@@ -515,59 +417,42 @@ continents), 'S' (for sub-continents), 'c' (for countries)</dd>
 			<code><a href="source-class-Punic.Territory.html#139-184" title="Go to source code">getLanguages</a>( <span>string <var>$territoryCode</var></span>, <span>string <var>$filterStatuses</var> = <span class="php-quote">''</span></span>, <span>string <var>$onlyCodes</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the list of languages spoken in a territory</p>
-
+				<p>Return the list of languages spoken in a territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the list of languages spoken in a territory</p>
-
+				<p>Return the list of languages spoken in a territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code</dd>
+						<dd>The territory code</dd>
 						<dt><var>$filterStatuses</var></dt>
-						<dd><code>string</code><br>$filterStatuses = '' Filter language status.
+						<dd><p>$filterStatuses='' Filter language status.</p>
+
 <ul>
-	<li>If empty no filter will be applied</li>
-
-	<li>'o' to include official languages</li>
-
-	<li>'r' to include official regional languages</li>
-
-	<li>'f' to include de facto official languages</li>
-
-	<li>'m' to include official minority languages</li>
-
-	<li>'u' to include unofficial or unknown languages</li>
-</ul>
-</dd>
+    <li>If empty no filter will be applied</li>
+    <li>'o' to include official languages</li>
+    <li>'r' to include official regional languages</li>
+    <li>'f' to include de facto official languages</li>
+    <li>'m' to include official minority languages</li>
+    <li>'u' to include unofficial or unknown languages</li>
+</ul></dd>
 						<dt><var>$onlyCodes</var></dt>
-						<dd><code>string</code><br>$onlyCodes = false Set to true to retrieve only the language codes. If set to
-false (default) you'll receive a list of arrays with these keys:
+						<dd><p>$onlyCodes=false Set to true to retrieve only the language codes. If set to false (default) you'll receive a list of arrays with these keys:</p>
+
 <ul>
-	<li>string id: the language identifier</li>
-
-	<li>string status: 'o' for official; 'r' for official regional; 'f' for de facto
-	official; 'm' for official minority; 'u' for unofficial or unknown</li>
-
-	<li>number population: the amount of people speaking the language (%)</li>
-
-	<li>number|null writing: the amount of people able to write (%). May be null if
-	no data is available</li>
-</ul>
-</dd>
+    <li>string id: the language identifier</li>
+    <li>string status: 'o' for official; 'r' for official regional; 'f' for de facto official; 'm' for official minority; 'u' for unofficial or unknown</li>
+    <li>number population: the amount of people speaking the language (%)</li>
+    <li>number|null writing: the amount of people able to write (%). May be null if no data is available</li>
+</ul></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array|null</code><br>Return the languages spoken in the specified territory, as described by the
-$onlyCodes parameter (or null if $territoryCode is not valid or no data is
-available)<br>
+						array|null<br>Return the languages spoken in the specified territory, as described by the $onlyCodes parameter (or null if $territoryCode is not valid or no data is available)
 					</div>
 
 
@@ -590,27 +475,22 @@ available)<br>
 			<code><a href="source-class-Punic.Territory.html#186-200" title="Go to source code">getPopulation</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the population of a specific territory</p>
-
+				<p>Return the population of a specific territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the population of a specific territory</p>
-
+				<p>Return the population of a specific territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code</dd>
+						<dd>The territory code</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>number|null</code><br>Return the size of the population of the specified territory (or null if
-$territoryCode is not valid or no data is available)<br>
+						number|null<br>Return the size of the population of the specified territory (or null if $territoryCode is not valid or no data is available)
 					</div>
 
 
@@ -633,27 +513,22 @@ $territoryCode is not valid or no data is available)<br>
 			<code><a href="source-class-Punic.Territory.html#202-216" title="Go to source code">getLiteracyLevel</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the literacy level for a specific territory, in %</p>
-
+				<p>Return the literacy level for a specific territory, in %</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the literacy level for a specific territory, in %</p>
-
+				<p>Return the literacy level for a specific territory, in %</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code</dd>
+						<dd>The territory code</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>number|null</code><br>Return the % of literacy lever of the specified territory (or null if
-$territoryCode is not valid or no data is available)<br>
+						number|null<br>Return the % of literacy lever of the specified territory (or null if $territoryCode is not valid or no data is available)
 					</div>
 
 
@@ -676,27 +551,22 @@ $territoryCode is not valid or no data is available)<br>
 			<code><a href="source-class-Punic.Territory.html#218-232" title="Go to source code">getGrossDomesticProduct</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the GDP (Gross Domestic Product) for a specific territory, in US$</p>
-
+				<p>Return the GDP (Gross Domestic Product) for a specific territory, in US$</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the GDP (Gross Domestic Product) for a specific territory, in US$</p>
-
+				<p>Return the GDP (Gross Domestic Product) for a specific territory, in US$</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code</dd>
+						<dd>The territory code</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>number|null</code><br>Return the GDP of the specified territory (or null if $territoryCode is not
-valid or no data is available)<br>
+						number|null<br>Return the GDP of the specified territory (or null if $territoryCode is not valid or no data is available)
 					</div>
 
 
@@ -719,28 +589,22 @@ valid or no data is available)<br>
 			<code><a href="source-class-Punic.Territory.html#234-265" title="Go to source code">getTerritoriesForLanguage</a>( <span>string <var>$languageID</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Return a list of territory IDs where a specific language is spoken, sorted by
-the total number of people speaking that language.</p>
-
+				<p>Return a list of territory IDs where a specific language is spoken, sorted by the total number of people speaking that language.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return a list of territory IDs where a specific language is spoken, sorted by
-the total number of people speaking that language.</p>
-
+				<p>Return a list of territory IDs where a specific language is spoken, sorted by the total number of people speaking that language.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$languageID</var></dt>
-						<dd><code>string</code><br>$languageID The language identifier</dd>
+						<dd>The language identifier</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>
+						array
 					</div>
 
 
@@ -763,27 +627,22 @@ the total number of people speaking that language.</p>
 			<code><a href="source-class-Punic.Territory.html#267-288" title="Go to source code">getParentTerritoryCode</a>( <span>string <var>$childTerritoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Return the code of the territory that contains a territory</p>
-
+				<p>Return the code of the territory that contains a territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Return the code of the territory that contains a territory</p>
-
+				<p>Return the code of the territory that contains a territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$childTerritoryCode</var></dt>
-						<dd><code>string</code><br>$childTerritoryCode</dd>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Return the parent territory code, or an empty string if $childTerritoryCode is
-the World (001) or if it's invalid.<br>
+						string<br>Return the parent territory code, or an empty string if $childTerritoryCode is the World (001) or if it's invalid.
 					</div>
 
 
@@ -806,30 +665,24 @@ the World (001) or if it's invalid.<br>
 			<code><a href="source-class-Punic.Territory.html#290-320" title="Go to source code">getChildTerritoryCodes</a>( <span>string <var>$parentTerritoryCode</var></span>, <span>boolean <var>$expandSubGroups</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the child territories of a parent territory</p>
-
+				<p>Retrieve the child territories of a parent territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the child territories of a parent territory</p>
-
+				<p>Retrieve the child territories of a parent territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$parentTerritoryCode</var></dt>
-						<dd><code>string</code><br>$parentTerritoryCode</dd>
+						<dd></dd>
 						<dt><var>$expandSubGroups</var></dt>
-						<dd><code>boolean</code><br>$expandSubGroups = false Set to true to expand the sub-groups, false to retrieve
-them.</dd>
+						<dd>$expandSubGroups=false Set to true to expand the sub-groups, false to retrieve them.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Return the list of territory codes that are children of $parentTerritoryCode (if
-$parentTerritoryCode is invalid you'll get an empty list)<br>
+						array<br>Return the list of territory codes that are children of $parentTerritoryCode (if $parentTerritoryCode is invalid you'll get an empty list)
 					</div>
 
 
@@ -855,8 +708,10 @@ $parentTerritoryCode is invalid you'll get an empty list)<br>
 	</div>
 
 	<div id="footer">
-		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta charset="utf-8">
 
 	<title>Class Punic\Unit | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
-	<script type="text/javascript" src="elementlist.js?1663966723"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
 
 </head>
 
@@ -52,13 +49,18 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Punic.html">Punic<span></span></a>
-						<ul>
-				<li><a href="namespace-Punic.Exception.html">Exception</a>
-						</li>
-							</ul></li>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
 			</ul>
 		</div>
 
@@ -77,12 +79,12 @@
 				<li class="active"><a href="class-Punic.Unit.html">Unit</a></li>
 			</ul>
 
-
-
-			<h3>Exceptions</h3>
+			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Punic.Exception.html">Exception</a></li>
 			</ul>
+
+
 
 
 		</div>
@@ -98,9 +100,7 @@
 
 
 	<div class="description">
-	
-<p>Units helper stuff</p>
-
+	<p>Units helper stuff</p>
 	</div>
 
 
@@ -117,13 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Unit.html#4-228" title="Go to source code">Unit.php</a><br>
+			<b>Located at</b> <a href="source-class-Punic.Unit.html#4-228" title="Go to source code">Unit.php</a>
+		<br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
+		<table class="summary table table-bordered table-striped methods" id="methods">
 		<tr data-order="format" id="_format">
 
 			<td class="attributes"><code>
@@ -138,30 +139,23 @@
 			<code><a href="source-class-Punic.Unit.html#9-89" title="Go to source code">format</a>( <span>integer|float|string <var>$number</var></span>, <span>string <var>$unit</var></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Format a unit string</p>
-
+				<p>Format a unit string</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Format a unit string</p>
-
+				<p>Format a unit string</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$number</var></dt>
-						<dd><code>integer|float|string</code><br>$number The unit amount</dd>
+						<dd>The unit amount</dd>
 						<dt><var>$unit</var></dt>
-						<dd><code>string</code><br>$unit The unit identifier (eg 'duration/millisecond' or 'millisecond')</dd>
+						<dd>The unit identifier (eg 'duration/millisecond' or 'millisecond')</dd>
 						<dt><var>$width</var></dt>
-						<dd><code>string</code><br>$width = 'short' The format name; it can be 'long' (eg '3 milliseconds'),
-'short' (eg '3 ms') or 'narrow' (eg '3ms'). You can also add a precision
-specifier ('long,2' or just '2')</dd>
+						<dd>$width='short' The format name; it can be 'long' (eg '3 milliseconds'), 'short' (eg '3 ms') or 'narrow' (eg '3ms'). You can also add a precision specifier ('long,2' or just '2')</dd>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 
@@ -185,29 +179,22 @@ specifier ('long,2' or just '2')</dd>
 			<code><a href="source-class-Punic.Unit.html#91-99" title="Go to source code">getMeasurementSystems</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the measurement systems and their localized names</p>
-
+				<p>Retrieve the measurement systems and their localized names</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the measurement systems and their localized names</p>
-
+				<p>Retrieve the measurement systems and their localized names</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd><code>string</code><br>$locale = '' The locale to use. If empty we'll use the default locale set in
-\Punic\Data</dd>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>The array keys are the measurement system codes (eg 'metric', 'US', 'UK'), the
-values are the localized measurement system names (eg 'Metric', 'US', 'UK' for
-English)<br>
+						array<br>The array keys are the measurement system codes (eg 'metric', 'US', 'UK'), the values are the localized measurement system names (eg 'Metric', 'US', 'UK' for English)
 					</div>
 
 
@@ -230,27 +217,22 @@ English)<br>
 			<code><a href="source-class-Punic.Unit.html#101-122" title="Go to source code">getMeasurementSystemFor</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the measurement system for a specific territory</p>
-
+				<p>Retrieve the measurement system for a specific territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the measurement system for a specific territory</p>
-
+				<p>Retrieve the measurement system for a specific territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code (eg. 'US' for 'United States of America').</dd>
+						<dd>The territory code (eg. 'US' for 'United States of America').</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Return the measurement system code (eg: 'metric') for the specified territory.
-If $territoryCode is not valid we'll return an empty string.<br>
+						string<br>Return the measurement system code (eg: 'metric') for the specified territory. If $territoryCode is not valid we'll return an empty string.
 					</div>
 
 
@@ -273,27 +255,22 @@ If $territoryCode is not valid we'll return an empty string.<br>
 			<code><a href="source-class-Punic.Unit.html#124-163" title="Go to source code">getCountriesWithMeasurementSystem</a>( <span>string <var>$measurementSystem</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the list of countries that use a specific measurement system</p>
-
+				<p>Returns the list of countries that use a specific measurement system</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the list of countries that use a specific measurement system</p>
-
+				<p>Returns the list of countries that use a specific measurement system</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$measurementSystem</var></dt>
-						<dd><code>string</code><br>$measurementSystem The measurement system identifier ('metric', 'US' or 'UK')</dd>
+						<dd>The measurement system identifier ('metric', 'US' or 'UK')</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>The list of country IDs that use the specified measurement system (if
-$measurementSystem is invalid you'll get an empty array)<br>
+						array<br>The list of country IDs that use the specified measurement system (if $measurementSystem is invalid you'll get an empty array)
 					</div>
 
 
@@ -316,27 +293,22 @@ $measurementSystem is invalid you'll get an empty array)<br>
 			<code><a href="source-class-Punic.Unit.html#165-186" title="Go to source code">getPaperSizeFor</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the standard paper size for a specific territory</p>
-
+				<p>Retrieve the standard paper size for a specific territory</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the standard paper size for a specific territory</p>
-
+				<p>Retrieve the standard paper size for a specific territory</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The territory code (eg. 'US' for 'United States of America').</dd>
+						<dd>The territory code (eg. 'US' for 'United States of America').</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>string</code><br>Return the standard paper size (eg: 'A4' or 'US-Letter') for the specified
-territory. If $territoryCode is not valid we'll return an empty string.<br>
+						string<br>Return the standard paper size (eg: 'A4' or 'US-Letter') for the specified territory. If $territoryCode is not valid we'll return an empty string.
 					</div>
 
 
@@ -359,27 +331,22 @@ territory. If $territoryCode is not valid we'll return an empty string.<br>
 			<code><a href="source-class-Punic.Unit.html#188-227" title="Go to source code">getCountriesWithPaperSize</a>( <span>string <var>$paperSize</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Returns the list of countries that use a specific paper size by default</p>
-
+				<p>Returns the list of countries that use a specific paper size by default</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Returns the list of countries that use a specific paper size by default</p>
-
+				<p>Returns the list of countries that use a specific paper size by default</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$paperSize</var></dt>
-						<dd><code>string</code><br>$paperSize The paper size identifier ('A4' or 'US-Letter')</dd>
+						<dd>The paper size identifier ('A4' or 'US-Letter')</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>The list of country IDs that use the specified paper size (if $paperSize is
-invalid you'll get an empty array)<br>
+						array<br>The list of country IDs that use the specified paper size (if $paperSize is invalid you'll get an empty array)
 					</div>
 
 
@@ -405,8 +372,10 @@ invalid you'll get an empty array)<br>
 	</div>
 
 	<div id="footer">
-		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta charset="utf-8">
 
 	<title>Class Punic\Phone | Punic APIs</title>
 
-	<script type="text/javascript" src="resources/combined.js?3128239213"></script>
-	<script type="text/javascript" src="elementlist.js?1663966723"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
 
 </head>
 
@@ -52,13 +49,18 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Punic.html">Punic<span></span></a>
-						<ul>
-				<li><a href="namespace-Punic.Exception.html">Exception</a>
-						</li>
-							</ul></li>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
 			</ul>
 		</div>
 
@@ -77,12 +79,12 @@
 				<li><a href="class-Punic.Unit.html">Unit</a></li>
 			</ul>
 
-
-
-			<h3>Exceptions</h3>
+			<h3>Interfaces</h3>
 			<ul>
 				<li><a href="class-Punic.Exception.html">Exception</a></li>
 			</ul>
+
+
 
 
 		</div>
@@ -98,9 +100,7 @@
 
 
 	<div class="description">
-	
-<p>Numbers helpers</p>
-
+	<p>Numbers helpers</p>
 	</div>
 
 
@@ -117,13 +117,14 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-		<b>Located at</b> <a href="source-class-Punic.Phone.html#4-71" title="Go to source code">Phone.php</a><br>
+			<b>Located at</b> <a href="source-class-Punic.Phone.html#4-71" title="Go to source code">Phone.php</a>
+		<br>
 	</div>
 
 
 
 		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
+		<table class="summary table table-bordered table-striped methods" id="methods">
 		<tr data-order="getPrefixesForTerritory" id="_getPrefixesForTerritory">
 
 			<td class="attributes"><code>
@@ -138,28 +139,22 @@
 			<code><a href="source-class-Punic.Phone.html#9-26" title="Go to source code">getPrefixesForTerritory</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the list of the country calling codes for a specific country</p>
-
+				<p>Retrieve the list of the country calling codes for a specific country</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the list of the country calling codes for a specific country</p>
-
+				<p>Retrieve the list of the country calling codes for a specific country</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$territoryCode</var></dt>
-						<dd><code>string</code><br>$territoryCode The country identifier ('001' for global systems, for instance
-satellite communications like Iridium)</dd>
+						<dd>The country identifier ('001' for global systems, for instance satellite communications like Iridium)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Returns the list of country calling codes found for the specified country (eg:
-for 'US' you'll get array('1'))<br>
+						array<br>Returns the list of country calling codes found for the specified country (eg: for 'US' you'll get array('1'))
 					</div>
 
 
@@ -182,27 +177,22 @@ for 'US' you'll get array('1'))<br>
 			<code><a href="source-class-Punic.Phone.html#28-46" title="Go to source code">getTerritoriesForPrefix</a>( <span>string <var>$prefix</var></span> )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the list of territory codes for a specific prefix</p>
-
+				<p>Retrieve the list of territory codes for a specific prefix</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the list of territory codes for a specific prefix</p>
-
+				<p>Retrieve the list of territory codes for a specific prefix</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$prefix</var></dt>
-						<dd><code>string</code><br>$prefix The country calling code (for instance: '1')</dd>
+						<dd>The country calling code (for instance: '1')</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>array</code><br>Returns the list of territories for which the specified prefix is applicable
-(eg: for '1' you'll get array('US', 'AG', 'AI', 'CA', ...))<br>
+						array<br>Returns the list of territories for which the specified prefix is applicable (eg: for '1' you'll get array('US', 'AG', 'AI', 'CA', ...))
 					</div>
 
 
@@ -225,21 +215,17 @@ for 'US' you'll get array('1'))<br>
 			<code><a href="source-class-Punic.Phone.html#48-70" title="Go to source code">getMaxPrefixLength</a>( )</code>
 
 			<div class="description short">
-				
-<p>Retrieve the max length of the country calling codes</p>
-
+				<p>Retrieve the max length of the country calling codes</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
-<p>Retrieve the max length of the country calling codes</p>
-
+				<p>Retrieve the max length of the country calling codes</p>
 
 
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>integer</code><br>
+						integer
 					</div>
 
 
@@ -265,8 +251,10 @@ for 'US' you'll get array('1'))<br>
 	</div>
 
 	<div id="footer">
-		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

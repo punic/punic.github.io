@@ -1,15 +1,3 @@
-/*!
- * ApiGen 2.8.0 - API documentation generator for PHP 5.3+
- *
- * Copyright (c) 2010-2011 David Grudl (http://davidgrudl.com)
- * Copyright (c) 2011-2012 Jaroslav Hanslík (https://github.com/kukulich)
- * Copyright (c) 2011-2012 Ondřej Nešpor (https://github.com/Andrewsville)
- * Copyright (c) 2012 Olivier Laviale (https://github.com/olvlvl)
- *
- * For the full copyright and license information, please view
- * the file LICENSE.md that was distributed with this source code.
- */
-
 body {
 	padding: 40px 0 0 0;
 }
@@ -71,6 +59,7 @@ pre code {
 
 .deprecated {
 	text-decoration: line-through;
+	opacity: .5;
 }
 
 .invalid {
@@ -226,7 +215,7 @@ pre code {
 	overflow: auto;
 	margin-left: 275px;
 	height: 100%;
-	position: fixed;
+	position: relative;
 	left: 0;
 	right: 0;
 }
@@ -293,6 +282,10 @@ h2.switchable {
 	text-align: right;
 }
 
+.summary td hr {
+	margin: 8px -8px;
+}
+
 #packages.summary td:first-child, #namespaces.summary td:first-child, .inherited.summary td:first-child, .used.summary td:first-child {
 	text-align: left;
 }
@@ -329,7 +322,7 @@ h2.switchable {
 	white-space: nowrap;
 }
 
-.value {
+.value code {
 	white-space: pre-wrap;
 }
 
@@ -337,20 +330,20 @@ td.name, td.attributes {
 	width: 1%;
 }
 
-.class #methods .name {
+.class .methods .name, .class .properties .name, .class .constants .name {
 	width: auto;
 	white-space: normal;
 }
 
-.class #methods .name > div > code {
+.class .methods .name > div > code {
 	white-space: pre-wrap;
 }
 
-.class #methods .name > div > code span, .function .value > code {
+.class .methods .name > div > code span, .function .value > code {
 	white-space: nowrap;
 }
 
-.class #methods td.name > div, .class td.description > div {
+.class .methods td.name > div, .class td.value > div {
 	position: relative;
 	padding-right: 1em;
 }
@@ -508,4 +501,12 @@ span.l a.l:hover, span.l a.l:active, span.l a.l:focus {
 /* Small screens */
 #rightInner.medium .name, #rightInner.medium .attributes {
 	white-space: normal;
+}
+
+/* global style */
+.left, .summary td.left {
+	text-align: left;
+}
+.right, .summary td.right {
+	text-align: right;
 }
