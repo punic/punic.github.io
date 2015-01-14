@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Punic\Currency | Punic APIs</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Punic APIs</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Punic.html" title="Summary of Punic"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+						<li>
+							<a href="todo.html" title="Todo list"><span>Todo</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Punic.html">
+							Punic<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Punic.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Punic.Calendar.html">Calendar</a></li>
+				<li class="active"><a href="class-Punic.Currency.html">Currency</a></li>
+				<li><a href="class-Punic.Data.html">Data</a></li>
+				<li><a href="class-Punic.Language.html">Language</a></li>
+				<li><a href="class-Punic.Misc.html">Misc</a></li>
+				<li><a href="class-Punic.Number.html">Number</a></li>
+				<li><a href="class-Punic.Phone.html">Phone</a></li>
+				<li><a href="class-Punic.Plural.html">Plural</a></li>
+				<li><a href="class-Punic.Territory.html">Territory</a></li>
+				<li><a href="class-Punic.Unit.html">Unit</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Punic.Exception.html">Exception</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Currency</h1>
+
+
+	<div class="description">
+	<p>Currency-related stuff</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Punic.Currency.html#4-197" title="Go to source code">Currency.php</a>
+		<br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="getAllCurrencies" id="_getAllCurrencies">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAllCurrencies">#</a>
+			<code><a href="source-class-Punic.Currency.html#9-55" title="Go to source code">getAllCurrencies</a>( <span>boolean <var>$alsoUnused</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$alsoNotTender</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns all the currencies</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns all the currencies</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$alsoUnused</var></dt>
+						<dd>$alsoUnused=false Set to true to receive also currencies not currently used by any country, false otherwise</dd>
+						<dt><var>$alsoNotTender</var></dt>
+						<dd>$alsoNotTender=false Set to true to receive also currencies that aren't legal tender in any country</dd>
+						<dt><var>$locale</var></dt>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>Array keys are the currency code, array values are the currency name. It's sorted by currency values
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getName" id="_getName">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getName">#</a>
+			<code><a href="source-class-Punic.Currency.html#57-89" title="Go to source code">getName</a>( <span>string <var>$currencyCode</var></span>, <span>null|number|string=null <var>$quantity</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the name of a currency given its code.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the name of a currency given its code.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currencyCode</var></dt>
+						<dd>The currency code</dd>
+						<dt><var>$quantity</var></dt>
+						<dd><p>quantity identifier. Allowed values:</p>
+
+<ul>
+    <li>`null` to return the standard name, not associated to any quantity</li>
+    <li>`number` to return the name following the plural rule for the specified quantity</li>
+    <li>string `'zero'|'one'|'two'|'few'|'many'|'other'` the plural rule
+</ul></dd>
+						<dt><var>$locale</var></dt>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Returns an empty string if $currencyCode is not valid, the localized currency name otherwise
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSymbol" id="_getSymbol">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSymbol">#</a>
+			<code><a href="source-class-Punic.Currency.html#91-127" title="Go to source code">getSymbol</a>( <span>string <var>$currencyCode</var></span>, <span>string <var>$which</var> = <span class="php-quote">''</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns the name of a currency given its code.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the name of a currency given its code.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$currencyCode</var></dt>
+						<dd>The currency code</dd>
+						<dt><var>$which</var></dt>
+						<dd>$which='' Which symbol flavor do you prefer? 'narrow' for narrow symbols, 'alt' for alternative. Other values: standard/default symbol</dd>
+						<dt><var>$locale</var></dt>
+						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Returns an empty string if $currencyCode is not valid, the localized currency name otherwise
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrencyHistoryForTerritory" id="_getCurrencyHistoryForTerritory">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrencyHistoryForTerritory">#</a>
+			<code><a href="source-class-Punic.Currency.html#129-159" title="Go to source code">getCurrencyHistoryForTerritory</a>( <span>string <var>$territoryCode</var></span> )</code>
+
+			<div class="description short">
+				<p>Return the history for the currencies used in a territory</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the history for the currencies used in a territory</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$territoryCode</var></dt>
+						<dd>The territoy code</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br><p>Return a list of items with these keys:</p>
+
+<ul>
+    <li>string `currency`: the currency code (always present)</li>
+    <li>string `from`: start date of the currency validity in the territory (not present if no start date) - Format is YYYY-MM-DD</li>
+    <li>string `to`: end date of the currency validity in the territory (not present if no end date) - Format is YYYY-MM-DD</li>
+    <li>bool `tender`: true if the currency was or is legal tender, false otherwise (always present)</li>
+</ul>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrencyForTerritory" id="_getCurrencyForTerritory">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrencyForTerritory">#</a>
+			<code><a href="source-class-Punic.Currency.html#161-183" title="Go to source code">getCurrencyForTerritory</a>( <span>string <var>$territoryCode</var></span> )</code>
+
+			<div class="description short">
+				<p>Return the currency to be used in a territory</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the currency to be used in a territory</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$territoryCode</var></dt>
+						<dd>The territoy code</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>Returns an empty string if $territoryCode is not valid or we don't have info about it, the currency code otherwise
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
