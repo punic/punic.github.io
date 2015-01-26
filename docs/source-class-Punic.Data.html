@@ -196,7 +196,7 @@
 </span><span id="102" class="l"><a href="#102">102 </a>    <span class="php-comment">/**
 </span></span><span id="103" class="l"><a href="#103">103 </a><span class="php-comment">     * Get the locale data
 </span></span><span id="104" class="l"><a href="#104">104 </a><span class="php-comment">     * @param string $identifier The data identifier
-</span></span><span id="105" class="l"><a href="#105">105 </a><span class="php-comment">     * @param string $locale='' The locale identifier (if empty we'll use the current default locale)
+</span></span><span id="105" class="l"><a href="#105">105 </a><span class="php-comment">     * @param string $locale The locale identifier (if empty we'll use the current default locale)
 </span></span><span id="106" class="l"><a href="#106">106 </a><span class="php-comment">     * @return array
 </span></span><span id="107" class="l"><a href="#107">107 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="108" class="l"><a href="#108">108 </a><span class="php-comment">     * @internal
@@ -287,7 +287,7 @@
 </span><span id="193" class="l"><a href="#193">193 </a>
 </span><span id="194" class="l"><a href="#194">194 </a>    <span class="php-comment">/**
 </span></span><span id="195" class="l"><a href="#195">195 </a><span class="php-comment">     * Return a list of available locale identifiers
-</span></span><span id="196" class="l"><a href="#196">196 </a><span class="php-comment">     * @param bool $allowGroups=false Set to true if you want to retrieve locale groups (eg. 'en-001'), false otherwise
+</span></span><span id="196" class="l"><a href="#196">196 </a><span class="php-comment">     * @param bool $allowGroups Set to true if you want to retrieve locale groups (eg. 'en-001'), false otherwise
 </span></span><span id="197" class="l"><a href="#197">197 </a><span class="php-comment">     * @return array
 </span></span><span id="198" class="l"><a href="#198">198 </a><span class="php-comment">     */</span>
 </span><span id="199" class="l"><a href="#199">199 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getAvailableLocales(<span class="php-var">$allowGroups</span> = <span class="php-keyword1">false</span>)
@@ -305,7 +305,7 @@
 </span><span id="211" class="l"><a href="#211">211 </a>                        <span class="php-var">$info</span> = <span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$item</span>);
 </span><span id="212" class="l"><a href="#212">212 </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$info</span>)) {
 </span><span id="213" class="l"><a href="#213">213 </a>                            <span class="php-keyword1">if</span> ((!<span class="php-var">$allowGroups</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^[0-9]{3}$/'</span>, <span class="php-var">$info</span>[<span class="php-quote">'territory'</span>])) {
-</span><span id="214" class="l"><a href="#214">214 </a>                                <span class="php-keyword1">foreach</span> (\Punic\Territory::getChildTerritoryCodes(<span class="php-var">$info</span>[<span class="php-quote">'territory'</span>], <span class="php-keyword1">true</span>) <span class="php-keyword1">as</span> <span class="php-var">$territory</span>) {
+</span><span id="214" class="l"><a href="#214">214 </a>                                <span class="php-keyword1">foreach</span> (Territory::getChildTerritoryCodes(<span class="php-var">$info</span>[<span class="php-quote">'territory'</span>], <span class="php-keyword1">true</span>) <span class="php-keyword1">as</span> <span class="php-var">$territory</span>) {
 </span><span id="215" class="l"><a href="#215">215 </a>                                    <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$info</span>[<span class="php-quote">'script'</span>][<span class="php-num">0</span>])) {
 </span><span id="216" class="l"><a href="#216">216 </a>                                        <span class="php-var">$locales</span>[] = <span class="php-quote">&quot;</span><span class="php-var">{$info['language']}</span><span class="php-quote">-</span><span class="php-var">{$info['script']}</span><span class="php-quote">-</span><span class="php-var">$territory</span><span class="php-quote">&quot;</span>;
 </span><span id="217" class="l"><a href="#217">217 </a>                                    } <span class="php-keyword1">else</span> {
@@ -327,8 +327,8 @@
 </span><span id="233" class="l"><a href="#233">233 </a>
 </span><span id="234" class="l"><a href="#234">234 </a>    <span class="php-comment">/**
 </span></span><span id="235" class="l"><a href="#235">235 </a><span class="php-comment">     * Try to guess the full locale (with script and territory) ID associated to a language
-</span></span><span id="236" class="l"><a href="#236">236 </a><span class="php-comment">     * @param string $language='' The language identifier (if empty we'll use the current default language)
-</span></span><span id="237" class="l"><a href="#237">237 </a><span class="php-comment">     * @param string $script='' The script identifier (if $language is empty we'll use the current default script)
+</span></span><span id="236" class="l"><a href="#236">236 </a><span class="php-comment">     * @param string $language The language identifier (if empty we'll use the current default language)
+</span></span><span id="237" class="l"><a href="#237">237 </a><span class="php-comment">     * @param string $script The script identifier (if $language is empty we'll use the current default script)
 </span></span><span id="238" class="l"><a href="#238">238 </a><span class="php-comment">     * @return string Returns an empty string if the territory was not found, the territory ID otherwise
 </span></span><span id="239" class="l"><a href="#239">239 </a><span class="php-comment">     */</span>
 </span><span id="240" class="l"><a href="#240">240 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> guessFullLocale(<span class="php-var">$language</span> = <span class="php-quote">''</span>, <span class="php-var">$script</span> = <span class="php-quote">''</span>)
@@ -363,8 +363,8 @@
 </span><span id="269" class="l"><a href="#269">269 </a>
 </span><span id="270" class="l"><a href="#270">270 </a>    <span class="php-comment">/**
 </span></span><span id="271" class="l"><a href="#271">271 </a><span class="php-comment">     * Return the terrotory associated to the locale (guess it if it's not present in $locale)
-</span></span><span id="272" class="l"><a href="#272">272 </a><span class="php-comment">     * @param string $locale='' The locale identifier (if empty we'll use the current default locale)
-</span></span><span id="273" class="l"><a href="#273">273 </a><span class="php-comment">     * @param bool $checkFallbackLocale=true Set to true to check the fallback locale if $locale (or the default locale) don't have an associated territory, false to don't fallback to fallback locale
+</span></span><span id="272" class="l"><a href="#272">272 </a><span class="php-comment">     * @param string $locale The locale identifier (if empty we'll use the current default locale)
+</span></span><span id="273" class="l"><a href="#273">273 </a><span class="php-comment">     * @param bool $checkFallbackLocale Set to true to check the fallback locale if $locale (or the default locale) don't have an associated territory, false to don't fallback to fallback locale
 </span></span><span id="274" class="l"><a href="#274">274 </a><span class="php-comment">     * @return string
 </span></span><span id="275" class="l"><a href="#275">275 </a><span class="php-comment">     */</span>
 </span><span id="276" class="l"><a href="#276">276 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getTerritory(<span class="php-var">$locale</span> = <span class="php-quote">''</span>, <span class="php-var">$checkFallbackLocale</span> = <span class="php-keyword1">true</span>)
@@ -396,7 +396,7 @@
 </span></span><span id="302" class="l"><a href="#302">302 </a><span class="php-comment">     */</span>
 </span><span id="303" class="l"><a href="#303">303 </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getParentTerritory(<span class="php-var">$territory</span>)
 </span><span id="304" class="l"><a href="#304">304 </a>    {
-</span><span id="305" class="l"><a href="#305">305 </a>        <span class="php-keyword1">return</span> \Punic\Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
+</span><span id="305" class="l"><a href="#305">305 </a>        <span class="php-keyword1">return</span> Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
 </span><span id="306" class="l"><a href="#306">306 </a>    }
 </span><span id="307" class="l"><a href="#307">307 </a>
 </span><span id="308" class="l"><a href="#308">308 </a>    <span class="php-comment">/**
@@ -404,13 +404,13 @@
 </span></span><span id="310" class="l"><a href="#310">310 </a><span class="php-comment">     */</span>
 </span><span id="311" class="l"><a href="#311">311 </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> expandTerritoryGroup(<span class="php-var">$parentTerritory</span>)
 </span><span id="312" class="l"><a href="#312">312 </a>    {
-</span><span id="313" class="l"><a href="#313">313 </a>        <span class="php-keyword1">return</span> \Punic\Territory::getChildTerritoryCodes(<span class="php-var">$parentTerritory</span>, <span class="php-keyword1">true</span>);
+</span><span id="313" class="l"><a href="#313">313 </a>        <span class="php-keyword1">return</span> Territory::getChildTerritoryCodes(<span class="php-var">$parentTerritory</span>, <span class="php-keyword1">true</span>);
 </span><span id="314" class="l"><a href="#314">314 </a>    }
 </span><span id="315" class="l"><a href="#315">315 </a>
 </span><span id="316" class="l"><a href="#316">316 </a>    <span class="php-comment">/**
 </span></span><span id="317" class="l"><a href="#317">317 </a><span class="php-comment">     * Return the node associated to the locale territory
 </span></span><span id="318" class="l"><a href="#318">318 </a><span class="php-comment">     * @param array $data The parent array for which you want the territory node
-</span></span><span id="319" class="l"><a href="#319">319 </a><span class="php-comment">     * @param string $locale='' The locale identifier (if empty we'll use the current default locale)
+</span></span><span id="319" class="l"><a href="#319">319 </a><span class="php-comment">     * @param string $locale The locale identifier (if empty we'll use the current default locale)
 </span></span><span id="320" class="l"><a href="#320">320 </a><span class="php-comment">     * @return mixed Returns null if the node was not found, the node data otherwise
 </span></span><span id="321" class="l"><a href="#321">321 </a><span class="php-comment">     * @internal
 </span></span><span id="322" class="l"><a href="#322">322 </a><span class="php-comment">     */</span>
@@ -423,7 +423,7 @@
 </span><span id="329" class="l"><a href="#329">329 </a>                <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$territory</span>];
 </span><span id="330" class="l"><a href="#330">330 </a>                <span class="php-keyword1">break</span>;
 </span><span id="331" class="l"><a href="#331">331 </a>            }
-</span><span id="332" class="l"><a href="#332">332 </a>            <span class="php-var">$territory</span> = \Punic\Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
+</span><span id="332" class="l"><a href="#332">332 </a>            <span class="php-var">$territory</span> = Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
 </span><span id="333" class="l"><a href="#333">333 </a>        }
 </span><span id="334" class="l"><a href="#334">334 </a>
 </span><span id="335" class="l"><a href="#335">335 </a>        <span class="php-keyword1">return</span> <span class="php-var">$result</span>;
@@ -432,7 +432,7 @@
 </span><span id="338" class="l"><a href="#338">338 </a>    <span class="php-comment">/**
 </span></span><span id="339" class="l"><a href="#339">339 </a><span class="php-comment">     * Return the node associated to the language (not locale) territory
 </span></span><span id="340" class="l"><a href="#340">340 </a><span class="php-comment">     * @param array $data The parent array for which you want the language node
-</span></span><span id="341" class="l"><a href="#341">341 </a><span class="php-comment">     * @param string $locale='' The locale identifier (if empty we'll use the current default locale)
+</span></span><span id="341" class="l"><a href="#341">341 </a><span class="php-comment">     * @param string $locale The locale identifier (if empty we'll use the current default locale)
 </span></span><span id="342" class="l"><a href="#342">342 </a><span class="php-comment">     * @return mixed Returns null if the node was not found, the node data otherwise
 </span></span><span id="343" class="l"><a href="#343">343 </a><span class="php-comment">     * @internal
 </span></span><span id="344" class="l"><a href="#344">344 </a><span class="php-comment">     */</span>
@@ -455,7 +455,7 @@
 </span><span id="361" class="l"><a href="#361">361 </a>    <span class="php-comment">/**
 </span></span><span id="362" class="l"><a href="#362">362 </a><span class="php-comment">     * Returns the item of an array associated to a locale
 </span></span><span id="363" class="l"><a href="#363">363 </a><span class="php-comment">     * @param array $data The data containing the locale info
-</span></span><span id="364" class="l"><a href="#364">364 </a><span class="php-comment">     * @param string $locale='' The locale identifier (if empty we'll use the current default locale)
+</span></span><span id="364" class="l"><a href="#364">364 </a><span class="php-comment">     * @param string $locale The locale identifier (if empty we'll use the current default locale)
 </span></span><span id="365" class="l"><a href="#365">365 </a><span class="php-comment">     * @return mixed Returns null if $data is not an array or it does not contain locale info, the array item otherwise
 </span></span><span id="366" class="l"><a href="#366">366 </a><span class="php-comment">     * @internal
 </span></span><span id="367" class="l"><a href="#367">367 </a><span class="php-comment">     */</span>
@@ -571,7 +571,7 @@
 </span><span id="477" class="l"><a href="#477">477 </a>    <span class="php-comment">/**
 </span></span><span id="478" class="l"><a href="#478">478 </a><span class="php-comment">     * Returns a list of locale identifiers associated to a locale
 </span></span><span id="479" class="l"><a href="#479">479 </a><span class="php-comment">     * @param string $locale The locale for which you want the alternatives
-</span></span><span id="480" class="l"><a href="#480">480 </a><span class="php-comment">     * @param string $addFallback=true Set to true to add the fallback locale to the result, false otherwise
+</span></span><span id="480" class="l"><a href="#480">480 </a><span class="php-comment">     * @param string $addFallback Set to true to add the fallback locale to the result, false otherwise
 </span></span><span id="481" class="l"><a href="#481">481 </a><span class="php-comment">     * @return array
 </span></span><span id="482" class="l"><a href="#482">482 </a><span class="php-comment">     */</span>
 </span><span id="483" class="l"><a href="#483">483 </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getLocaleAlternatives(<span class="php-var">$locale</span>, <span class="php-var">$addFallback</span> = <span class="php-keyword1">true</span>)
@@ -598,7 +598,7 @@
 </span><span id="504" class="l"><a href="#504">504 </a>        <span class="php-var">$territories</span> = <span class="php-keyword1">array</span>();
 </span><span id="505" class="l"><a href="#505">505 </a>        <span class="php-keyword1">while</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$territory</span>[<span class="php-num">0</span>])) {
 </span><span id="506" class="l"><a href="#506">506 </a>            <span class="php-var">$territories</span>[] = <span class="php-var">$territory</span>;
-</span><span id="507" class="l"><a href="#507">507 </a>            <span class="php-var">$territory</span> = \Punic\Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
+</span><span id="507" class="l"><a href="#507">507 </a>            <span class="php-var">$territory</span> = Territory::getParentTerritoryCode(<span class="php-var">$territory</span>);
 </span><span id="508" class="l"><a href="#508">508 </a>        }
 </span><span id="509" class="l"><a href="#509">509 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$script</span>[<span class="php-num">0</span>])) {
 </span><span id="510" class="l"><a href="#510">510 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$territories</span> <span class="php-keyword1">as</span> <span class="php-var">$territory</span>) {

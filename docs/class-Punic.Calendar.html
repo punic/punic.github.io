@@ -152,9 +152,9 @@
 						<dt><var>$value</var></dt>
 						<dd>An Unix timestamp, a <code>\DateTime</code> instance \DateTime or a string accepted by <a href="http://php.net/manual/function.strtotime.php">strtotime</a>.</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd>$toTimezone='' The timezone to set; leave empty to use the value of $fromTimezone (if it's empty we'll use the default timezone or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
+						<dd>The timezone to set; leave empty to use the value of $fromTimezone (if it's empty we'll use the default timezone or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
 						<dt><var>$fromTimezone</var></dt>
-						<dd>$fromTimezone='' The original timezone of $value; leave empty to use the default timezone (or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
+						<dd>The original timezone of $value; leave empty to use the default timezone (or the timezone associated to $value if it's already a <code>\DateTime</code>).</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -255,9 +255,9 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>The year number or the \DateTime instance for which you want the name of the era.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='abbreviated' The format name; it can be 'wide' (eg 'Before Christ'), 'abbreviated' (eg 'BC') or 'narrow' (eg 'B').</dd>
+						<dd>The format name; it can be 'wide' (eg 'Before Christ'), 'abbreviated' (eg 'BC') or 'narrow' (eg 'B').</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -303,11 +303,11 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>The month number (1-12) or a \DateTime instance for which you want the name of the month.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='wide' The format name; it can be 'wide' (eg 'January'), 'abbreviated' (eg 'Jan') or 'narrow' (eg 'J').</dd>
+						<dd>The format name; it can be 'wide' (eg 'January'), 'abbreviated' (eg 'Jan') or 'narrow' (eg 'J').</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the month name will be part of a date.</dd>
+						<dd>Set to true to return the form used independently (such as in calendar header), set to false if the month name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -353,11 +353,11 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>A week day number (from 0-Sunday to 6-Saturnday) or a \DateTime instance for which you want the name of the day of the week.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='wide' The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated' (eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').</dd>
+						<dd>The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated' (eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the week day name will be part of a date.</dd>
+						<dd>Set to true to return the form used independently (such as in calendar header), set to false if the week day name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -403,11 +403,11 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>A quarter number (from 1 to 4) or a \DateTime instance for which you want the name of the day of the quarter.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='wide' The format name; it can be 'wide' (eg '1st quarter'), 'abbreviated' (eg 'Q1') or 'narrow' (eg '1').</dd>
+						<dd>The format name; it can be 'wide' (eg '1st quarter'), 'abbreviated' (eg 'Q1') or 'narrow' (eg '1').</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the quarter name will be part of a date.</dd>
+						<dd>Set to true to return the form used independently (such as in calendar header), set to false if the quarter name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -453,11 +453,11 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>An hour (from 0 to 23), a standard period name ('am' or 'pm', lower or upper case) a \DateTime instance for which you want the name of the day period.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='wide' The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg 'AM') or 'narrow' (eg 'a').</dd>
+						<dd>The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg 'AM') or 'narrow' (eg 'a').</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 						<dt><var>$standAlone</var></dt>
-						<dd>$standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the day period name will be part of a date.</dd>
+						<dd>Set to true to return the form used independently (such as in calendar header), set to false if the day period name will be part of a date.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -503,11 +503,11 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance for which you want the localized timezone name.</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='long' The format name; it can be 'long' (eg 'Greenwich Mean Time') or 'short' (eg 'GMT').</dd>
+						<dd>The format name; it can be 'long' (eg 'Greenwich Mean Time') or 'short' (eg 'GMT').</dd>
 						<dt><var>$kind</var></dt>
-						<dd>$kind='' Set to 'daylight' to retrieve the daylight saving time name, set to 'standard' to retrieve the standard time, set to 'generic' to retrieve the generic name, set to '' to determine automatically the dst (if $value is \DateTime) or the generic (otherwise).</dd>
+						<dd>Set to 'daylight' to retrieve the daylight saving time name, set to 'standard' to retrieve the standard time, set to 'generic' to retrieve the generic name, set to '' to determine automatically the dst (if $value is \DateTime) or the generic (otherwise).</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
+						<dd>The locale to use. If empty we'll use the default locale set with <code><a href="class-Punic.Data.html#_setDefaultLocale">Punic\Data::setDefaultLocale()</a></code>.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -584,9 +584,9 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 						<dt><var>$value</var></dt>
 						<dd>The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance</dd>
 						<dt><var>$returnUnknownIfNotFound</var></dt>
-						<dd>$returnUnknownIfNotFound=true true If the exemplar city is not found, shall we return the translation of 'Unknown City'?</dd>
+						<dd>true If the exemplar city is not found, shall we return the translation of 'Unknown City'?</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -624,7 +624,7 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -666,7 +666,7 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -704,10 +704,10 @@ So, if your system default timezone is 'America/Los_Angeles' (GMT -8), the resul
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$namesWidth</var></dt>
-						<dd><p>$namesWidth=false If false you'll get only the list of weekday identifiers (for instance: [0, 1, 2, 3, 4, 5, 6]),
+						<dd><p>If false you'll get only the list of weekday identifiers (for instance: [0, 1, 2, 3, 4, 5, 6]),
 If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.html#_getWeekdayName">Punic\Calendar::getWeekdayName()</a></code>, and you'll get an array like this: [{id: 0, name: 'Monday', ..., {id: 6, name: 'Sunday'}]</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -747,7 +747,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$width</var></dt>
 						<dd>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -797,7 +797,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$width</var></dt>
 						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -847,7 +847,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$width</var></dt>
 						<dd>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -897,7 +897,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$dateEnd</var></dt>
 						<dd>The first date</dd>
 						<dt><var>$dateStart</var></dt>
-						<dd>$dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
+						<dd>The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -941,13 +941,13 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$dateEnd</var></dt>
 						<dd>The first date</dd>
 						<dt><var>$dateStart</var></dt>
-						<dd>$dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
+						<dd>The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)</dd>
 						<dt><var>$maxParts</var></dt>
-						<dd>$maxParts=2 The maximim parts (eg with 2 you may have '2 days and 4 hours', with 3 '2 days, 4 hours and 24 minutes')</dd>
+						<dd>The maximim parts (eg with 2 you may have '2 days and 4 hours', with 3 '2 days, 4 hours and 24 minutes')</dd>
 						<dt><var>$width</var></dt>
-						<dd>$width='short' The format name; it can be 'long' (eg '3 seconds'), 'short' (eg '3 s') or 'narrow' (eg '3s')</dd>
+						<dd>The format name; it can be 'long' (eg '3 seconds'), 'short' (eg '3 s') or 'narrow' (eg '3s')</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -994,7 +994,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dd><p>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14').
                      You can also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '</em>') instead of the date.</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1047,9 +1047,9 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dd><p>The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')
                      You can also append a caret ('^') or an asterisk ('<em>') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '</em>') instead of the date.</p></dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1105,7 +1105,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$width</var></dt>
 						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1157,9 +1157,9 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$width</var></dt>
 						<dd>The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1216,7 +1216,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dd><p>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
                      You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.</p></dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1269,9 +1269,9 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dd><p>The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
                      You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.</p></dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1327,7 +1327,7 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$format</var></dt>
 						<dd>The ISO format that specify how to render the date/time</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1379,9 +1379,9 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$format</var></dt>
 						<dd>The ISO format that specify how to render the date/time</dd>
 						<dt><var>$toTimezone</var></dt>
-						<dd>$toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
+						<dd>The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1431,9 +1431,9 @@ If it's a string it must be one accepted by <code><a href="class-Punic.Calendar.
 						<dt><var>$datetime</var></dt>
 						<dd>The date for which you want the relative day name</dd>
 						<dt><var>$ucFirst</var></dt>
-						<dd>$ucFirst=false Force first letter to be upper case?</dd>
+						<dd>Force first letter to be upper case?</dd>
 						<dt><var>$locale</var></dt>
-						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
 					<h4>Returns</h4>

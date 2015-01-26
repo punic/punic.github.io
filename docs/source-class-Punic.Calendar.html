@@ -116,8 +116,8 @@
 </span><span id="22" class="l"><a href="#22">  22 </a>    <span class="php-comment">/**
 </span></span><span id="23" class="l"><a href="#23">  23 </a><span class="php-comment">     * Convert a date/time representation to a {@link http://php.net/manual/class.datetime.php \DateTime} instance.
 </span></span><span id="24" class="l"><a href="#24">  24 </a><span class="php-comment">     * @param number|\DateTime|string $value An Unix timestamp, a `\DateTime` instance \DateTime or a string accepted by {@link http://php.net/manual/function.strtotime.php strtotime}.
-</span></span><span id="25" class="l"><a href="#25">  25 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone='' The timezone to set; leave empty to use the value of $fromTimezone (if it's empty we'll use the default timezone or the timezone associated to $value if it's already a `\DateTime`).
-</span></span><span id="26" class="l"><a href="#26">  26 </a><span class="php-comment">     * @param string|\DateTimeZone $fromTimezone='' The original timezone of $value; leave empty to use the default timezone (or the timezone associated to $value if it's already a `\DateTime`).
+</span></span><span id="25" class="l"><a href="#25">  25 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone The timezone to set; leave empty to use the value of $fromTimezone (if it's empty we'll use the default timezone or the timezone associated to $value if it's already a `\DateTime`).
+</span></span><span id="26" class="l"><a href="#26">  26 </a><span class="php-comment">     * @param string|\DateTimeZone $fromTimezone The original timezone of $value; leave empty to use the default timezone (or the timezone associated to $value if it's already a `\DateTime`).
 </span></span><span id="27" class="l"><a href="#27">  27 </a><span class="php-comment">     * @return \DateTime|null Returns null if $value is empty, a `\DateTime` instance otherwise.
 </span></span><span id="28" class="l"><a href="#28">  28 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws an exception if $value is not empty and can't be converted to a `\DateTime` instance or if $toTimezone is not empty and is not valid.
 </span></span><span id="29" class="l"><a href="#29">  29 </a><span class="php-comment">     * @example Convert a Unix timestamp to a \DateTime instance with the current time zone:
@@ -277,8 +277,8 @@
 </span><span id="183" class="l"><a href="#183"> 183 </a>    <span class="php-comment">/**
 </span></span><span id="184" class="l"><a href="#184"> 184 </a><span class="php-comment">     * Get the name of an era.
 </span></span><span id="185" class="l"><a href="#185"> 185 </a><span class="php-comment">     * @param number|\DateTime $value The year number or the \DateTime instance for which you want the name of the era.
-</span></span><span id="186" class="l"><a href="#186"> 186 </a><span class="php-comment">     * @param string $width='abbreviated' The format name; it can be 'wide' (eg 'Before Christ'), 'abbreviated' (eg 'BC') or 'narrow' (eg 'B').
-</span></span><span id="187" class="l"><a href="#187"> 187 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="186" class="l"><a href="#186"> 186 </a><span class="php-comment">     * @param string $width The format name; it can be 'wide' (eg 'Before Christ'), 'abbreviated' (eg 'BC') or 'narrow' (eg 'B').
+</span></span><span id="187" class="l"><a href="#187"> 187 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
 </span></span><span id="188" class="l"><a href="#188"> 188 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the name of the era otherwise.
 </span></span><span id="189" class="l"><a href="#189"> 189 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws a BadArgumentType exception if $value is not valid.
 </span></span><span id="190" class="l"><a href="#190"> 190 </a><span class="php-comment">     * @throws \Punic\Exception\ValueNotInList Throws a ValueNotInList exception if $width is not valid.
@@ -303,7 +303,7 @@
 </span><span id="209" class="l"><a href="#209"> 209 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-var">$year</span>)) {
 </span><span id="210" class="l"><a href="#210"> 210 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$value</span>, <span class="php-quote">'year number'</span>);
 </span><span id="211" class="l"><a href="#211"> 211 </a>            }
-</span><span id="212" class="l"><a href="#212"> 212 </a>            <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="212" class="l"><a href="#212"> 212 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="213" class="l"><a href="#213"> 213 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'eras'</span>];
 </span><span id="214" class="l"><a href="#214"> 214 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="215" class="l"><a href="#215"> 215 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -317,9 +317,9 @@
 </span><span id="223" class="l"><a href="#223"> 223 </a>    <span class="php-comment">/**
 </span></span><span id="224" class="l"><a href="#224"> 224 </a><span class="php-comment">     * Get the name of a month.
 </span></span><span id="225" class="l"><a href="#225"> 225 </a><span class="php-comment">     * @param number|\DateTime $value The month number (1-12) or a \DateTime instance for which you want the name of the month.
-</span></span><span id="226" class="l"><a href="#226"> 226 </a><span class="php-comment">     * @param string $width='wide' The format name; it can be 'wide' (eg 'January'), 'abbreviated' (eg 'Jan') or 'narrow' (eg 'J').
-</span></span><span id="227" class="l"><a href="#227"> 227 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
-</span></span><span id="228" class="l"><a href="#228"> 228 </a><span class="php-comment">     * @param bool $standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the month name will be part of a date.
+</span></span><span id="226" class="l"><a href="#226"> 226 </a><span class="php-comment">     * @param string $width The format name; it can be 'wide' (eg 'January'), 'abbreviated' (eg 'Jan') or 'narrow' (eg 'J').
+</span></span><span id="227" class="l"><a href="#227"> 227 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="228" class="l"><a href="#228"> 228 </a><span class="php-comment">     * @param bool $standAlone Set to true to return the form used independently (such as in calendar header), set to false if the month name will be part of a date.
 </span></span><span id="229" class="l"><a href="#229"> 229 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the name of the month otherwise.
 </span></span><span id="230" class="l"><a href="#230"> 230 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws a BadArgumentType exception if $value is not valid.
 </span></span><span id="231" class="l"><a href="#231"> 231 </a><span class="php-comment">     * @throws \Punic\Exception\ValueNotInList Throws a ValueNotInList exception if $width is not valid.
@@ -344,7 +344,7 @@
 </span><span id="250" class="l"><a href="#250"> 250 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-var">$month</span>) || ((<span class="php-var">$month</span> &lt; <span class="php-num">1</span>) || (<span class="php-var">$month</span> &gt; <span class="php-num">12</span>))) {
 </span><span id="251" class="l"><a href="#251"> 251 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$value</span>, <span class="php-quote">'month number'</span>);
 </span><span id="252" class="l"><a href="#252"> 252 </a>            }
-</span><span id="253" class="l"><a href="#253"> 253 </a>            <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="253" class="l"><a href="#253"> 253 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="254" class="l"><a href="#254"> 254 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'months'</span>][<span class="php-var">$standAlone</span> ? <span class="php-quote">'stand-alone'</span> : <span class="php-quote">'format'</span>];
 </span><span id="255" class="l"><a href="#255"> 255 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="256" class="l"><a href="#256"> 256 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -358,9 +358,9 @@
 </span><span id="264" class="l"><a href="#264"> 264 </a>    <span class="php-comment">/**
 </span></span><span id="265" class="l"><a href="#265"> 265 </a><span class="php-comment">     * Get the name of a week day.
 </span></span><span id="266" class="l"><a href="#266"> 266 </a><span class="php-comment">     * @param number|\DateTime $value A week day number (from 0-Sunday to 6-Saturnday) or a \DateTime instance for which you want the name of the day of the week.
-</span></span><span id="267" class="l"><a href="#267"> 267 </a><span class="php-comment">     * @param string $width='wide' The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated' (eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').
-</span></span><span id="268" class="l"><a href="#268"> 268 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
-</span></span><span id="269" class="l"><a href="#269"> 269 </a><span class="php-comment">     * @param bool $standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the week day name will be part of a date.
+</span></span><span id="267" class="l"><a href="#267"> 267 </a><span class="php-comment">     * @param string $width The format name; it can be 'wide' (eg 'Sunday'), 'abbreviated' (eg 'Sun'), 'short' (eg 'Su') or 'narrow' (eg 'S').
+</span></span><span id="268" class="l"><a href="#268"> 268 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="269" class="l"><a href="#269"> 269 </a><span class="php-comment">     * @param bool $standAlone Set to true to return the form used independently (such as in calendar header), set to false if the week day name will be part of a date.
 </span></span><span id="270" class="l"><a href="#270"> 270 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the name of the week day name otherwise.
 </span></span><span id="271" class="l"><a href="#271"> 271 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws a BadArgumentType exception if $value is not valid.
 </span></span><span id="272" class="l"><a href="#272"> 272 </a><span class="php-comment">     * @throws \Punic\Exception\ValueNotInList Throws a ValueNotInList exception if $width is not valid.
@@ -386,7 +386,7 @@
 </span><span id="292" class="l"><a href="#292"> 292 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$value</span>, <span class="php-quote">'weekday number'</span>);
 </span><span id="293" class="l"><a href="#293"> 293 </a>            }
 </span><span id="294" class="l"><a href="#294"> 294 </a>            <span class="php-var">$weekday</span> = self::<span class="php-var">$weekdayDictionary</span>[<span class="php-var">$weekday</span>];
-</span><span id="295" class="l"><a href="#295"> 295 </a>            <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="295" class="l"><a href="#295"> 295 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="296" class="l"><a href="#296"> 296 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'days'</span>][<span class="php-var">$standAlone</span> ? <span class="php-quote">'stand-alone'</span> : <span class="php-quote">'format'</span>];
 </span><span id="297" class="l"><a href="#297"> 297 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="298" class="l"><a href="#298"> 298 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -400,9 +400,9 @@
 </span><span id="306" class="l"><a href="#306"> 306 </a>    <span class="php-comment">/**
 </span></span><span id="307" class="l"><a href="#307"> 307 </a><span class="php-comment">     * Get the name of a quarter.
 </span></span><span id="308" class="l"><a href="#308"> 308 </a><span class="php-comment">     * @param number|\DateTime $value A quarter number (from 1 to 4) or a \DateTime instance for which you want the name of the day of the quarter.
-</span></span><span id="309" class="l"><a href="#309"> 309 </a><span class="php-comment">     * @param string $width='wide' The format name; it can be 'wide' (eg '1st quarter'), 'abbreviated' (eg 'Q1') or 'narrow' (eg '1').
-</span></span><span id="310" class="l"><a href="#310"> 310 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
-</span></span><span id="311" class="l"><a href="#311"> 311 </a><span class="php-comment">     * @param bool $standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the quarter name will be part of a date.
+</span></span><span id="309" class="l"><a href="#309"> 309 </a><span class="php-comment">     * @param string $width The format name; it can be 'wide' (eg '1st quarter'), 'abbreviated' (eg 'Q1') or 'narrow' (eg '1').
+</span></span><span id="310" class="l"><a href="#310"> 310 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="311" class="l"><a href="#311"> 311 </a><span class="php-comment">     * @param bool $standAlone Set to true to return the form used independently (such as in calendar header), set to false if the quarter name will be part of a date.
 </span></span><span id="312" class="l"><a href="#312"> 312 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the name of the quarter name otherwise.
 </span></span><span id="313" class="l"><a href="#313"> 313 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws a BadArgumentType exception if $value is not valid.
 </span></span><span id="314" class="l"><a href="#314"> 314 </a><span class="php-comment">     * @throws \Punic\Exception\ValueNotInList Throws a ValueNotInList exception if $width is not valid.
@@ -427,7 +427,7 @@
 </span><span id="333" class="l"><a href="#333"> 333 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-var">$quarter</span>) || ((<span class="php-var">$quarter</span> &lt; <span class="php-num">1</span>) || (<span class="php-var">$quarter</span> &gt; <span class="php-num">4</span>))) {
 </span><span id="334" class="l"><a href="#334"> 334 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$value</span>, <span class="php-quote">'quarter number'</span>);
 </span><span id="335" class="l"><a href="#335"> 335 </a>            }
-</span><span id="336" class="l"><a href="#336"> 336 </a>            <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="336" class="l"><a href="#336"> 336 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="337" class="l"><a href="#337"> 337 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'quarters'</span>][<span class="php-var">$standAlone</span> ? <span class="php-quote">'stand-alone'</span> : <span class="php-quote">'format'</span>];
 </span><span id="338" class="l"><a href="#338"> 338 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="339" class="l"><a href="#339"> 339 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -441,9 +441,9 @@
 </span><span id="347" class="l"><a href="#347"> 347 </a>    <span class="php-comment">/**
 </span></span><span id="348" class="l"><a href="#348"> 348 </a><span class="php-comment">     * Get the name of a day period (AM/PM).
 </span></span><span id="349" class="l"><a href="#349"> 349 </a><span class="php-comment">     * @param number|string|\DateTime $value An hour (from 0 to 23), a standard period name ('am' or 'pm', lower or upper case) a \DateTime instance for which you want the name of the day period.
-</span></span><span id="350" class="l"><a href="#350"> 350 </a><span class="php-comment">     * @param string $width='wide' The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg 'AM') or 'narrow' (eg 'a').
-</span></span><span id="351" class="l"><a href="#351"> 351 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
-</span></span><span id="352" class="l"><a href="#352"> 352 </a><span class="php-comment">     * @param bool $standAlone=false Set to true to return the form used independently (such as in calendar header), set to false if the day period name will be part of a date.
+</span></span><span id="350" class="l"><a href="#350"> 350 </a><span class="php-comment">     * @param string $width The format name; it can be 'wide' (eg 'AM'), 'abbreviated' (eg 'AM') or 'narrow' (eg 'a').
+</span></span><span id="351" class="l"><a href="#351"> 351 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="352" class="l"><a href="#352"> 352 </a><span class="php-comment">     * @param bool $standAlone Set to true to return the form used independently (such as in calendar header), set to false if the day period name will be part of a date.
 </span></span><span id="353" class="l"><a href="#353"> 353 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the name of the day period name otherwise.
 </span></span><span id="354" class="l"><a href="#354"> 354 </a><span class="php-comment">     * @throws \Punic\Exception\BadArgumentType Throws a BadArgumentType exception if $value is not valid.
 </span></span><span id="355" class="l"><a href="#355"> 355 </a><span class="php-comment">     * @throws \Punic\Exception\ValueNotInList Throws a ValueNotInList exception if $width is not valid.
@@ -478,7 +478,7 @@
 </span><span id="384" class="l"><a href="#384"> 384 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-var">$dayperiod</span>)) {
 </span><span id="385" class="l"><a href="#385"> 385 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$value</span>, <span class="php-quote">'day period'</span>);
 </span><span id="386" class="l"><a href="#386"> 386 </a>            }
-</span><span id="387" class="l"><a href="#387"> 387 </a>            <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="387" class="l"><a href="#387"> 387 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="388" class="l"><a href="#388"> 388 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'dayPeriods'</span>][<span class="php-var">$standAlone</span> ? <span class="php-quote">'stand-alone'</span> : <span class="php-quote">'format'</span>];
 </span><span id="389" class="l"><a href="#389"> 389 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="390" class="l"><a href="#390"> 390 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -492,15 +492,15 @@
 </span><span id="398" class="l"><a href="#398"> 398 </a>    <span class="php-comment">/**
 </span></span><span id="399" class="l"><a href="#399"> 399 </a><span class="php-comment">     * Returns the localized name of a timezone, no location-specific.
 </span></span><span id="400" class="l"><a href="#400"> 400 </a><span class="php-comment">     * @param string|\DateTime|\DateTimeZone $value The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance for which you want the localized timezone name.
-</span></span><span id="401" class="l"><a href="#401"> 401 </a><span class="php-comment">     * @param string $width='long' The format name; it can be 'long' (eg 'Greenwich Mean Time') or 'short' (eg 'GMT').
-</span></span><span id="402" class="l"><a href="#402"> 402 </a><span class="php-comment">     * @param string $kind='' Set to 'daylight' to retrieve the daylight saving time name, set to 'standard' to retrieve the standard time, set to 'generic' to retrieve the generic name, set to '' to determine automatically the dst (if $value is \DateTime) or the generic (otherwise).
-</span></span><span id="403" class="l"><a href="#403"> 403 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
+</span></span><span id="401" class="l"><a href="#401"> 401 </a><span class="php-comment">     * @param string $width The format name; it can be 'long' (eg 'Greenwich Mean Time') or 'short' (eg 'GMT').
+</span></span><span id="402" class="l"><a href="#402"> 402 </a><span class="php-comment">     * @param string $kind Set to 'daylight' to retrieve the daylight saving time name, set to 'standard' to retrieve the standard time, set to 'generic' to retrieve the generic name, set to '' to determine automatically the dst (if $value is \DateTime) or the generic (otherwise).
+</span></span><span id="403" class="l"><a href="#403"> 403 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set with {@link \Punic\Data::setDefaultLocale()}.
 </span></span><span id="404" class="l"><a href="#404"> 404 </a><span class="php-comment">     * @return string Returns an empty string if the timezone has not been found (maybe we don't have the data in the specified $width), the timezone name otherwise.
 </span></span><span id="405" class="l"><a href="#405"> 405 </a><span class="php-comment">     * @throws \Punic\Exception Throws a generic exception in case of problems (for instance if you specify an invalid locale).
 </span></span><span id="406" class="l"><a href="#406"> 406 </a><span class="php-comment">     */</span>
 </span><span id="407" class="l"><a href="#407"> 407 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getTimezoneNameNoLocationSpecific(<span class="php-var">$value</span>, <span class="php-var">$width</span> = <span class="php-quote">'long'</span>, <span class="php-var">$kind</span> = <span class="php-quote">''</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="408" class="l"><a href="#408"> 408 </a>    {
-</span><span id="409" class="l"><a href="#409"> 409 </a>        <span class="php-var">$cacheKey</span> = <span class="php-keyword2">json_encode</span>(<span class="php-keyword1">array</span>(<span class="php-var">$value</span>, <span class="php-var">$width</span>, <span class="php-var">$kind</span>, <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? \Punic\Data::getDefaultLocale() : <span class="php-var">$locale</span>));
+</span><span id="409" class="l"><a href="#409"> 409 </a>        <span class="php-var">$cacheKey</span> = <span class="php-keyword2">json_encode</span>(<span class="php-keyword1">array</span>(<span class="php-var">$value</span>, <span class="php-var">$width</span>, <span class="php-var">$kind</span>, <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? Data::getDefaultLocale() : <span class="php-var">$locale</span>));
 </span><span id="410" class="l"><a href="#410"> 410 </a>        <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(self::<span class="php-var">$timezoneCache</span>[<span class="php-var">$cacheKey</span>])) {
 </span><span id="411" class="l"><a href="#411"> 411 </a>            <span class="php-keyword1">return</span> self::<span class="php-var">$timezoneCache</span>[<span class="php-var">$cacheKey</span>];
 </span><span id="412" class="l"><a href="#412"> 412 </a>        }
@@ -526,7 +526,7 @@
 </span><span id="432" class="l"><a href="#432"> 432 </a>            }
 </span><span id="433" class="l"><a href="#433"> 433 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$receivedPhpName</span>[<span class="php-num">0</span>])) {
 </span><span id="434" class="l"><a href="#434"> 434 </a>                <span class="php-var">$metazoneCode</span> = <span class="php-quote">''</span>;
-</span><span id="435" class="l"><a href="#435"> 435 </a>                <span class="php-var">$data</span> = \Punic\Data::getGeneric(<span class="php-quote">'metaZones'</span>);
+</span><span id="435" class="l"><a href="#435"> 435 </a>                <span class="php-var">$data</span> = Data::getGeneric(<span class="php-quote">'metaZones'</span>);
 </span><span id="436" class="l"><a href="#436"> 436 </a>                <span class="php-var">$phpNames</span> = <span class="php-keyword1">static</span>::getTimezonesAliases(<span class="php-var">$receivedPhpName</span>);
 </span><span id="437" class="l"><a href="#437"> 437 </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$metazoneCode</span>[<span class="php-num">0</span>])) {
 </span><span id="438" class="l"><a href="#438"> 438 </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$phpNames</span> <span class="php-keyword1">as</span> <span class="php-var">$phpName</span>) {
@@ -578,7 +578,7 @@
 </span><span id="484" class="l"><a href="#484"> 484 </a>                    <span class="php-var">$metazoneCode</span> = <span class="php-var">$receivedPhpName</span>;
 </span><span id="485" class="l"><a href="#485"> 485 </a>                }
 </span><span id="486" class="l"><a href="#486"> 486 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$metazoneCode</span>[<span class="php-num">0</span>])) {
-</span><span id="487" class="l"><a href="#487"> 487 </a>                    <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
+</span><span id="487" class="l"><a href="#487"> 487 </a>                    <span class="php-var">$data</span> = Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
 </span><span id="488" class="l"><a href="#488"> 488 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-quote">'metazone'</span>])) {
 </span><span id="489" class="l"><a href="#489"> 489 </a>                        <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'metazone'</span>];
 </span><span id="490" class="l"><a href="#490"> 490 </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$metazoneCode</span>])) {
@@ -619,14 +619,14 @@
 </span><span id="525" class="l"><a href="#525"> 525 </a>    <span class="php-comment">/**
 </span></span><span id="526" class="l"><a href="#526"> 526 </a><span class="php-comment">     * Returns the localized name of an exemplar city for a specific timezone
 </span></span><span id="527" class="l"><a href="#527"> 527 </a><span class="php-comment">     * @param string|\DateTime|\DateTimeZone $value The php name of a timezone, or a \DateTime instance or a \DateTimeZone instance
-</span></span><span id="528" class="l"><a href="#528"> 528 </a><span class="php-comment">     * @param bool $returnUnknownIfNotFound=true true If the exemplar city is not found, shall we return the translation of 'Unknown City'?
-</span></span><span id="529" class="l"><a href="#529"> 529 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="528" class="l"><a href="#528"> 528 </a><span class="php-comment">     * @param bool $returnUnknownIfNotFound true If the exemplar city is not found, shall we return the translation of 'Unknown City'?
+</span></span><span id="529" class="l"><a href="#529"> 529 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="530" class="l"><a href="#530"> 530 </a><span class="php-comment">     * @return string Returns an empty string if the exemplar city hasn't been found and $returnUnknownIfNotFound is false
 </span></span><span id="531" class="l"><a href="#531"> 531 </a><span class="php-comment">     */</span>
 </span><span id="532" class="l"><a href="#532"> 532 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getTimezoneExemplarCity(<span class="php-var">$value</span>, <span class="php-var">$returnUnknownIfNotFound</span> = <span class="php-keyword1">true</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="533" class="l"><a href="#533"> 533 </a>    {
 </span><span id="534" class="l"><a href="#534"> 534 </a>        <span class="php-var">$result</span> = <span class="php-quote">''</span>;
-</span><span id="535" class="l"><a href="#535"> 535 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? \Punic\Data::getDefaultLocale() : <span class="php-var">$locale</span>;
+</span><span id="535" class="l"><a href="#535"> 535 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? Data::getDefaultLocale() : <span class="php-var">$locale</span>;
 </span><span id="536" class="l"><a href="#536"> 536 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$value</span>)) {
 </span><span id="537" class="l"><a href="#537"> 537 </a>            <span class="php-var">$receivedPhpName</span> = <span class="php-quote">''</span>;
 </span><span id="538" class="l"><a href="#538"> 538 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$value</span>)) {
@@ -638,7 +638,7 @@
 </span><span id="544" class="l"><a href="#544"> 544 </a>            }
 </span><span id="545" class="l"><a href="#545"> 545 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$receivedPhpName</span>[<span class="php-num">0</span>])) {
 </span><span id="546" class="l"><a href="#546"> 546 </a>                <span class="php-var">$phpNames</span> = <span class="php-keyword1">static</span>::getTimezonesAliases(<span class="php-var">$receivedPhpName</span>);
-</span><span id="547" class="l"><a href="#547"> 547 </a>                <span class="php-var">$timeZoneNames</span> = \Punic\Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
+</span><span id="547" class="l"><a href="#547"> 547 </a>                <span class="php-var">$timeZoneNames</span> = Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
 </span><span id="548" class="l"><a href="#548"> 548 </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$phpNames</span> <span class="php-keyword1">as</span> <span class="php-var">$phpName</span>) {
 </span><span id="549" class="l"><a href="#549"> 549 </a>                    <span class="php-var">$chunks</span> = <span class="php-keyword2">array_merge</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'zone'</span>), <span class="php-keyword2">explode</span>(<span class="php-quote">'/'</span>, <span class="php-var">$phpName</span>));
 </span><span id="550" class="l"><a href="#550"> 550 </a>                    <span class="php-var">$data</span> = <span class="php-var">$timeZoneNames</span>;
@@ -672,14 +672,14 @@
 </span><span id="578" class="l"><a href="#578"> 578 </a>
 </span><span id="579" class="l"><a href="#579"> 579 </a>    <span class="php-comment">/**
 </span></span><span id="580" class="l"><a href="#580"> 580 </a><span class="php-comment">     * Returns true if a locale has a 12-hour clock, false if 24-hour clock
-</span></span><span id="581" class="l"><a href="#581"> 581 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="581" class="l"><a href="#581"> 581 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="582" class="l"><a href="#582"> 582 </a><span class="php-comment">     * @return bool
 </span></span><span id="583" class="l"><a href="#583"> 583 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="584" class="l"><a href="#584"> 584 </a><span class="php-comment">     */</span>
 </span><span id="585" class="l"><a href="#585"> 585 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> has12HoursClock(<span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="586" class="l"><a href="#586"> 586 </a>    {
 </span><span id="587" class="l"><a href="#587"> 587 </a>        <span class="php-keyword1">static</span> <span class="php-var">$cache</span> = <span class="php-keyword1">array</span>();
-</span><span id="588" class="l"><a href="#588"> 588 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? \Punic\Data::getDefaultLocale() : <span class="php-var">$locale</span>;
+</span><span id="588" class="l"><a href="#588"> 588 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? Data::getDefaultLocale() : <span class="php-var">$locale</span>;
 </span><span id="589" class="l"><a href="#589"> 589 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$cache</span>[<span class="php-var">$locale</span>])) {
 </span><span id="590" class="l"><a href="#590"> 590 </a>            <span class="php-var">$format</span> = <span class="php-keyword1">static</span>::getTimeFormat(<span class="php-quote">'short'</span>, <span class="php-var">$locale</span>);
 </span><span id="591" class="l"><a href="#591"> 591 </a>            <span class="php-var">$format</span> = <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;''&quot;</span>, <span class="php-quote">''</span>, <span class="php-var">$format</span>);
@@ -691,17 +691,17 @@
 </span><span id="597" class="l"><a href="#597"> 597 </a>
 </span><span id="598" class="l"><a href="#598"> 598 </a>    <span class="php-comment">/**
 </span></span><span id="599" class="l"><a href="#599"> 599 </a><span class="php-comment">     * Retrieve the first weekday for a specific locale (from 0-Sunday to 6-Saturnday)
-</span></span><span id="600" class="l"><a href="#600"> 600 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="600" class="l"><a href="#600"> 600 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="601" class="l"><a href="#601"> 601 </a><span class="php-comment">     * @return int Returns a number from 0 (Sunday) to 7 (Saturnday)
 </span></span><span id="602" class="l"><a href="#602"> 602 </a><span class="php-comment">     */</span>
 </span><span id="603" class="l"><a href="#603"> 603 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getFirstWeekday(<span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="604" class="l"><a href="#604"> 604 </a>    {
 </span><span id="605" class="l"><a href="#605"> 605 </a>        <span class="php-keyword1">static</span> <span class="php-var">$cache</span> = <span class="php-keyword1">array</span>();
-</span><span id="606" class="l"><a href="#606"> 606 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? \Punic\Data::getDefaultLocale() : <span class="php-var">$locale</span>;
+</span><span id="606" class="l"><a href="#606"> 606 </a>        <span class="php-var">$locale</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? Data::getDefaultLocale() : <span class="php-var">$locale</span>;
 </span><span id="607" class="l"><a href="#607"> 607 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$cache</span>[<span class="php-var">$locale</span>])) {
 </span><span id="608" class="l"><a href="#608"> 608 </a>            <span class="php-var">$result</span> = <span class="php-num">0</span>;
-</span><span id="609" class="l"><a href="#609"> 609 </a>            <span class="php-var">$data</span> = \Punic\Data::getGeneric(<span class="php-quote">'weekData'</span>);
-</span><span id="610" class="l"><a href="#610"> 610 </a>            <span class="php-var">$i</span> = \Punic\Data::getTerritoryNode(<span class="php-var">$data</span>[<span class="php-quote">'firstDay'</span>], <span class="php-var">$locale</span>);
+</span><span id="609" class="l"><a href="#609"> 609 </a>            <span class="php-var">$data</span> = Data::getGeneric(<span class="php-quote">'weekData'</span>);
+</span><span id="610" class="l"><a href="#610"> 610 </a>            <span class="php-var">$i</span> = Data::getTerritoryNode(<span class="php-var">$data</span>[<span class="php-quote">'firstDay'</span>], <span class="php-var">$locale</span>);
 </span><span id="611" class="l"><a href="#611"> 611 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_int</span>(<span class="php-var">$i</span>)) {
 </span><span id="612" class="l"><a href="#612"> 612 </a>                <span class="php-var">$result</span> = <span class="php-var">$i</span>;
 </span><span id="613" class="l"><a href="#613"> 613 </a>            }
@@ -713,9 +713,9 @@
 </span><span id="619" class="l"><a href="#619"> 619 </a>
 </span><span id="620" class="l"><a href="#620"> 620 </a>    <span class="php-comment">/**
 </span></span><span id="621" class="l"><a href="#621"> 621 </a><span class="php-comment">     * Returns the sorted list of weekdays, starting from {@link getFirstWeekday}
-</span></span><span id="622" class="l"><a href="#622"> 622 </a><span class="php-comment">     * @param string|false $namesWidth=false If false you'll get only the list of weekday identifiers (for instance: [0, 1, 2, 3, 4, 5, 6]),
+</span></span><span id="622" class="l"><a href="#622"> 622 </a><span class="php-comment">     * @param string|false $namesWidth If false you'll get only the list of weekday identifiers (for instance: [0, 1, 2, 3, 4, 5, 6]),
 </span></span><span id="623" class="l"><a href="#623"> 623 </a><span class="php-comment">     * If it's a string it must be one accepted by {@link getWeekdayName}, and you'll get an array like this: [{id: 0, name: 'Monday', ..., {id: 6, name: 'Sunday'}]
-</span></span><span id="624" class="l"><a href="#624"> 624 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="624" class="l"><a href="#624"> 624 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="625" class="l"><a href="#625"> 625 </a><span class="php-comment">     * @return array
 </span></span><span id="626" class="l"><a href="#626"> 626 </a><span class="php-comment">     */</span>
 </span><span id="627" class="l"><a href="#627"> 627 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getSortedWeekdays(<span class="php-var">$namesWidth</span> = <span class="php-keyword1">false</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
@@ -744,7 +744,7 @@
 </span><span id="650" class="l"><a href="#650"> 650 </a>    <span class="php-comment">/**
 </span></span><span id="651" class="l"><a href="#651"> 651 </a><span class="php-comment">     * Get the ISO format for a date
 </span></span><span id="652" class="l"><a href="#652"> 652 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')
-</span></span><span id="653" class="l"><a href="#653"> 653 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="653" class="l"><a href="#653"> 653 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="654" class="l"><a href="#654"> 654 </a><span class="php-comment">     * @return string Returns the requested ISO format
 </span></span><span id="655" class="l"><a href="#655"> 655 </a><span class="php-comment">     * @throws Exception Throws an exception in case of problems
 </span></span><span id="656" class="l"><a href="#656"> 656 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -753,7 +753,7 @@
 </span></span><span id="659" class="l"><a href="#659"> 659 </a><span class="php-comment">     */</span>
 </span><span id="660" class="l"><a href="#660"> 660 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getDateFormat(<span class="php-var">$width</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="661" class="l"><a href="#661"> 661 </a>    {
-</span><span id="662" class="l"><a href="#662"> 662 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="662" class="l"><a href="#662"> 662 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="663" class="l"><a href="#663"> 663 </a>        <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'dateFormats'</span>];
 </span><span id="664" class="l"><a href="#664"> 664 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="665" class="l"><a href="#665"> 665 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -765,7 +765,7 @@
 </span><span id="671" class="l"><a href="#671"> 671 </a>    <span class="php-comment">/**
 </span></span><span id="672" class="l"><a href="#672"> 672 </a><span class="php-comment">     * Get the ISO format for a time
 </span></span><span id="673" class="l"><a href="#673"> 673 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')
-</span></span><span id="674" class="l"><a href="#674"> 674 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="674" class="l"><a href="#674"> 674 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="675" class="l"><a href="#675"> 675 </a><span class="php-comment">     * @return string Returns the requested ISO format
 </span></span><span id="676" class="l"><a href="#676"> 676 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="677" class="l"><a href="#677"> 677 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -774,7 +774,7 @@
 </span></span><span id="680" class="l"><a href="#680"> 680 </a><span class="php-comment">     */</span>
 </span><span id="681" class="l"><a href="#681"> 681 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getTimeFormat(<span class="php-var">$width</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="682" class="l"><a href="#682"> 682 </a>    {
-</span><span id="683" class="l"><a href="#683"> 683 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="683" class="l"><a href="#683"> 683 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="684" class="l"><a href="#684"> 684 </a>        <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'timeFormats'</span>];
 </span><span id="685" class="l"><a href="#685"> 685 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$width</span>])) {
 </span><span id="686" class="l"><a href="#686"> 686 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$width</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -786,7 +786,7 @@
 </span><span id="692" class="l"><a href="#692"> 692 </a>    <span class="php-comment">/**
 </span></span><span id="693" class="l"><a href="#693"> 693 </a><span class="php-comment">     * Get the ISO format for a date/time
 </span></span><span id="694" class="l"><a href="#694"> 694 </a><span class="php-comment">     * @param string $width The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
-</span></span><span id="695" class="l"><a href="#695"> 695 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="695" class="l"><a href="#695"> 695 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="696" class="l"><a href="#696"> 696 </a><span class="php-comment">     * @return string Returns the requested ISO format
 </span></span><span id="697" class="l"><a href="#697"> 697 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="698" class="l"><a href="#698"> 698 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -836,7 +836,7 @@
 </span><span id="742" class="l"><a href="#742"> 742 </a>            <span class="php-keyword1">default</span>:
 </span><span id="743" class="l"><a href="#743"> 743 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$width</span>, <span class="php-quote">'pipe-separated list of strings (from 1 to 3 chunks)'</span>);
 </span><span id="744" class="l"><a href="#744"> 744 </a>        }
-</span><span id="745" class="l"><a href="#745"> 745 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
+</span><span id="745" class="l"><a href="#745"> 745 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'calendar'</span>, <span class="php-var">$locale</span>);
 </span><span id="746" class="l"><a href="#746"> 746 </a>        <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'dateTimeFormats'</span>];
 </span><span id="747" class="l"><a href="#747"> 747 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$wholeWidth</span>])) {
 </span><span id="748" class="l"><a href="#748"> 748 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\ValueNotInList(<span class="php-var">$wholeWidth</span>, <span class="php-keyword2">array_keys</span>(<span class="php-var">$data</span>));
@@ -852,7 +852,7 @@
 </span><span id="758" class="l"><a href="#758"> 758 </a>    <span class="php-comment">/**
 </span></span><span id="759" class="l"><a href="#759"> 759 </a><span class="php-comment">     * Returns the difference in days between two dates (or between a date and today)
 </span></span><span id="760" class="l"><a href="#760"> 760 </a><span class="php-comment">     * @param \DateTime $dateEnd The first date
-</span></span><span id="761" class="l"><a href="#761"> 761 </a><span class="php-comment">     * @param \DateTime|null $dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)
+</span></span><span id="761" class="l"><a href="#761"> 761 </a><span class="php-comment">     * @param \DateTime|null $dateStart The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)
 </span></span><span id="762" class="l"><a href="#762"> 762 </a><span class="php-comment">     * @return int Returns the diffence $dateEnd - $dateStart in days
 </span></span><span id="763" class="l"><a href="#763"> 763 </a><span class="php-comment">     * @throws Exception\BadArgumentType
 </span></span><span id="764" class="l"><a href="#764"> 764 </a><span class="php-comment">     */</span>
@@ -881,10 +881,10 @@
 </span><span id="787" class="l"><a href="#787"> 787 </a>    <span class="php-comment">/**
 </span></span><span id="788" class="l"><a href="#788"> 788 </a><span class="php-comment">     * Describe an interval between two dates (eg '2 days and 4 hours').
 </span></span><span id="789" class="l"><a href="#789"> 789 </a><span class="php-comment">     * @param \DateTime $dateEnd The first date
-</span></span><span id="790" class="l"><a href="#790"> 790 </a><span class="php-comment">     * @param \DateTime|null $dateStart=null The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)
-</span></span><span id="791" class="l"><a href="#791"> 791 </a><span class="php-comment">     * @param int $maxParts=2 The maximim parts (eg with 2 you may have '2 days and 4 hours', with 3 '2 days, 4 hours and 24 minutes')
-</span></span><span id="792" class="l"><a href="#792"> 792 </a><span class="php-comment">     * @param string $width='short' The format name; it can be 'long' (eg '3 seconds'), 'short' (eg '3 s') or 'narrow' (eg '3s')
-</span></span><span id="793" class="l"><a href="#793"> 793 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="790" class="l"><a href="#790"> 790 </a><span class="php-comment">     * @param \DateTime|null $dateStart The final date (if it has a timezone different than $dateEnd, we'll use the one of $dateEnd)
+</span></span><span id="791" class="l"><a href="#791"> 791 </a><span class="php-comment">     * @param int $maxParts The maximim parts (eg with 2 you may have '2 days and 4 hours', with 3 '2 days, 4 hours and 24 minutes')
+</span></span><span id="792" class="l"><a href="#792"> 792 </a><span class="php-comment">     * @param string $width The format name; it can be 'long' (eg '3 seconds'), 'short' (eg '3 s') or 'narrow' (eg '3s')
+</span></span><span id="793" class="l"><a href="#793"> 793 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="794" class="l"><a href="#794"> 794 </a><span class="php-comment">     * @return string
 </span></span><span id="795" class="l"><a href="#795"> 795 </a><span class="php-comment">     * @throws Exception\BadArgumentType
 </span></span><span id="796" class="l"><a href="#796"> 796 </a><span class="php-comment">     */</span>
@@ -908,7 +908,7 @@
 </span><span id="814" class="l"><a href="#814"> 814 </a>        <span class="php-var">$dateStartUTC</span> = <span class="php-keyword1">new</span> \DateTime(<span class="php-var">$dateStart</span>-&gt;format(<span class="php-quote">'Y-m-d H:i:s'</span>), <span class="php-var">$utc</span>);
 </span><span id="815" class="l"><a href="#815"> 815 </a>
 </span><span id="816" class="l"><a href="#816"> 816 </a>        <span class="php-var">$parts</span> = <span class="php-keyword1">array</span>();
-</span><span id="817" class="l"><a href="#817"> 817 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'dateFields'</span>, <span class="php-var">$locale</span>);
+</span><span id="817" class="l"><a href="#817"> 817 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'dateFields'</span>, <span class="php-var">$locale</span>);
 </span><span id="818" class="l"><a href="#818"> 818 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$dateEndUTC</span>-&gt;getTimestamp() == <span class="php-var">$dateStartUTC</span>-&gt;getTimestamp()) {
 </span><span id="819" class="l"><a href="#819"> 819 </a>            <span class="php-var">$parts</span>[] = <span class="php-var">$data</span>[<span class="php-quote">'second'</span>][<span class="php-quote">'relative-type-0'</span>];
 </span><span id="820" class="l"><a href="#820"> 820 </a>        } <span class="php-keyword1">else</span> {
@@ -916,37 +916,37 @@
 </span><span id="822" class="l"><a href="#822"> 822 </a>            <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="823" class="l"><a href="#823"> 823 </a>            <span class="php-var">$maxDistance</span> = <span class="php-num">3</span>;
 </span><span id="824" class="l"><a href="#824"> 824 </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$mostFar</span> &lt; <span class="php-var">$maxDistance</span>) &amp;&amp; (<span class="php-var">$diff</span>-&gt;y &gt; <span class="php-num">0</span>)) {
-</span><span id="825" class="l"><a href="#825"> 825 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;y, <span class="php-quote">'duration/year'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="825" class="l"><a href="#825"> 825 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;y, <span class="php-quote">'duration/year'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="826" class="l"><a href="#826"> 826 </a>                <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="827" class="l"><a href="#827"> 827 </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>)) {
 </span><span id="828" class="l"><a href="#828"> 828 </a>                <span class="php-var">$mostFar</span>++;
 </span><span id="829" class="l"><a href="#829"> 829 </a>            }
 </span><span id="830" class="l"><a href="#830"> 830 </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$mostFar</span> &lt; <span class="php-var">$maxDistance</span>) &amp;&amp; (<span class="php-var">$diff</span>-&gt;m &gt; <span class="php-num">0</span>)) {
-</span><span id="831" class="l"><a href="#831"> 831 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;m, <span class="php-quote">'duration/month'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="831" class="l"><a href="#831"> 831 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;m, <span class="php-quote">'duration/month'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="832" class="l"><a href="#832"> 832 </a>                <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="833" class="l"><a href="#833"> 833 </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>)) {
 </span><span id="834" class="l"><a href="#834"> 834 </a>                <span class="php-var">$mostFar</span>++;
 </span><span id="835" class="l"><a href="#835"> 835 </a>            }
 </span><span id="836" class="l"><a href="#836"> 836 </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$mostFar</span> &lt; <span class="php-var">$maxDistance</span>) &amp;&amp; (<span class="php-var">$diff</span>-&gt;d &gt; <span class="php-num">0</span>)) {
-</span><span id="837" class="l"><a href="#837"> 837 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;d, <span class="php-quote">'duration/day'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="837" class="l"><a href="#837"> 837 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;d, <span class="php-quote">'duration/day'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="838" class="l"><a href="#838"> 838 </a>                <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="839" class="l"><a href="#839"> 839 </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>)) {
 </span><span id="840" class="l"><a href="#840"> 840 </a>                <span class="php-var">$mostFar</span>++;
 </span><span id="841" class="l"><a href="#841"> 841 </a>            }
 </span><span id="842" class="l"><a href="#842"> 842 </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$mostFar</span> &lt; <span class="php-var">$maxDistance</span>) &amp;&amp; (<span class="php-var">$diff</span>-&gt;h &gt; <span class="php-num">0</span>)) {
-</span><span id="843" class="l"><a href="#843"> 843 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;h, <span class="php-quote">'duration/hour'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="843" class="l"><a href="#843"> 843 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;h, <span class="php-quote">'duration/hour'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="844" class="l"><a href="#844"> 844 </a>                <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="845" class="l"><a href="#845"> 845 </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>)) {
 </span><span id="846" class="l"><a href="#846"> 846 </a>                <span class="php-var">$mostFar</span>++;
 </span><span id="847" class="l"><a href="#847"> 847 </a>            }
 </span><span id="848" class="l"><a href="#848"> 848 </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$mostFar</span> &lt; <span class="php-var">$maxDistance</span>) &amp;&amp; (<span class="php-var">$diff</span>-&gt;i &gt; <span class="php-num">0</span>)) {
-</span><span id="849" class="l"><a href="#849"> 849 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;i, <span class="php-quote">'duration/minute'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="849" class="l"><a href="#849"> 849 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;i, <span class="php-quote">'duration/minute'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="850" class="l"><a href="#850"> 850 </a>                <span class="php-var">$mostFar</span> = <span class="php-num">0</span>;
 </span><span id="851" class="l"><a href="#851"> 851 </a>            } <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>)) {
 </span><span id="852" class="l"><a href="#852"> 852 </a>                <span class="php-var">$mostFar</span>++;
 </span><span id="853" class="l"><a href="#853"> 853 </a>            }
 </span><span id="854" class="l"><a href="#854"> 854 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$parts</span>) || (<span class="php-var">$diff</span>-&gt;s &gt; <span class="php-num">0</span>)) {
-</span><span id="855" class="l"><a href="#855"> 855 </a>                <span class="php-var">$parts</span>[] = \Punic\Unit::format(<span class="php-var">$diff</span>-&gt;s, <span class="php-quote">'duration/second'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="855" class="l"><a href="#855"> 855 </a>                <span class="php-var">$parts</span>[] = Unit::format(<span class="php-var">$diff</span>-&gt;s, <span class="php-quote">'duration/second'</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="856" class="l"><a href="#856"> 856 </a>            }
 </span><span id="857" class="l"><a href="#857"> 857 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$parts</span>) &gt; <span class="php-var">$maxParts</span>) {
 </span><span id="858" class="l"><a href="#858"> 858 </a>                <span class="php-var">$parts</span> = <span class="php-keyword2">array_slice</span>(<span class="php-var">$parts</span>, <span class="php-num">0</span>, <span class="php-var">$maxParts</span>);
@@ -955,10 +955,10 @@
 </span><span id="861" class="l"><a href="#861"> 861 </a>        <span class="php-keyword1">switch</span> (<span class="php-var">$width</span>) {
 </span><span id="862" class="l"><a href="#862"> 862 </a>            <span class="php-keyword1">case</span> <span class="php-quote">'narrow'</span>:
 </span><span id="863" class="l"><a href="#863"> 863 </a>            <span class="php-keyword1">case</span> <span class="php-quote">'short'</span>:
-</span><span id="864" class="l"><a href="#864"> 864 </a>                <span class="php-var">$joined</span> = \Punic\Misc::joinUnits(<span class="php-var">$parts</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
+</span><span id="864" class="l"><a href="#864"> 864 </a>                <span class="php-var">$joined</span> = Misc::joinUnits(<span class="php-var">$parts</span>, <span class="php-var">$width</span>, <span class="php-var">$locale</span>);
 </span><span id="865" class="l"><a href="#865"> 865 </a>                <span class="php-keyword1">break</span>;
 </span><span id="866" class="l"><a href="#866"> 866 </a>            <span class="php-keyword1">default</span>:
-</span><span id="867" class="l"><a href="#867"> 867 </a>                <span class="php-var">$joined</span> = \Punic\Misc::<span class="php-keyword2">join</span>(<span class="php-var">$parts</span>, <span class="php-var">$locale</span>);
+</span><span id="867" class="l"><a href="#867"> 867 </a>                <span class="php-var">$joined</span> = Misc::<span class="php-keyword2">join</span>(<span class="php-var">$parts</span>, <span class="php-var">$locale</span>);
 </span><span id="868" class="l"><a href="#868"> 868 </a>                <span class="php-keyword1">break</span>;
 </span><span id="869" class="l"><a href="#869"> 869 </a>        }
 </span><span id="870" class="l"><a href="#870"> 870 </a>
@@ -970,7 +970,7 @@
 </span></span><span id="876" class="l"><a href="#876"> 876 </a><span class="php-comment">     * @param \DateTime $value The \DateTime instance for which you want the localized textual representation
 </span></span><span id="877" class="l"><a href="#877"> 877 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14').
 </span></span><span id="878" class="l"><a href="#878"> 878 </a><span class="php-comment">     *                      You can also append a caret ('^') or an asterisk ('*') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '*') instead of the date.
-</span></span><span id="879" class="l"><a href="#879"> 879 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="879" class="l"><a href="#879"> 879 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="880" class="l"><a href="#880"> 880 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="881" class="l"><a href="#881"> 881 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="882" class="l"><a href="#882"> 882 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -1000,8 +1000,8 @@
 </span></span><span id="906" class="l"><a href="#906"> 906 </a><span class="php-comment">     * @param number|\DateTime|string $value An Unix timestamp, a `\DateTime` instance or a string accepted by {@link http://php.net/manual/function.strtotime.php strtotime}.
 </span></span><span id="907" class="l"><a href="#907"> 907 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'EEEE, MMMM d, y' - 'Wednesday, August 20, 2014'), 'long' (eg 'MMMM d, y' - 'August 20, 2014'), 'medium' (eg 'MMM d, y' - 'August 20, 2014') or 'short' (eg 'M/d/yy' - '8/20/14')
 </span></span><span id="908" class="l"><a href="#908"> 908 </a><span class="php-comment">     *                      You can also append a caret ('^') or an asterisk ('*') to $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow' with '^' and 'today', 'yesterday', 'tomorrow' width '*') instead of the date.
-</span></span><span id="909" class="l"><a href="#909"> 909 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
-</span></span><span id="910" class="l"><a href="#910"> 910 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="909" class="l"><a href="#909"> 909 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
+</span></span><span id="910" class="l"><a href="#910"> 910 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="911" class="l"><a href="#911"> 911 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="912" class="l"><a href="#912"> 912 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="913" class="l"><a href="#913"> 913 </a><span class="php-comment">     * @see toDateTime()
@@ -1022,7 +1022,7 @@
 </span></span><span id="928" class="l"><a href="#928"> 928 </a><span class="php-comment">     * Format a time
 </span></span><span id="929" class="l"><a href="#929"> 929 </a><span class="php-comment">     * @param \DateTime $value The \DateTime instance for which you want the localized textual representation
 </span></span><span id="930" class="l"><a href="#930"> 930 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')
-</span></span><span id="931" class="l"><a href="#931"> 931 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="931" class="l"><a href="#931"> 931 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="932" class="l"><a href="#932"> 932 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="933" class="l"><a href="#933"> 933 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="934" class="l"><a href="#934"> 934 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -1042,8 +1042,8 @@
 </span></span><span id="948" class="l"><a href="#948"> 948 </a><span class="php-comment">     * Format a time (extended version: various date/time representations - see toDateTime())
 </span></span><span id="949" class="l"><a href="#949"> 949 </a><span class="php-comment">     * @param number|\DateTime|string $value An Unix timestamp, a `\DateTime` instance or a string accepted by {@link http://php.net/manual/function.strtotime.php strtotime}.
 </span></span><span id="950" class="l"><a href="#950"> 950 </a><span class="php-comment">     * @param string $width The format name; it can be 'full' (eg 'h:mm:ss a zzzz' - '11:42:13 AM GMT+2:00'), 'long' (eg 'h:mm:ss a z' - '11:42:13 AM GMT+2:00'), 'medium' (eg 'h:mm:ss a' - '11:42:13 AM') or 'short' (eg 'h:mm a' - '11:42 AM')
-</span></span><span id="951" class="l"><a href="#951"> 951 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
-</span></span><span id="952" class="l"><a href="#952"> 952 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="951" class="l"><a href="#951"> 951 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
+</span></span><span id="952" class="l"><a href="#952"> 952 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="953" class="l"><a href="#953"> 953 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="954" class="l"><a href="#954"> 954 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="955" class="l"><a href="#955"> 955 </a><span class="php-comment">     * @see toDateTime()
@@ -1065,7 +1065,7 @@
 </span></span><span id="971" class="l"><a href="#971"> 971 </a><span class="php-comment">     * @param \DateTime $value The \DateTime instance for which you want the localized textual representation
 </span></span><span id="972" class="l"><a href="#972"> 972 </a><span class="php-comment">     * @param string $width The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
 </span></span><span id="973" class="l"><a href="#973"> 973 </a><span class="php-comment">     *                      You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.
-</span></span><span id="974" class="l"><a href="#974"> 974 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="974" class="l"><a href="#974"> 974 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="975" class="l"><a href="#975"> 975 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="976" class="l"><a href="#976"> 976 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="977" class="l"><a href="#977"> 977 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -1109,8 +1109,8 @@
 </span></span><span id="1015" class="l"><a href="#1015">1015 </a><span class="php-comment">     * @param number|\DateTime|string $value An Unix timestamp, a `\DateTime` instance or a string accepted by {@link http://php.net/manual/function.strtotime.php strtotime}.
 </span></span><span id="1016" class="l"><a href="#1016">1016 </a><span class="php-comment">     * @param string $width The format name; it can be 'full', 'long', 'medium', 'short' or a combination for date+time like 'full|short' or a combination for format+date+time like 'full|full|short'
 </span></span><span id="1017" class="l"><a href="#1017">1017 </a><span class="php-comment">     *                      You can also append an asterisk ('*') to the date parh of $width. If so, special day names may be used (like 'Today', 'Yesterday', 'Tomorrow') instead of the date part.
-</span></span><span id="1018" class="l"><a href="#1018">1018 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
-</span></span><span id="1019" class="l"><a href="#1019">1019 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="1018" class="l"><a href="#1018">1018 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
+</span></span><span id="1019" class="l"><a href="#1019">1019 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="1020" class="l"><a href="#1020">1020 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="1021" class="l"><a href="#1021">1021 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="1022" class="l"><a href="#1022">1022 </a><span class="php-comment">     * @see toDateTime()
@@ -1131,7 +1131,7 @@
 </span></span><span id="1037" class="l"><a href="#1037">1037 </a><span class="php-comment">     * Format a date and/or time
 </span></span><span id="1038" class="l"><a href="#1038">1038 </a><span class="php-comment">     * @param \DateTime $value The \DateTime instance for which you want the localized textual representation
 </span></span><span id="1039" class="l"><a href="#1039">1039 </a><span class="php-comment">     * @param string $format The ISO format that specify how to render the date/time
-</span></span><span id="1040" class="l"><a href="#1040">1040 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="1040" class="l"><a href="#1040">1040 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="1041" class="l"><a href="#1041">1041 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="1042" class="l"><a href="#1042">1042 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="1043" class="l"><a href="#1043">1043 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -1187,7 +1187,7 @@
 </span><span id="1093" class="l"><a href="#1093">1093 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$length</span> === <span class="php-num">0</span>) {
 </span><span id="1094" class="l"><a href="#1094">1094 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\BadArgumentType(<span class="php-var">$format</span>, <span class="php-quote">'date/time ISO format'</span>);
 </span><span id="1095" class="l"><a href="#1095">1095 </a>            }
-</span><span id="1096" class="l"><a href="#1096">1096 </a>            <span class="php-var">$cacheKey</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? \Punic\Data::getDefaultLocale() : <span class="php-var">$locale</span>;
+</span><span id="1096" class="l"><a href="#1096">1096 </a>            <span class="php-var">$cacheKey</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$locale</span>) ? Data::getDefaultLocale() : <span class="php-var">$locale</span>;
 </span><span id="1097" class="l"><a href="#1097">1097 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$decodeCache</span>[<span class="php-var">$cacheKey</span>])) {
 </span><span id="1098" class="l"><a href="#1098">1098 </a>                <span class="php-var">$decodeCache</span>[<span class="php-var">$cacheKey</span>] = <span class="php-keyword1">array</span>();
 </span><span id="1099" class="l"><a href="#1099">1099 </a>            }
@@ -1242,8 +1242,8 @@
 </span></span><span id="1148" class="l"><a href="#1148">1148 </a><span class="php-comment">     * Format a date and/or time (extended version: various date/time representations - see toDateTime())
 </span></span><span id="1149" class="l"><a href="#1149">1149 </a><span class="php-comment">     * @param number|\DateTime|string $value An Unix timestamp, a `\DateTime` instance or a string accepted by {@link http://php.net/manual/function.strtotime.php strtotime}.
 </span></span><span id="1150" class="l"><a href="#1150">1150 </a><span class="php-comment">     * @param string $format The ISO format that specify how to render the date/time
-</span></span><span id="1151" class="l"><a href="#1151">1151 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone='' The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
-</span></span><span id="1152" class="l"><a href="#1152">1152 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="1151" class="l"><a href="#1151">1151 </a><span class="php-comment">     * @param string|\DateTimeZone $toTimezone The timezone to set; leave empty to use the default timezone (or the timezone associated to $value if it's already a \DateTime)
+</span></span><span id="1152" class="l"><a href="#1152">1152 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="1153" class="l"><a href="#1153">1153 </a><span class="php-comment">     * @return string Returns an empty string if $value is empty, the localized textual representation otherwise
 </span></span><span id="1154" class="l"><a href="#1154">1154 </a><span class="php-comment">     * @throws \Punic\Exception Throws an exception in case of problems
 </span></span><span id="1155" class="l"><a href="#1155">1155 </a><span class="php-comment">     * @link http://cldr.unicode.org/translation/date-time-patterns
@@ -1262,22 +1262,22 @@
 </span><span id="1168" class="l"><a href="#1168">1168 </a>    <span class="php-comment">/**
 </span></span><span id="1169" class="l"><a href="#1169">1169 </a><span class="php-comment">     * Retrieve the relative day name (eg 'yesterday', 'tomorrow'), if available
 </span></span><span id="1170" class="l"><a href="#1170">1170 </a><span class="php-comment">     * @param \DateTime $datetime The date for which you want the relative day name
-</span></span><span id="1171" class="l"><a href="#1171">1171 </a><span class="php-comment">     * @param bool $ucFirst=false Force first letter to be upper case?
-</span></span><span id="1172" class="l"><a href="#1172">1172 </a><span class="php-comment">     * @param string $locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data
+</span></span><span id="1171" class="l"><a href="#1171">1171 </a><span class="php-comment">     * @param bool $ucFirst Force first letter to be upper case?
+</span></span><span id="1172" class="l"><a href="#1172">1172 </a><span class="php-comment">     * @param string $locale The locale to use. If empty we'll use the default locale set in \Punic\Data
 </span></span><span id="1173" class="l"><a href="#1173">1173 </a><span class="php-comment">     * @return string Returns the relative name if available, otherwise returns an empty string
 </span></span><span id="1174" class="l"><a href="#1174">1174 </a><span class="php-comment">     */</span>
 </span><span id="1175" class="l"><a href="#1175">1175 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getDateRelativeName(<span class="php-var">$datetime</span>, <span class="php-var">$ucFirst</span> = <span class="php-keyword1">false</span>, <span class="php-var">$locale</span> = <span class="php-quote">''</span>)
 </span><span id="1176" class="l"><a href="#1176">1176 </a>    {
 </span><span id="1177" class="l"><a href="#1177">1177 </a>        <span class="php-var">$result</span> = <span class="php-quote">''</span>;
 </span><span id="1178" class="l"><a href="#1178">1178 </a>        <span class="php-var">$deltaDays</span> = <span class="php-keyword1">static</span>::getDeltaDays(<span class="php-var">$datetime</span>);
-</span><span id="1179" class="l"><a href="#1179">1179 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'dateFields'</span>, <span class="php-var">$locale</span>);
+</span><span id="1179" class="l"><a href="#1179">1179 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'dateFields'</span>, <span class="php-var">$locale</span>);
 </span><span id="1180" class="l"><a href="#1180">1180 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-quote">'day'</span>])) {
 </span><span id="1181" class="l"><a href="#1181">1181 </a>            <span class="php-var">$data</span> = <span class="php-var">$data</span>[<span class="php-quote">'day'</span>];
 </span><span id="1182" class="l"><a href="#1182">1182 </a>            <span class="php-var">$key</span> = <span class="php-quote">&quot;relative-type-</span><span class="php-var">$deltaDays</span><span class="php-quote">&quot;</span>;
 </span><span id="1183" class="l"><a href="#1183">1183 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$key</span>])) {
 </span><span id="1184" class="l"><a href="#1184">1184 </a>                <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$key</span>];
 </span><span id="1185" class="l"><a href="#1185">1185 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$ucFirst</span>) {
-</span><span id="1186" class="l"><a href="#1186">1186 </a>                    <span class="php-var">$result</span> = \Punic\Misc::fixCase(<span class="php-var">$result</span>, <span class="php-quote">'titlecase-firstword'</span>);
+</span><span id="1186" class="l"><a href="#1186">1186 </a>                    <span class="php-var">$result</span> = Misc::fixCase(<span class="php-var">$result</span>, <span class="php-quote">'titlecase-firstword'</span>);
 </span><span id="1187" class="l"><a href="#1187">1187 </a>                }
 </span><span id="1188" class="l"><a href="#1188">1188 </a>            }
 </span><span id="1189" class="l"><a href="#1189">1189 </a>        }
@@ -1487,7 +1487,7 @@
 </span><span id="1393" class="l"><a href="#1393">1393 </a>        <span class="php-var">$hours</span> = <span class="php-keyword2">intval</span>(<span class="php-keyword2">floor</span>(<span class="php-var">$seconds</span> / <span class="php-num">3600</span>));
 </span><span id="1394" class="l"><a href="#1394">1394 </a>        <span class="php-var">$seconds</span> -= <span class="php-var">$hours</span> * <span class="php-num">3600</span>;
 </span><span id="1395" class="l"><a href="#1395">1395 </a>        <span class="php-var">$minutes</span> = <span class="php-keyword2">intval</span>(<span class="php-keyword2">floor</span>(<span class="php-var">$seconds</span> / <span class="php-num">60</span>));
-</span><span id="1396" class="l"><a href="#1396">1396 </a>        <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
+</span><span id="1396" class="l"><a href="#1396">1396 </a>        <span class="php-var">$data</span> = Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
 </span><span id="1397" class="l"><a href="#1397">1397 </a>        <span class="php-var">$format</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-quote">'gmtFormat'</span>]) ? <span class="php-var">$data</span>[<span class="php-quote">'gmtFormat'</span>] : <span class="php-quote">'GMT%1$s'</span>;
 </span><span id="1398" class="l"><a href="#1398">1398 </a>        <span class="php-keyword1">switch</span> (<span class="php-var">$count</span>) {
 </span><span id="1399" class="l"><a href="#1399">1399 </a>            <span class="php-keyword1">case</span> <span class="php-num">1</span>:
@@ -1655,7 +1655,7 @@
 </span><span id="1561" class="l"><a href="#1561">1561 </a>            <span class="php-keyword1">case</span> <span class="php-num">3</span>:
 </span><span id="1562" class="l"><a href="#1562">1562 </a>                <span class="php-keyword1">return</span> <span class="php-keyword2">implode</span>(<span class="php-quote">''</span>, <span class="php-var">$partsMaybeWithSeconds</span>);
 </span><span id="1563" class="l"><a href="#1563">1563 </a>            <span class="php-keyword1">case</span> <span class="php-num">4</span>:
-</span><span id="1564" class="l"><a href="#1564">1564 </a>                <span class="php-var">$data</span> = \Punic\Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
+</span><span id="1564" class="l"><a href="#1564">1564 </a>                <span class="php-var">$data</span> = Data::get(<span class="php-quote">'timeZoneNames'</span>, <span class="php-var">$locale</span>);
 </span><span id="1565" class="l"><a href="#1565">1565 </a>                <span class="php-var">$format</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-quote">'gmtFormat'</span>]) ? <span class="php-var">$data</span>[<span class="php-quote">'gmtFormat'</span>] : <span class="php-quote">'GMT%1$s'</span>;
 </span><span id="1566" class="l"><a href="#1566">1566 </a>
 </span><span id="1567" class="l"><a href="#1567">1567 </a>                <span class="php-keyword1">return</span> <span class="php-keyword2">sprintf</span>(<span class="php-var">$format</span>, <span class="php-keyword2">implode</span>(<span class="php-quote">':'</span>, <span class="php-var">$partsWithoutSeconds</span>));
