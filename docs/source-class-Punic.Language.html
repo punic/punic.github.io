@@ -147,38 +147,40 @@
 </span><span id="53" class="l"><a href="#53">53 </a>        <span class="php-var">$result</span> = <span class="php-var">$languageCode</span>;
 </span><span id="54" class="l"><a href="#54">54 </a>        <span class="php-var">$info</span> = Data::explodeLocale(<span class="php-var">$languageCode</span>);
 </span><span id="55" class="l"><a href="#55">55 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_null</span>(<span class="php-var">$info</span>)) {
-</span><span id="56" class="l"><a href="#56">56 </a>            <span class="php-keyword2">extract</span>(<span class="php-var">$info</span>);
-</span><span id="57" class="l"><a href="#57">57 </a>            <span class="php-var">$lookFor</span> = <span class="php-keyword1">array</span>();
-</span><span id="58" class="l"><a href="#58">58 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$script</span>)) {
-</span><span id="59" class="l"><a href="#59">59 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$territory</span>)) {
-</span><span id="60" class="l"><a href="#60">60 </a>                    <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">-</span><span class="php-var">$territory</span><span class="php-quote">&quot;</span>;
-</span><span id="61" class="l"><a href="#61">61 </a>                }
-</span><span id="62" class="l"><a href="#62">62 </a>                <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">&quot;</span>;
-</span><span id="63" class="l"><a href="#63">63 </a>            } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$territory</span>)) {
-</span><span id="64" class="l"><a href="#64">64 </a>                <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$territory</span><span class="php-quote">&quot;</span>;
-</span><span id="65" class="l"><a href="#65">65 </a>            }
-</span><span id="66" class="l"><a href="#66">66 </a>            <span class="php-var">$lookFor</span>[] = <span class="php-var">$language</span>;
-</span><span id="67" class="l"><a href="#67">67 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'languages'</span>, <span class="php-var">$locale</span>);
-</span><span id="68" class="l"><a href="#68">68 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$lookFor</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span>) {
-</span><span id="69" class="l"><a href="#69">69 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$key</span>, <span class="php-var">$data</span>)) {
-</span><span id="70" class="l"><a href="#70">70 </a>                    <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$key</span>];
-</span><span id="71" class="l"><a href="#71">71 </a>                    <span class="php-keyword1">break</span>;
-</span><span id="72" class="l"><a href="#72">72 </a>                }
-</span><span id="73" class="l"><a href="#73">73 </a>            }
-</span><span id="74" class="l"><a href="#74">74 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$territory</span>)) {
-</span><span id="75" class="l"><a href="#75">75 </a>                <span class="php-var">$territoryName</span> = Territory::getName(<span class="php-var">$territory</span>, <span class="php-var">$locale</span>);
-</span><span id="76" class="l"><a href="#76">76 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$territoryName</span>)) {
-</span><span id="77" class="l"><a href="#77">77 </a>                    <span class="php-var">$patternData</span> = Data::get(<span class="php-quote">'localeDisplayNames'</span>);
-</span><span id="78" class="l"><a href="#78">78 </a>                    <span class="php-var">$pattern</span> = <span class="php-var">$patternData</span>[<span class="php-quote">'localeDisplayPattern'</span>][<span class="php-quote">'localePattern'</span>];
-</span><span id="79" class="l"><a href="#79">79 </a>                    <span class="php-var">$result</span> = <span class="php-keyword2">sprintf</span>(<span class="php-var">$pattern</span>, <span class="php-var">$result</span>, <span class="php-var">$territoryName</span>);
-</span><span id="80" class="l"><a href="#80">80 </a>                }
-</span><span id="81" class="l"><a href="#81">81 </a>            }
-</span><span id="82" class="l"><a href="#82">82 </a>        }
-</span><span id="83" class="l"><a href="#83">83 </a>
-</span><span id="84" class="l"><a href="#84">84 </a>        <span class="php-keyword1">return</span> <span class="php-var">$result</span>;
-</span><span id="85" class="l"><a href="#85">85 </a>    }
-</span><span id="86" class="l"><a href="#86">86 </a>}
-</span><span id="87" class="l"><a href="#87">87 </a></span></code></pre>
+</span><span id="56" class="l"><a href="#56">56 </a>            <span class="php-var">$language</span> = <span class="php-var">$info</span>[<span class="php-quote">'language'</span>];
+</span><span id="57" class="l"><a href="#57">57 </a>            <span class="php-var">$script</span> = <span class="php-var">$info</span>[<span class="php-quote">'script'</span>];
+</span><span id="58" class="l"><a href="#58">58 </a>            <span class="php-var">$territory</span> = <span class="php-var">$info</span>[<span class="php-quote">'territory'</span>];
+</span><span id="59" class="l"><a href="#59">59 </a>            <span class="php-var">$lookFor</span> = <span class="php-keyword1">array</span>();
+</span><span id="60" class="l"><a href="#60">60 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$script</span>[<span class="php-num">0</span>])) {
+</span><span id="61" class="l"><a href="#61">61 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$territory</span>[<span class="php-num">0</span>])) {
+</span><span id="62" class="l"><a href="#62">62 </a>                    <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">-</span><span class="php-var">$territory</span><span class="php-quote">&quot;</span>;
+</span><span id="63" class="l"><a href="#63">63 </a>                }
+</span><span id="64" class="l"><a href="#64">64 </a>                <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">&quot;</span>;
+</span><span id="65" class="l"><a href="#65">65 </a>            } <span class="php-keyword1">elseif</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$territory</span>[<span class="php-num">0</span>])) {
+</span><span id="66" class="l"><a href="#66">66 </a>                <span class="php-var">$lookFor</span>[] = <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$territory</span><span class="php-quote">&quot;</span>;
+</span><span id="67" class="l"><a href="#67">67 </a>            }
+</span><span id="68" class="l"><a href="#68">68 </a>            <span class="php-var">$lookFor</span>[] = <span class="php-var">$language</span>;
+</span><span id="69" class="l"><a href="#69">69 </a>            <span class="php-var">$data</span> = Data::get(<span class="php-quote">'languages'</span>, <span class="php-var">$locale</span>);
+</span><span id="70" class="l"><a href="#70">70 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$lookFor</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span>) {
+</span><span id="71" class="l"><a href="#71">71 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$key</span>])) {
+</span><span id="72" class="l"><a href="#72">72 </a>                    <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$key</span>];
+</span><span id="73" class="l"><a href="#73">73 </a>                    <span class="php-keyword1">break</span>;
+</span><span id="74" class="l"><a href="#74">74 </a>                }
+</span><span id="75" class="l"><a href="#75">75 </a>            }
+</span><span id="76" class="l"><a href="#76">76 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$territory</span>[<span class="php-num">0</span>])) {
+</span><span id="77" class="l"><a href="#77">77 </a>                <span class="php-var">$territoryName</span> = Territory::getName(<span class="php-var">$territory</span>, <span class="php-var">$locale</span>);
+</span><span id="78" class="l"><a href="#78">78 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$territoryName</span>[<span class="php-num">0</span>])) {
+</span><span id="79" class="l"><a href="#79">79 </a>                    <span class="php-var">$patternData</span> = Data::get(<span class="php-quote">'localeDisplayNames'</span>);
+</span><span id="80" class="l"><a href="#80">80 </a>                    <span class="php-var">$pattern</span> = <span class="php-var">$patternData</span>[<span class="php-quote">'localeDisplayPattern'</span>][<span class="php-quote">'localePattern'</span>];
+</span><span id="81" class="l"><a href="#81">81 </a>                    <span class="php-var">$result</span> = <span class="php-keyword2">sprintf</span>(<span class="php-var">$pattern</span>, <span class="php-var">$result</span>, <span class="php-var">$territoryName</span>);
+</span><span id="82" class="l"><a href="#82">82 </a>                }
+</span><span id="83" class="l"><a href="#83">83 </a>            }
+</span><span id="84" class="l"><a href="#84">84 </a>        }
+</span><span id="85" class="l"><a href="#85">85 </a>
+</span><span id="86" class="l"><a href="#86">86 </a>        <span class="php-keyword1">return</span> <span class="php-var">$result</span>;
+</span><span id="87" class="l"><a href="#87">87 </a>    }
+</span><span id="88" class="l"><a href="#88">88 </a>}
+</span><span id="89" class="l"><a href="#89">89 </a></span></code></pre>
 	</div>
 
 	<div id="footer">

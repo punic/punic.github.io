@@ -118,7 +118,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Punic.Unit.html#4-228" title="Go to source code">Unit.php</a>
+			<b>Located at</b> <a href="source-class-Punic.Unit.html#4-230" title="Go to source code">Unit.php</a>
 		<br>
 	</div>
 
@@ -130,14 +130,14 @@
 
 			<td class="attributes"><code>
 				 public static
-				
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_format">#</a>
-			<code><a href="source-class-Punic.Unit.html#9-89" title="Go to source code">format</a>( <span>integer|float|string <var>$number</var></span>, <span>string <var>$unit</var></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#9-91" title="Go to source code">format</a>( <span>integer|float|string <var>$number</var></span>, <span>string <var>$unit</var></span>, <span>string <var>$width</var> = <span class="php-quote">'short'</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Format a unit string</p>
@@ -159,7 +159,15 @@
 						<dd>$locale='' The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
 
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Punic.Exception.ValueNotInList.html">Punic\Exception\ValueNotInList</a></code>
+					</div>
 
 
 
@@ -177,7 +185,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMeasurementSystems">#</a>
-			<code><a href="source-class-Punic.Unit.html#91-99" title="Go to source code">getMeasurementSystems</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#93-101" title="Go to source code">getMeasurementSystems</a>( <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve the measurement systems and their localized names</p>
@@ -215,7 +223,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMeasurementSystemFor">#</a>
-			<code><a href="source-class-Punic.Unit.html#101-122" title="Go to source code">getMeasurementSystemFor</a>( <span>string <var>$territoryCode</var></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#103-124" title="Go to source code">getMeasurementSystemFor</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve the measurement system for a specific territory</p>
@@ -253,7 +261,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCountriesWithMeasurementSystem">#</a>
-			<code><a href="source-class-Punic.Unit.html#124-163" title="Go to source code">getCountriesWithMeasurementSystem</a>( <span>string <var>$measurementSystem</var></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#126-165" title="Go to source code">getCountriesWithMeasurementSystem</a>( <span>string <var>$measurementSystem</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the list of countries that use a specific measurement system</p>
@@ -291,7 +299,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPaperSizeFor">#</a>
-			<code><a href="source-class-Punic.Unit.html#165-186" title="Go to source code">getPaperSizeFor</a>( <span>string <var>$territoryCode</var></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#167-188" title="Go to source code">getPaperSizeFor</a>( <span>string <var>$territoryCode</var></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve the standard paper size for a specific territory</p>
@@ -329,7 +337,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCountriesWithPaperSize">#</a>
-			<code><a href="source-class-Punic.Unit.html#188-227" title="Go to source code">getCountriesWithPaperSize</a>( <span>string <var>$paperSize</var></span> )</code>
+			<code><a href="source-class-Punic.Unit.html#190-229" title="Go to source code">getCountriesWithPaperSize</a>( <span>string <var>$paperSize</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the list of countries that use a specific paper size by default</p>

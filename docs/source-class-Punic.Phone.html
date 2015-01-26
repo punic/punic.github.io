@@ -111,7 +111,7 @@
 </span><span id="17" class="l"><a href="#17">17 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$territoryCode</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^([a-z]{2}|[0-9]{3})$/i'</span>, <span class="php-var">$territoryCode</span>)) {
 </span><span id="18" class="l"><a href="#18">18 </a>            <span class="php-var">$territoryCode</span> = <span class="php-keyword2">strtoupper</span>(<span class="php-var">$territoryCode</span>);
 </span><span id="19" class="l"><a href="#19">19 </a>            <span class="php-var">$data</span> = Data::getGeneric(<span class="php-quote">'telephoneCodeData'</span>);
-</span><span id="20" class="l"><a href="#20">20 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$territoryCode</span>, <span class="php-var">$data</span>)) {
+</span><span id="20" class="l"><a href="#20">20 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$data</span>[<span class="php-var">$territoryCode</span>])) {
 </span><span id="21" class="l"><a href="#21">21 </a>                <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$territoryCode</span>];
 </span><span id="22" class="l"><a href="#22">22 </a>            }
 </span><span id="23" class="l"><a href="#23">23 </a>        }

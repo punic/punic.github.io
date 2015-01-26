@@ -138,7 +138,7 @@
 </span><span id="44" class="l"><a href="#44"> 44 </a>                <span class="php-keyword1">list</span>(<span class="php-var">$intPart</span>, <span class="php-var">$floatPart</span>) = <span class="php-keyword2">explode</span>(<span class="php-quote">'.'</span>, <span class="php-var">$s</span>);
 </span><span id="45" class="l"><a href="#45"> 45 </a>            }
 </span><span id="46" class="l"><a href="#46"> 46 </a>            <span class="php-var">$intPartAbs</span> = <span class="php-keyword2">strval</span>(<span class="php-keyword2">abs</span>(<span class="php-keyword2">intval</span>(<span class="php-var">$intPart</span>)));
-</span><span id="47" class="l"><a href="#47"> 47 </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$number</span>) &amp;&amp; <span class="php-keyword2">strlen</span>(<span class="php-var">$number</span>)) {
+</span><span id="47" class="l"><a href="#47"> 47 </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$number</span>) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$number</span>[<span class="php-num">0</span>])) {
 </span><span id="48" class="l"><a href="#48"> 48 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^[+|\\-]?\\d+\\.?$/'</span>, <span class="php-var">$number</span>)) {
 </span><span id="49" class="l"><a href="#49"> 49 </a>                <span class="php-var">$v</span> = <span class="php-keyword2">intval</span>(<span class="php-var">$number</span>);
 </span><span id="50" class="l"><a href="#50"> 50 </a>                <span class="php-var">$intPartAbs</span> = <span class="php-keyword2">strval</span>(<span class="php-keyword2">abs</span>(<span class="php-var">$v</span>));
@@ -165,7 +165,7 @@
 </span><span id="71" class="l"><a href="#71"> 71 </a>        <span class="php-var">$v5</span> = <span class="php-keyword2">strlen</span>(<span class="php-var">$floatPart</span>) ? <span class="php-keyword2">strval</span>(<span class="php-keyword2">intval</span>(<span class="php-var">$floatPart</span>)) : <span class="php-quote">'0'</span>;
 </span><span id="72" class="l"><a href="#72"> 72 </a>        <span class="php-comment">// 't' =&gt; '%6$s', // visible fractional digits in n, without trailing zeros.</span>
 </span><span id="73" class="l"><a href="#73"> 73 </a>        <span class="php-var">$v6</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$floatPart</span>, <span class="php-quote">'0'</span>);
-</span><span id="74" class="l"><a href="#74"> 74 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">strlen</span>(<span class="php-var">$v6</span>)) {
+</span><span id="74" class="l"><a href="#74"> 74 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$v6</span>[<span class="php-num">0</span>])) {
 </span><span id="75" class="l"><a href="#75"> 75 </a>            <span class="php-var">$v6</span> = <span class="php-quote">'0'</span>;
 </span><span id="76" class="l"><a href="#76"> 76 </a>        }
 </span><span id="77" class="l"><a href="#77"> 77 </a>        <span class="php-var">$result</span> = <span class="php-quote">'other'</span>;
