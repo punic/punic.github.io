@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Punic\Language | Punic APIs</title>
+	<title>Class Punic\Comparer | Punic APIs</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
 	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
@@ -69,10 +69,10 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Punic.Calendar.html">Calendar</a></li>
-				<li><a href="class-Punic.Comparer.html">Comparer</a></li>
+				<li class="active"><a href="class-Punic.Comparer.html">Comparer</a></li>
 				<li><a href="class-Punic.Currency.html">Currency</a></li>
 				<li><a href="class-Punic.Data.html">Data</a></li>
-				<li class="active"><a href="class-Punic.Language.html">Language</a></li>
+				<li><a href="class-Punic.Language.html">Language</a></li>
 				<li><a href="class-Punic.Misc.html">Misc</a></li>
 				<li><a href="class-Punic.Number.html">Number</a></li>
 				<li><a href="class-Punic.Phone.html">Phone</a></li>
@@ -98,11 +98,11 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Language</h1>
+	<h1>Class Comparer</h1>
 
 
 	<div class="description">
-	<p>Language-related stuff.</p>
+	<p>Various helper stuff.</p>
 	</div>
 
 
@@ -119,7 +119,7 @@
 		<b>Namespace:</b> <a href="namespace-Punic.html">Punic</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Punic.Language.html#5-96" title="Go to source code">Language.php</a>
+			<b>Located at</b> <a href="source-class-Punic.Comparer.html#8-165" title="Go to source code">Comparer.php</a>
 		<br>
 	</div>
 
@@ -127,40 +127,74 @@
 
 		<h2>Methods summary</h2>
 		<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="getAll" id="_getAll">
+		<tr data-order="__construct" id="___construct">
 
 			<td class="attributes"><code>
-				 public static
-				array
+				 public 
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Punic.Language.html#10-47" title="Go to source code">getAll</a>( <span>boolean <var>$excludeCountrySpecific</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$excludeScriptSpecific</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span> )</code>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Punic.Comparer.html#33-52" title="Go to source code">__construct</a>( <span>string <var>$locale</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$caseSensitive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Return all the languages.</p>
+				<p>Initializes the instance.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Return all the languages.</p>
+				<p>Initializes the instance.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$excludeCountrySpecific</var></dt>
-						<dd>Set to false (default) to include also Country-specific languages (eg 'U.S. English' in addition to 'English'), set to true to exclude them</dd>
-						<dt><var>$excludeScriptSpecific</var></dt>
-						<dd>Set to false (default) to include also script-specific languages (eg 'Simplified Chinese' in addition to 'Chinese'), set to true to exclude them</dd>
 						<dt><var>$locale</var></dt>
-						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
+						<dd></dd>
+						<dt><var>$caseSensitive</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compare" id="_compare">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compare">#</a>
+			<code><a href="source-class-Punic.Comparer.html#77-123" title="Go to source code">compare</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
+
+			<div class="description short">
+				<p>Compare two strings.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Compare two strings.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$a</var></dt>
+						<dd></dd>
+						<dt><var>$b</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>Return an array, sorted by values, whose keys are the language IDs and the values are the localized language names
+						integer
 					</div>
 
 
@@ -169,40 +203,38 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getName" id="_getName">
+		<tr data-order="sort" id="_sort">
 
 			<td class="attributes"><code>
-				 public static
-				string
+				 public 
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Punic.Language.html#49-95" title="Go to source code">getName</a>( <span>string <var>$languageCode</var></span>, <span>string <var>$locale</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$allowCompoundNames</var> = <span class="php-keyword1">false</span></span> )</code>
+			<a class="anchor" href="#_sort">#</a>
+			<code><a href="source-class-Punic.Comparer.html#125-164" title="Go to source code">sort</a>( <span>array <var>&amp; $array</var></span>, <span>boolean <var>$keepKeys</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Retrieve the name of a language.</p>
+				
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Retrieve the name of a language.</p>
+				
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$languageCode</var></dt>
-						<dd>The language code. If it contails also a terrotory code (eg: 'en-US'), the result will contain also the territory code (eg 'English (United States)')</dd>
-						<dt><var>$locale</var></dt>
-						<dd>The locale to use. If empty we'll use the default locale set in \Punic\Data</dd>
-						<dt><var>$allowCompoundNames</var></dt>
-						<dd>Set to true to allow compound names (eg 'American English' instead of 'English '</dd>
+						<dt><var>$array</var></dt>
+						<dd></dd>
+						<dt><var>$keepKeys</var></dt>
+						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>Returns the localized language name (returns $languageCode if not found)
+						array
 					</div>
 
 

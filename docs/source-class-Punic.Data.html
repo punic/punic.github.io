@@ -160,7 +160,7 @@
 </span></span><span id="66" class="l"><a href="#66"> 66 </a><span class="php-comment">     */</span>
 </span><span id="67" class="l"><a href="#67"> 67 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> setDefaultLocale(<span class="php-var">$locale</span>)
 </span><span id="68" class="l"><a href="#68"> 68 </a>    {
-</span><span id="69" class="l"><a href="#69"> 69 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$locale</span>))) {
+</span><span id="69" class="l"><a href="#69"> 69 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$locale</span>) === <span class="php-keyword1">null</span>) {
 </span><span id="70" class="l"><a href="#70"> 70 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidLocale(<span class="php-var">$locale</span>);
 </span><span id="71" class="l"><a href="#71"> 71 </a>        }
 </span><span id="72" class="l"><a href="#72"> 72 </a>        <span class="php-keyword1">static</span>::<span class="php-var">$defaultLocale</span> = <span class="php-var">$locale</span>;
@@ -197,7 +197,7 @@
 </span></span><span id="103" class="l"><a href="#103">103 </a><span class="php-comment">     */</span>
 </span><span id="104" class="l"><a href="#104">104 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> setFallbackLocale(<span class="php-var">$locale</span>)
 </span><span id="105" class="l"><a href="#105">105 </a>    {
-</span><span id="106" class="l"><a href="#106">106 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_null</span>(<span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$locale</span>))) {
+</span><span id="106" class="l"><a href="#106">106 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$locale</span>) === <span class="php-keyword1">null</span>) {
 </span><span id="107" class="l"><a href="#107">107 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidLocale(<span class="php-var">$locale</span>);
 </span><span id="108" class="l"><a href="#108">108 </a>        }
 </span><span id="109" class="l"><a href="#109">109 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span> !== <span class="php-var">$locale</span>) {
@@ -237,11 +237,11 @@
 </span><span id="143" class="l"><a href="#143">143 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$dir</span>[<span class="php-num">0</span>])) {
 </span><span id="144" class="l"><a href="#144">144 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\DataFolderNotFound(<span class="php-var">$locale</span>, <span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>);
 </span><span id="145" class="l"><a href="#145">145 </a>            }
-</span><span id="146" class="l"><a href="#146">146 </a>            <span class="php-var">$file</span> = <span class="php-var">$dir</span> . DIRECTORY_SEPARATOR . <span class="php-var">$identifier</span> . <span class="php-quote">'.json'</span>;
-</span><span id="147" class="l"><a href="#147">147 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(__DIR__ . DIRECTORY_SEPARATOR . <span class="php-var">$file</span>)) {
+</span><span id="146" class="l"><a href="#146">146 </a>            <span class="php-var">$file</span> = <span class="php-var">$dir</span>.DIRECTORY_SEPARATOR.<span class="php-var">$identifier</span>.<span class="php-quote">'.json'</span>;
+</span><span id="147" class="l"><a href="#147">147 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(__DIR__.DIRECTORY_SEPARATOR.<span class="php-var">$file</span>)) {
 </span><span id="148" class="l"><a href="#148">148 </a>                <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\DataFileNotFound(<span class="php-var">$identifier</span>, <span class="php-var">$locale</span>, <span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>);
 </span><span id="149" class="l"><a href="#149">149 </a>            }
-</span><span id="150" class="l"><a href="#150">150 </a>            <span class="php-var">$json</span> = @<span class="php-keyword2">file_get_contents</span>(__DIR__ . DIRECTORY_SEPARATOR . <span class="php-var">$file</span>);
+</span><span id="150" class="l"><a href="#150">150 </a>            <span class="php-var">$json</span> = @<span class="php-keyword2">file_get_contents</span>(__DIR__.DIRECTORY_SEPARATOR.<span class="php-var">$file</span>);
 </span><span id="151" class="l"><a href="#151">151 </a>            <span class="php-comment">//@codeCoverageIgnoreStart</span>
 </span><span id="152" class="l"><a href="#152">152 </a>            <span class="php-comment">// In test enviro we can't replicate this problem</span>
 </span><span id="153" class="l"><a href="#153">153 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$json</span> === <span class="php-keyword1">false</span>) {
@@ -283,11 +283,11 @@
 </span><span id="189" class="l"><a href="#189">189 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^[a-zA-Z0-9_\\-]+$/'</span>, <span class="php-var">$identifier</span>)) {
 </span><span id="190" class="l"><a href="#190">190 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\InvalidDataFile(<span class="php-var">$identifier</span>);
 </span><span id="191" class="l"><a href="#191">191 </a>        }
-</span><span id="192" class="l"><a href="#192">192 </a>        <span class="php-var">$file</span> = <span class="php-quote">'data'</span> . DIRECTORY_SEPARATOR . <span class="php-quote">&quot;</span><span class="php-var">$identifier</span><span class="php-quote">.json&quot;</span>;
-</span><span id="193" class="l"><a href="#193">193 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(__DIR__ . DIRECTORY_SEPARATOR . <span class="php-var">$file</span>)) {
+</span><span id="192" class="l"><a href="#192">192 </a>        <span class="php-var">$file</span> = <span class="php-quote">'data'</span>.DIRECTORY_SEPARATOR.<span class="php-quote">&quot;</span><span class="php-var">$identifier</span><span class="php-quote">.json&quot;</span>;
+</span><span id="193" class="l"><a href="#193">193 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(__DIR__.DIRECTORY_SEPARATOR.<span class="php-var">$file</span>)) {
 </span><span id="194" class="l"><a href="#194">194 </a>            <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> Exception\DataFileNotFound(<span class="php-var">$identifier</span>);
 </span><span id="195" class="l"><a href="#195">195 </a>        }
-</span><span id="196" class="l"><a href="#196">196 </a>        <span class="php-var">$json</span> = @<span class="php-keyword2">file_get_contents</span>(__DIR__ . DIRECTORY_SEPARATOR . <span class="php-var">$file</span>);
+</span><span id="196" class="l"><a href="#196">196 </a>        <span class="php-var">$json</span> = @<span class="php-keyword2">file_get_contents</span>(__DIR__.DIRECTORY_SEPARATOR.<span class="php-var">$file</span>);
 </span><span id="197" class="l"><a href="#197">197 </a>        <span class="php-comment">//@codeCoverageIgnoreStart</span>
 </span><span id="198" class="l"><a href="#198">198 </a>        <span class="php-comment">// In test enviro we can't replicate this problem</span>
 </span><span id="199" class="l"><a href="#199">199 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$json</span> === <span class="php-keyword1">false</span>) {
@@ -316,12 +316,12 @@
 </span><span id="222" class="l"><a href="#222">222 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getAvailableLocales(<span class="php-var">$allowGroups</span> = <span class="php-keyword1">false</span>)
 </span><span id="223" class="l"><a href="#223">223 </a>    {
 </span><span id="224" class="l"><a href="#224">224 </a>        <span class="php-var">$locales</span> = <span class="php-keyword1">array</span>();
-</span><span id="225" class="l"><a href="#225">225 </a>        <span class="php-var">$dir</span> = __DIR__ . DIRECTORY_SEPARATOR . <span class="php-quote">'data'</span>;
+</span><span id="225" class="l"><a href="#225">225 </a>        <span class="php-var">$dir</span> = __DIR__.DIRECTORY_SEPARATOR.<span class="php-quote">'data'</span>;
 </span><span id="226" class="l"><a href="#226">226 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span>) &amp;&amp; <span class="php-keyword2">is_readable</span>(<span class="php-var">$dir</span>)) {
 </span><span id="227" class="l"><a href="#227">227 </a>            <span class="php-var">$contents</span> = @<span class="php-keyword2">scandir</span>(<span class="php-var">$dir</span>);
 </span><span id="228" class="l"><a href="#228">228 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$contents</span>)) {
 </span><span id="229" class="l"><a href="#229">229 </a>                <span class="php-keyword1">foreach</span> (<span class="php-keyword2">array_diff</span>(<span class="php-var">$contents</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'.'</span>, <span class="php-quote">'..'</span>)) <span class="php-keyword1">as</span> <span class="php-var">$item</span>) {
-</span><span id="230" class="l"><a href="#230">230 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span> . DIRECTORY_SEPARATOR . <span class="php-var">$item</span>)) {
+</span><span id="230" class="l"><a href="#230">230 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(<span class="php-var">$dir</span>.DIRECTORY_SEPARATOR.<span class="php-var">$item</span>)) {
 </span><span id="231" class="l"><a href="#231">231 </a>                        <span class="php-keyword1">if</span> (<span class="php-var">$item</span> === <span class="php-quote">'root'</span>) {
 </span><span id="232" class="l"><a href="#232">232 </a>                            <span class="php-var">$item</span> = <span class="php-quote">'en-US'</span>;
 </span><span id="233" class="l"><a href="#233">233 </a>                        }
@@ -375,7 +375,7 @@
 </span><span id="281" class="l"><a href="#281">281 </a>                <span class="php-var">$result</span> = <span class="php-var">$data</span>[<span class="php-var">$key</span>];
 </span><span id="282" class="l"><a href="#282">282 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$script</span>[<span class="php-num">0</span>]) &amp;&amp; (<span class="php-keyword2">stripos</span>(<span class="php-var">$result</span>, <span class="php-quote">&quot;</span><span class="php-var">$language</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">-&quot;</span>) !== <span class="php-num">0</span>)) {
 </span><span id="283" class="l"><a href="#283">283 </a>                    <span class="php-var">$parts</span> = <span class="php-keyword1">static</span>::explodeLocale(<span class="php-var">$result</span>);
-</span><span id="284" class="l"><a href="#284">284 </a>                    <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_null</span>(<span class="php-var">$parts</span>)) {
+</span><span id="284" class="l"><a href="#284">284 </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$parts</span> !== <span class="php-keyword1">null</span>) {
 </span><span id="285" class="l"><a href="#285">285 </a>                        <span class="php-var">$result</span> = <span class="php-quote">&quot;</span><span class="php-var">{$parts['language']}</span><span class="php-quote">-</span><span class="php-var">$script</span><span class="php-quote">-</span><span class="php-var">{$parts['territory']}</span><span class="php-quote">&quot;</span>;
 </span><span id="286" class="l"><a href="#286">286 </a>                    }
 </span><span id="287" class="l"><a href="#287">287 </a>                }
@@ -538,7 +538,7 @@
 </span><span id="444" class="l"><a href="#444">444 </a>                    <span class="php-var">$parentLocale</span> = <span class="php-quote">''</span>;
 </span><span id="445" class="l"><a href="#445">445 </a>                    <span class="php-var">$ok</span> = <span class="php-keyword1">true</span>;
 </span><span id="446" class="l"><a href="#446">446 </a>                    <span class="php-var">$chunkCount</span> = <span class="php-keyword2">count</span>(<span class="php-var">$chunks</span>);
-</span><span id="447" class="l"><a href="#447">447 </a>                    <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-num">1</span>; <span class="php-var">$ok</span> &amp;&amp; (<span class="php-var">$i</span> &lt; <span class="php-var">$chunkCount</span>); <span class="php-var">$i</span>++) {
+</span><span id="447" class="l"><a href="#447">447 </a>                    <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-num">1</span>; <span class="php-var">$ok</span> &amp;&amp; (<span class="php-var">$i</span> &lt; <span class="php-var">$chunkCount</span>); ++<span class="php-var">$i</span>) {
 </span><span id="448" class="l"><a href="#448">448 </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^[a-z]{4}$/'</span>, <span class="php-var">$chunks</span>[<span class="php-var">$i</span>])) {
 </span><span id="449" class="l"><a href="#449">449 </a>                            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$script</span>[<span class="php-num">0</span>])) {
 </span><span id="450" class="l"><a href="#450">450 </a>                                <span class="php-var">$ok</span> = <span class="php-keyword1">false</span>;
@@ -592,11 +592,11 @@
 </span><span id="498" class="l"><a href="#498">498 </a>        <span class="php-keyword1">static</span> <span class="php-var">$cache</span> = <span class="php-keyword1">array</span>();
 </span><span id="499" class="l"><a href="#499">499 </a>        <span class="php-var">$result</span> = <span class="php-quote">''</span>;
 </span><span id="500" class="l"><a href="#500">500 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$locale</span>)) {
-</span><span id="501" class="l"><a href="#501">501 </a>            <span class="php-var">$key</span> = <span class="php-var">$locale</span> . <span class="php-quote">'/'</span> . <span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>;
+</span><span id="501" class="l"><a href="#501">501 </a>            <span class="php-var">$key</span> = <span class="php-var">$locale</span>.<span class="php-quote">'/'</span>.<span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>;
 </span><span id="502" class="l"><a href="#502">502 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$cache</span>[<span class="php-var">$key</span>])) {
 </span><span id="503" class="l"><a href="#503">503 </a>                <span class="php-keyword1">foreach</span> (<span class="php-keyword1">static</span>::getLocaleAlternatives(<span class="php-var">$locale</span>) <span class="php-keyword1">as</span> <span class="php-var">$alternative</span>) {
-</span><span id="504" class="l"><a href="#504">504 </a>                    <span class="php-var">$dir</span> = <span class="php-quote">'data'</span> . DIRECTORY_SEPARATOR . <span class="php-var">$alternative</span>;
-</span><span id="505" class="l"><a href="#505">505 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(__DIR__ . DIRECTORY_SEPARATOR . <span class="php-var">$dir</span>)) {
+</span><span id="504" class="l"><a href="#504">504 </a>                    <span class="php-var">$dir</span> = <span class="php-quote">'data'</span>.DIRECTORY_SEPARATOR.<span class="php-var">$alternative</span>;
+</span><span id="505" class="l"><a href="#505">505 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword2">is_dir</span>(__DIR__.DIRECTORY_SEPARATOR.<span class="php-var">$dir</span>)) {
 </span><span id="506" class="l"><a href="#506">506 </a>                        <span class="php-var">$result</span> = <span class="php-var">$dir</span>;
 </span><span id="507" class="l"><a href="#507">507 </a>                        <span class="php-keyword1">break</span>;
 </span><span id="508" class="l"><a href="#508">508 </a>                    }
@@ -664,8 +664,8 @@
 </span><span id="570" class="l"><a href="#570">570 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$addFallback</span> &amp;&amp; (<span class="php-var">$locale</span> !== <span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>)) {
 </span><span id="571" class="l"><a href="#571">571 </a>            <span class="php-var">$result</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$result</span>, <span class="php-keyword1">static</span>::getLocaleAlternatives(<span class="php-keyword1">static</span>::<span class="php-var">$fallbackLocale</span>, <span class="php-keyword1">false</span>));
 </span><span id="572" class="l"><a href="#572">572 </a>        }
-</span><span id="573" class="l"><a href="#573">573 </a>        <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-keyword2">count</span>(<span class="php-var">$result</span>) - <span class="php-num">1</span>; <span class="php-var">$i</span> &gt; <span class="php-num">1</span>; <span class="php-var">$i</span>--) {
-</span><span id="574" class="l"><a href="#574">574 </a>            <span class="php-keyword1">for</span> (<span class="php-var">$j</span> = <span class="php-num">0</span>; <span class="php-var">$j</span> &lt; <span class="php-var">$i</span>; <span class="php-var">$j</span>++) {
+</span><span id="573" class="l"><a href="#573">573 </a>        <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-keyword2">count</span>(<span class="php-var">$result</span>) - <span class="php-num">1</span>; <span class="php-var">$i</span> &gt; <span class="php-num">1</span>; --<span class="php-var">$i</span>) {
+</span><span id="574" class="l"><a href="#574">574 </a>            <span class="php-keyword1">for</span> (<span class="php-var">$j</span> = <span class="php-num">0</span>; <span class="php-var">$j</span> &lt; <span class="php-var">$i</span>; ++<span class="php-var">$j</span>) {
 </span><span id="575" class="l"><a href="#575">575 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$result</span>[<span class="php-var">$i</span>] === <span class="php-var">$result</span>[<span class="php-var">$j</span>]) {
 </span><span id="576" class="l"><a href="#576">576 </a>                    <span class="php-keyword2">array_splice</span>(<span class="php-var">$result</span>, <span class="php-var">$i</span>, <span class="php-num">1</span>);
 </span><span id="577" class="l"><a href="#577">577 </a>                    <span class="php-keyword1">break</span>;
@@ -688,7 +688,7 @@
 		Punic APIs API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?8ec944cda550ca2138c24331f5249f9c4c211ba4"></script>
-<script src="elementlist.js?d8f8a47b87271081570280a4ac07a17aa8c7b36b"></script>
+<script src="resources/combined.js?10894dbf73a3e57bbb11a68d031a075bc838bcbd"></script>
+<script src="elementlist.js?7c03448245d1d21be472c4595dadcde1209f2d30"></script>
 </body>
 </html>
