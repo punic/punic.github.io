@@ -1,0 +1,21 @@
+{
+	"name" : "punic/website",
+	"type" : "project",
+	"license" : "MIT",
+	"require" : {
+		"apigen/apigen" : "^4",
+		"nette/di" : "2.3.*"
+	},
+	"authors" : [{
+			"name" : "Michele Locati",
+			"email" : "michele@locati.it",
+			"homepage" : "https://mlocati.github.io",
+			"role" : "Author"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Punic\\Website\\" : "src/"
+		}
+	}
+}

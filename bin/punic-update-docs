@@ -1,0 +1,83 @@
+#!/usr/bin/env php
+<?php
+
+use Punic\Website\Options;
+use Punic\Website\VolatileDirectory;
+use Punic\Website\FileUtils;
+use Punic\Website\UserMessageException;
+
+require_once dirname(__DIR__).'/src/bootstrap.php';
+
+try {
+    if (isset($argv) && is_array($argv) && count($argv) > 1) {
+        $optionArray = array_values($argv);
+        array_shift($optionArray);
+    } else {
+        $optionArray = [];
+    }
+    $options = Options::fromArray($optionArray);
+    $punicDirectory = $options->getPunicDirectory();
+    if ($punicDirectory === '') {
+        $punicVolatileContainer = new VolatileDirectory($options->getTempDirectory());
+        $punicDirectory = $punicVolatileContainer->getPath();
+        echo 'Fetching Punic from GitHub... ';
+        $output = [];
+        $rc = null;
+        exec('git clone --no-tags --branch master --depth 1 https://github.com/punic/punic.git '.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, $punicDirectory)).' 2>&1', $output, $rc);
+        if ($rc !== 0) {
+            throw new Exception("Failed to clone website repository:\n".trim(implode("\n", $output)));
+        }
+        echo "done.\n";
+    }
+    $sourceDirectory = $punicDirectory . '/src';
+    if (!is_dir($sourceDirectory)) {
+        throw new UserMessageException("Unable to find the Punic source directory ({$sourceDirectory}).");
+    }
+    $outputDirectory = $options->getOutputDirectory();
+    if (file_exists($outputDirectory)) {
+        if (!is_dir($outputDirectory)) {
+            throw new UserMessageException("{$outputDirectory} exists but it's not a directory.");
+        }
+        echo 'Clearing output directory... ';
+        FileUtils::deleteFromFilesystem($outputDirectory, true);
+        echo "done.\n";
+    } else {
+        echo 'Creating output directory... ';
+        FileUtils::createDirectory($outputDirectory);
+        echo "done.\n";
+    }
+
+    echo 'Creating doc files... ';
+    $apigenVolatileContainer = new VolatileDirectory($options->getTempDirectory());
+    
+    $output = [];
+    $rc = -1;
+    exec(
+        'php'
+        .' '.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, VENDORDIR . '/apigen/apigen/bin/apigen'))
+        .' generate'
+        .' --source='.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, $sourceDirectory))
+        .' --destination='.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, $outputDirectory))
+        .' --access-levels=public'
+        .' --extensions=php'
+        .' --groups=namespaces'
+        .' --charset=UTF-8'
+        .' --template-theme=bootstrap'
+        .' --title='.escapeshellarg('Punic APIs')
+        .' --todo'
+        .' --tree'
+        .' --debug'
+        .' 2>&1',
+        $output,
+        $rc
+    );
+    if ($rc !== 0) {
+        throw new Exception("ApiGen failed:\n".trim(implode("\n", $output)));
+    }
+    echo "done.\n";
+
+    die(0);
+} catch (Exception $x) {
+    echo $x->getMessage(), "\n";
+    die(1);
+}
